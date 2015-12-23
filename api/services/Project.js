@@ -39,6 +39,12 @@ var models = {
         callback(null, data);
       }
     });
+  },
+  getAll: function(data,callback) {
+    this.find().exec(callback);
+  },
+  getOne: function(data,callback) {
+    this.findOne({"_id":data._id}).populate('Api').exec(callback);
   }
 
 };

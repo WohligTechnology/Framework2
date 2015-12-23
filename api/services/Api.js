@@ -6,10 +6,6 @@ var schema = new Schema({
   status: Number,
   type: String,
   url: String,
-  Project: {
-    type: Schema.Types.ObjectId,
-    ref: 'Project'
-  },
   Response: {
     type: [{
       request: String,
@@ -25,13 +21,13 @@ module.exports = mongoose.model('Api', schema);
 
 var models = {
   saveData: function(data, callback) {
-    var project = this(data);
+    var api = this(data);
     if (data._id) {
       this.findOneAndUpdate({
         _id: data._id
       }, data, callback);
     } else {
-      project.save(function(err, data) {
+      api.save(function(err, data) {
         if (err) {
           callback(err, false);
         } else {
@@ -41,7 +37,7 @@ var models = {
     }
   },
   deleteData: function(data, callback) {
-    this.findOneAndRemove({
+    Api.findOneAndRemove({
       _id: data._id
     }, function(err, data) {
       if (err) {
@@ -54,4 +50,4 @@ var models = {
 
 };
 
-module.exports = _.assign(models, module.exports);
+module.exports = _.assign(module.exports, models);
