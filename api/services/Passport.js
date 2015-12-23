@@ -36,17 +36,34 @@ module.exports.use(new FacebookStrategy({
     enableProof: false
   },
   function(accessToken, refreshToken, profile, done) {
-
     if (!_.isEmpty(profile)) {
-      var user = User({
-        name: profile.displayName,
-        "oauthLogin": [{
-          "socialId": profile.id+"",
-          "socialProvider": profile.provider
-        }],
-        status: 1
+      User.find({
+        "oauthLogin.socialId": profile.id + ""
+      }).exec(function(err, data) {
+        if (err) {
+          done(err, false);
+        } else {
+          usertemp = {
+            "name": profile.displayName,
+            "oauthLogin": [{
+              "socialId": profile.id + "",
+              "socialProvider": profile.provider
+            }],
+            "status": 1
+          };
+
+          if (data.length != 0) {
+            done(err, data);
+          } else {
+            var user = User(usertemp);
+            user.save(function(err, data2) {
+              done(err, data2);
+            });
+          }
+
+        }
       });
-      user.save(done);
+
     } else {
       done("There is an Error", false);
     }
@@ -61,19 +78,33 @@ module.exports.use(new TwitterStrategy({
   },
   function(token, tokenSecret, profile, done) {
     if (!_.isEmpty(profile)) {
-      console.log(profile.id);
-      console.log(profile.provider);
-      var user = User({
-        "name": profile.displayName,
-        "oauthLogin": [{
-          "socialId": profile.id+"",
-          "socialProvider": profile.provider
-        }],
-        "status": 1
+      User.find({
+        "oauthLogin.socialId": profile.id + ""
+      }).exec(function(err, data) {
+        if (err) {
+          done(err, false);
+        } else {
+          usertemp = {
+            "name": profile.displayName,
+            "oauthLogin": [{
+              "socialId": profile.id + "",
+              "socialProvider": profile.provider
+            }],
+            "status": 1
+          };
+
+          if (data.length != 0) {
+            done(err, data);
+          } else {
+            var user = User(usertemp);
+            user.save(function(err, data2) {
+              done(err, data2);
+            });
+          }
+
+        }
       });
-      user.save(function(err,data) {
-        done(err,data);
-      });
+
     } else {
       done("There is an Error", false);
     }
@@ -88,17 +119,33 @@ module.exports.use(new GoogleStrategy({
   },
   function(token, tokenSecret, profile, done) {
     if (!_.isEmpty(profile)) {
-      var user = User({
-        name: profile.displayName,
-        "oauthLogin": [{
-          "socialId": profile.id+"",
-          "socialProvider": profile.provider
-        }],
-        status: 1
+      User.find({
+        "oauthLogin.socialId": profile.id + ""
+      }).exec(function(err, data) {
+        if (err) {
+          done(err, false);
+        } else {
+          usertemp = {
+            "name": profile.displayName,
+            "oauthLogin": [{
+              "socialId": profile.id + "",
+              "socialProvider": profile.provider
+            }],
+            "status": 1
+          };
+
+          if (data.length != 0) {
+            done(err, data);
+          } else {
+            var user = User(usertemp);
+            user.save(function(err, data2) {
+              done(err, data2);
+            });
+          }
+
+        }
       });
-      user.save(function(err,data) {
-        done(err,data);
-      });
+
     } else {
       done("There is an Error", false);
     }
