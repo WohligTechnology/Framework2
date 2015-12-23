@@ -33,16 +33,22 @@ module.exports = {
     User.register(req.body, callback);
   },
   login: function(req, res) {
-    passport.authenticate('local', {
-      failureRedirect: '/login'
-    }, function(err, data) {
+    var callback = function(err, data) {
       if (err || _.isEmpty(data)) {
-        res.redirect("user/fail");
-        console.log("Error");
+        res.json({
+          error: err,
+          value: false
+        });
       } else {
-        res.redirect("user/success");
+        res.json({
+          data: data,
+          value: true
+        });
       }
-    })(req, res);
+    };
+    Passport.authenticate('local', {
+      failureRedirect: '/login'
+    }, callback)(req, res);
   },
   logout: function(req, res) {
     res.session.destroy(function(err) {

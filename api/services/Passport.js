@@ -7,20 +7,24 @@ module.exports = require("passport");
 module.exports.use(new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
-    passReqToCallback: true
   },
-  function(username, password, done) {
-    sails.query(function(err, db) {
-      var col = db.collection('user');
-      // Show that duplicate records got dropped
-      col.find({
-        username: username
-      }).toArray(function(err, items) {
-        test.equal(null, err);
-        test.equal(4, items.length);
-        db.close();
-      });
-    });
+  function(email, password, done) {
+    User.findOne({
+      email: email,
+      password: password
+    }).exec(
+      function(err, data) {
+        if (err) {
+          done(err, false);
+        } else {
+          if (_.isEmpty(data)) {
+            done("Wrong Email or Password", false);
+          } else {
+            done(null, data);
+          }
+        }
+      }
+    );
   }
 ));
 
