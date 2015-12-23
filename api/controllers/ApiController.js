@@ -4,7 +4,7 @@ module.exports = {
       if (err) {
         res.json({
           error: err,
-          value: false
+          value: data
         });
       } else {
         res.json({
