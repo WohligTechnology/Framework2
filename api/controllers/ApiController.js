@@ -6,7 +6,6 @@ module.exports = {
           error: err,
           value: false
         });
-        s
       } else {
         res.json({
           data: data,
@@ -23,7 +22,6 @@ module.exports = {
           error: err,
           value: false
         });
-        s
       } else {
         res.json({
           data: data,
