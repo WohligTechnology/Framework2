@@ -157,9 +157,5 @@ module.exports = {
     Passport.authenticate('google', {
       failureRedirect: '/login'
     }, callback)(req, res);
-  },
-  createUser:function(req,res) {
-    var user = User(req.body);
-    res.json(user);
   }
 };
