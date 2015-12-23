@@ -40,9 +40,9 @@ module.exports.use(new FacebookStrategy({
     if (!_.isEmpty(profile)) {
       var user = User({
         name: profile.displayName,
-        oauthLogin: [{
-          socialProvider: profile.provider,
-          socialId: profile.id+""
+        "oauthLogin": [{
+          "socialId": profile.id+"",
+          "socialProvider": profile.provider
         }],
         status: 1
       });
@@ -57,21 +57,21 @@ module.exports.use(new FacebookStrategy({
 module.exports.use(new TwitterStrategy({
     consumerKey: "gZPPSIqZHL3mqlgq76bBc4Yqq",
     consumerSecret: "FGZTNSrJjztzlSsoX5TzvnWzVTFfpbw4D8veCFH8ME75Jup2CK",
-    callbackURL: "/user/logintwitter/",
+    callbackURL: "/user/loginTwitter/",
   },
   function(token, tokenSecret, profile, done) {
     if (!_.isEmpty(profile)) {
+      console.log(profile.id);
+      console.log(profile.provider);
       var user = User({
-        name: profile.displayName,
-        oauthLogin: {
-          socialId: profile.id+"",
-          socialProvider: profile.provider,
-        },
-        status: 1
+        "name": profile.displayName,
+        "oauthLogin": [{
+          "socialId": profile.id+"",
+          "socialProvider": profile.provider
+        }],
+        "status": 1
       });
       user.save(function(err,data) {
-        console.log(err);
-        console.log(data);
         done(err,data);
       });
     } else {
@@ -90,15 +90,13 @@ module.exports.use(new GoogleStrategy({
     if (!_.isEmpty(profile)) {
       var user = User({
         name: profile.displayName,
-        oauthLogin: {
-          socialId: profile.id+"",
-          socialProvider: profile.provider,
-        },
+        "oauthLogin": [{
+          "socialId": profile.id+"",
+          "socialProvider": profile.provider
+        }],
         status: 1
       });
       user.save(function(err,data) {
-        console.log(err);
-        console.log(data);
         done(err,data);
       });
     } else {

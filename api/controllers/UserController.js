@@ -158,4 +158,8 @@ module.exports = {
       failureRedirect: '/login'
     }, callback)(req, res);
   },
+  createUser:function(req,res) {
+    var user = User(req.body);
+    res.json(user);
+  }
 };
