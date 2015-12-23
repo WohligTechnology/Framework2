@@ -38,7 +38,7 @@ var models = {
         callback(err,data);
       } else {
         console.log(data2);
-        var user = User(data);
+        var user = this(data);
         if(data2 == 0) {
           user.save(function(err,data3) {
             callback(err,data3);

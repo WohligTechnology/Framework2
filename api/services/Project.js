@@ -15,7 +15,32 @@ var schema = new Schema({
 
 module.exports = mongoose.model('Project', schema);
 var models = {
+  saveData: function(data, callback) {
+    var project = this(data);
+    if (data._id) {
+      this.findOneAndUpdate({_id:data._id},data,callback);
+    } else {
+      project.save(function(err, data) {
+        if (err) {
+          callback(err, false);
+        } else {
+          callback(null, data);
+        }
+      });
+    }
+  },
+  deleteData: function(data, callback) {
+    this.findOneAndRemove({
+      _id: data._id
+    }, function(err, data) {
+      if (err) {
+        callback(err, false);
+      } else {
+        callback(null, data);
+      }
+    });
+  }
 
 };
 
-module.exports = _.assign(models, module.exports);
+module.exports = _.assign(module.exports, models);
