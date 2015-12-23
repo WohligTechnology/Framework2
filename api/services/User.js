@@ -19,8 +19,8 @@ var schema = new Schema({
   },
   oathLogin: {
     type: [{
-      socialId: String,
-      oauthId: String
+      socialProvider: String,
+      socialId: String
     }],
     index: true
   }

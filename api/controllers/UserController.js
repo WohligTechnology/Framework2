@@ -17,6 +17,7 @@ module.exports = {
     });
   },
   register: function(req, res) {
+    req.body.status = 1;
     var callback = function(err, data) {
       if (err || _.isEmpty(data)) {
         res.json({
@@ -40,6 +41,8 @@ module.exports = {
           value: false
         });
       } else {
+        req.session.user = data;
+        req.session.save();
         res.json({
           data: data,
           value: true
@@ -51,7 +54,7 @@ module.exports = {
     }, callback)(req, res);
   },
   logout: function(req, res) {
-    res.session.destroy(function(err) {
+    req.session.destroy(function(err) {
       if (err) {
         res.json({
           value: false,
@@ -63,5 +66,96 @@ module.exports = {
         });
       }
     });
-  }
+  },
+  loginFacebook: function(req, res) {
+    var callback = function(err, data) {
+      if (err || _.isEmpty(data)) {
+        res.json({
+          error: err,
+          value: false
+        });
+      } else {
+        req.session.user = data;
+        req.session.save(function(err) {
+          if (err) {
+            res.json(err);
+          } else {
+            res.json({
+              data: data,
+              value: true
+            });
+          }
+        });
+      }
+    };
+    Passport.authenticate('facebook', {
+      scope: ['public_profile', 'user_friends', 'email']
+    }, callback)(req, res);
+
+  },
+  profile: function(req, res) {
+    var user = req.session.user;
+    if (user) {
+      res.json(user);
+    } else {
+      res.json({
+        value: false
+      });
+    }
+  },
+  loginTwitter: function(req, res) {
+    var callback = function(err, data) {
+      if (err || _.isEmpty(data)) {
+        res.json({
+          error: err,
+          value: false
+        });
+      } else {
+        req.session.user = data;
+        // console.log(req.session);
+        req.session.save(function(err) {
+          if (err) {
+            res.json(err);
+          } else {
+            res.json({
+              data: data,
+              value: true
+            });
+          }
+        });
+      }
+    };
+    Passport.authenticate('twitter', {}, callback)(req, res);
+  },
+  loginGoogle: function(req, res) {
+    Passport.authenticate('google', {
+      scope: ['https://www.googleapis.com/auth/plus.login']
+    })(req, res);
+  },
+  loging: function(req, res) {
+    var callback = function(err, data) {
+      if (err || _.isEmpty(data)) {
+        res.json({
+          error: err,
+          value: false
+        });
+      } else {
+        req.session.user = data;
+        // console.log(req.session);
+        req.session.save(function(err) {
+          if (err) {
+            res.json(err);
+          } else {
+            res.json({
+              data: data,
+              value: true
+            });
+          }
+        });
+      }
+    };
+    Passport.authenticate('google', {
+      failureRedirect: '/login'
+    }, callback)(req, res);
+  },
 };

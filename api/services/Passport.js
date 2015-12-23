@@ -32,13 +32,21 @@ module.exports.use(new LocalStrategy({
 module.exports.use(new FacebookStrategy({
     clientID: "873276856121821",
     clientSecret: "3ecf121f8c741d41dd35d55dc0db711c",
-    callbackURL: "/user/loginfacebook/",
+    callbackURL: "/user/loginFacebook/",
     enableProof: false
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log(profile);
+
     if (!_.isEmpty(profile)) {
-      done(null, profile);
+      var user = User({
+        name: profile.displayName,
+        oauthLogin: [{
+          socialProvider: profile.provider,
+          socialId: profile.id+""
+        }],
+        status: 1
+      });
+      user.save(done);
     } else {
       done("There is an Error", false);
     }
@@ -52,9 +60,20 @@ module.exports.use(new TwitterStrategy({
     callbackURL: "/user/logintwitter/",
   },
   function(token, tokenSecret, profile, done) {
-    console.log(profile);
     if (!_.isEmpty(profile)) {
-      done(null, profile);
+      var user = User({
+        name: profile.displayName,
+        oauthLogin: {
+          socialId: profile.id+"",
+          socialProvider: profile.provider,
+        },
+        status: 1
+      });
+      user.save(function(err,data) {
+        console.log(err);
+        console.log(data);
+        done(err,data);
+      });
     } else {
       done("There is an Error", false);
     }
@@ -69,7 +88,19 @@ module.exports.use(new GoogleStrategy({
   },
   function(token, tokenSecret, profile, done) {
     if (!_.isEmpty(profile)) {
-      done(null, profile);
+      var user = User({
+        name: profile.displayName,
+        oauthLogin: {
+          socialId: profile.id+"",
+          socialProvider: profile.provider,
+        },
+        status: 1
+      });
+      user.save(function(err,data) {
+        console.log(err);
+        console.log(data);
+        done(err,data);
+      });
     } else {
       done("There is an Error", false);
     }

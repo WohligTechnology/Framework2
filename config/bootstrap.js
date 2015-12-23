@@ -30,6 +30,7 @@ module.exports.bootstrap = function(cb) {
     sails.myurl = "http://wohlig.io/",
     // Connection URL
     sails.url = 'mongodb://localhost:27017/framework2';
+
   sails.query = function(myfunc) {
       sails.MongoClient.connect(sails.url, myfunc);
     }
