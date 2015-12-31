@@ -7,14 +7,15 @@ var schema = new Schema({
   type: String,
   url: String,
   Response: {
-    type: [{
+    type: {
       request: String,
       response: String,
       session: String,
       comment: String
-    }],
+    },
     index: true
-  }
+  },
+  comment: String
 });
 
 module.exports = mongoose.model('Api', schema);
