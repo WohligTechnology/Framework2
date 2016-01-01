@@ -47,7 +47,7 @@ var models = {
                   if (err) {
                     callback(err, false);
                   } else {
-                    callback(null, data3);
+                    callback(null, data);
                   }
                 });
               }

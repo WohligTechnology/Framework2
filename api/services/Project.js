@@ -5,7 +5,7 @@ var schema = new Schema({
   name: String,
   status: Number,
   alias: String,
-  serverUrl: String,
+  url: String,
   Api: [{
     type: Schema.Types.ObjectId,
     ref: 'Api',
