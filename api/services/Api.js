@@ -63,12 +63,12 @@ var models = {
     }
   },
   deleteData: function(data, callback) {
-    Project.findOne({"Api":data._id},function(err,data) {
-      if(err)
-      {
-        callback("ERR",data);
-      }
-      else {
+    Project.findOne({
+      "Api": data._id
+    }, function(err, data) {
+      if (err) {
+        callback("ERR", data);
+      } else {
         console.log(data);
         data.Api.pull(data._id);
       }
@@ -84,6 +84,48 @@ var models = {
         callback(null, data);
       }
     });
+  },
+  callApi: function(project, url, jsonData, callback) {
+    Project.findOne({
+      alias: project,
+    }, function(err, data) {
+      if (err) {
+        callback("ERR", data);
+      } else {
+        if (_.isEmpty(data)) {
+          callback("ERR", data);
+        } else {
+          Api.find({
+            url: url,
+          }, function(err, data) {
+
+            if (_.isEmpty(data)) {
+              callback("ERROR", data);
+            } else {
+              var iscallback = false;
+              _.each(data, function(n) {
+                var obj = JSON.parse(_.unescape(n.Response.request));
+                console.log(obj);
+                console.log(jsonData);
+                if (_.isEqual(obj, jsonData)) {
+                  iscallback = true;
+                  callback(err, n);
+                }
+
+              });
+              if (!iscallback) {
+                callback("ERR",null);
+              }
+
+            }
+
+
+          });
+        }
+
+      }
+    });
+
   }
 
 };
