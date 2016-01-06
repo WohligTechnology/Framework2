@@ -23,7 +23,10 @@
 process.chdir(__dirname);
 var mongoose;
 mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/framework2');
+mongoose.connect('mongodb://localhost:27017/framework2',function(err) {
+  console.log("CHINTAN");
+  console.log(err);
+});
 // Ensure a "sails" can be located:
 (function() {
   var sails;

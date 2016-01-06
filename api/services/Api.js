@@ -13,7 +13,7 @@ var schema = new Schema({
       session: String,
       comment: String
     },
-    index: true
+    index: false
   },
   comment: String
 });
@@ -63,27 +63,27 @@ var models = {
     }
   },
   deleteData: function(data, callback) {
-    Project.findOne({
+    Project.findOneAndUpdate({
       "Api": data._id
-    }, function(err, data) {
-      if (err) {
-        callback("ERR", data);
-      } else {
-        console.log(data);
-        data.Api.pull(data._id);
+    }, {
+      $pull: {
+        Api: data._id
       }
-    });
-    Api.findOneAndRemove({
-      _id: data._id
     }, function(err, data) {
 
-      if (err) {
-        callback(err, false);
-      } else {
-        console.log(data);
-        callback(null, data);
-      }
+      Api.findOneAndRemove({
+        _id: data._id
+      }, function(err, data) {
+
+        if (err) {
+          callback(err, false);
+        } else {
+          callback(null, data);
+        }
+      });
+
     });
+
   },
   callApi: function(project, url, jsonData, callback) {
     Project.findOne({
@@ -105,8 +105,7 @@ var models = {
               var iscallback = false;
               _.each(data, function(n) {
                 var obj = JSON.parse(_.unescape(n.Response.request));
-                console.log(obj);
-                console.log(jsonData);
+
                 if (_.isEqual(obj, jsonData)) {
                   iscallback = true;
                   callback(err, n);
@@ -114,7 +113,7 @@ var models = {
 
               });
               if (!iscallback) {
-                callback("ERR",null);
+                callback("ERR", null);
               }
 
             }

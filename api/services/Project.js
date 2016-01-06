@@ -11,14 +11,16 @@ var schema = new Schema({
     ref: 'Api',
     index: true
   }]
-});
+}); 
 
 module.exports = mongoose.model('Project', schema);
 var models = {
   saveData: function(data, callback) {
     var project = this(data);
     if (data._id) {
-      this.findOneAndUpdate({_id:data._id},data,callback);
+      this.findOneAndUpdate({
+        _id: data._id
+      }, data, callback);
     } else {
       project.save(function(err, data) {
         if (err) {
@@ -33,6 +35,7 @@ var models = {
     this.findOneAndRemove({
       _id: data._id
     }, function(err, data) {
+
       if (err) {
         callback(err, false);
       } else {
@@ -40,11 +43,13 @@ var models = {
       }
     });
   },
-  getAll: function(data,callback) {
+  getAll: function(data, callback) {
     this.find().exec(callback);
   },
-  getOne: function(data,callback) {
-    this.findOne({"_id":data._id}).populate('Api').exec(callback);
+  getOne: function(data, callback) {
+    this.findOne({
+      "_id": data._id
+    }).populate('Api').exec(callback);
   }
 
 };

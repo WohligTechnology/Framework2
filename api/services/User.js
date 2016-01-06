@@ -32,14 +32,11 @@ var models = {
     this.count({
       "email": data.email
     }).exec(function(err, data2) {
-      console.log(err);
-      console.log(data);
       if (err) {
         callback(err,data);
       } else {
-        console.log(data2);
         var user = this(data);
-        if(data2 == 0) {
+        if(data2 === 0) {
           user.save(function(err,data3) {
             callback(err,data3);
           });
