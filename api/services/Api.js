@@ -86,8 +86,6 @@ var models = {
 
   },
   callApi: function(project, url, jsonData, callback) {
-    console.log("CHECK@");
-    console.log(jsonData);
     Project.findOne({
       alias: project,
     }, function(err, data) {
@@ -106,9 +104,6 @@ var models = {
             } else {
               var iscallback = false;
               _.each(data, function(n) {
-                console.log("CHECKING");
-                console.log(n.Response.request);
-                console.log(data);
                 if(_.isEmpty(jsonData)) {
                   if(_.isEmpty(n.Response.request)) {
                     iscallback = true;

@@ -47,9 +47,7 @@ module.exports = {
           value: false
         });
       } else {
-        console.log(data);
         var str = JSON.parse(_.unescape(data.Response.response));
-        console.log(str);
         res.json(str);
       }
 
