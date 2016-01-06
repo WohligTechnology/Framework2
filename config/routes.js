@@ -35,7 +35,7 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   },
-  '/callApi/:project/:controller/:function': 'ApiController.callApi'
+  '/callApi/:project/:controller/:function?*': 'ApiController.callApi'
 
   /***************************************************************************
   *                                                                          *

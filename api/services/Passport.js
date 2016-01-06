@@ -52,7 +52,7 @@ module.exports.use(new FacebookStrategy({
             "status": 1
           };
 
-          if (data.length != 0) {
+          if (data.length !== 0) {
             done(err, data);
           } else {
             var user = User(usertemp);
