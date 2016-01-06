@@ -86,6 +86,8 @@ var models = {
 
   },
   callApi: function(project, url, jsonData, callback) {
+    console.log("CHECK@");
+    console.log(jsonData);
     Project.findOne({
       alias: project,
     }, function(err, data) {
@@ -98,18 +100,31 @@ var models = {
           Api.find({
             url: url,
           }, function(err, data) {
-
+            console.log(data);
             if (_.isEmpty(data)) {
               callback("ERROR", data);
             } else {
               var iscallback = false;
               _.each(data, function(n) {
-                var obj = JSON.parse(_.unescape(n.Response.request));
-
-                if (_.isEqual(obj, jsonData)) {
-                  iscallback = true;
-                  callback(err, n);
+                console.log("CHECKING");
+                console.log(n.Response.request);
+                console.log(data);
+                if(_.isEmpty(jsonData)) {
+                  if(_.isEmpty(n.Response.request)) {
+                    iscallback = true;
+                    callback(err,n);
+                  }
                 }
+                else {
+                  if(n.Response.request) {
+                    var obj = JSON.parse(_.unescape(n.Response.request));
+                    if (_.isEqual(obj, jsonData)) {
+                      iscallback = true;
+                      callback(err, n);
+                    }
+                  }
+                }
+
 
               });
               if (!iscallback) {

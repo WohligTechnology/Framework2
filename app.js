@@ -23,9 +23,10 @@
 process.chdir(__dirname);
 var mongoose;
 mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/framework2',function(err) {
-  console.log("CHINTAN");
-  console.log(err);
+mongoose.connect('mongodb://localhost:27017/framework2', function(err) {
+  if (err) {
+    console.log(err);
+  }
 });
 // Ensure a "sails" can be located:
 (function() {
@@ -56,7 +57,9 @@ mongoose.connect('mongodb://localhost:27017/framework2',function(err) {
       console.error('Your `.sailsrc` file(s) will be ignored.');
       console.error('To resolve this, run:');
       console.error('npm install rc --save');
-      rc = function () { return {}; };
+      rc = function() {
+        return {};
+      };
     }
   }
 
