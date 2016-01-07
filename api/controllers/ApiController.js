@@ -47,8 +47,12 @@ module.exports = {
           value: false
         });
       } else {
-        var str = JSON.parse(_.unescape(data.Response.response));
-        res.json(str);
+        if (data.Response.response) {
+          var str = JSON.parse(_.unescape(data.Response.response));
+          res.json(str);
+        } else {
+          res.json(data.Response.response);
+        }
       }
 
     }

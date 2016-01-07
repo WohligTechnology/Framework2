@@ -98,7 +98,6 @@ var models = {
           Api.find({
             url: url,
           }, function(err, data) {
-            console.log(data);
             if (_.isEmpty(data)) {
               callback("ERROR", data);
             } else {
