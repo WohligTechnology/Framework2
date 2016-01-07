@@ -1,0 +1,1 @@
+{ "_id" : { "$oid" : "567aa6e41c80c3420746d737" }, "name" : "Chintan Shah", "status" : 1, "oauthLogin" : [ { "socialId" : "121427044", "socialProvider" : "twitter", "_id" : { "$oid" : "567aa6e41c80c3420746d738" } } ], "notification" : [  ], "__v" : 0 }
