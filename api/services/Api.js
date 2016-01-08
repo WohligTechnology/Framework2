@@ -102,20 +102,21 @@ var models = {
             } else {
               var iscallback = false;
               _.each(data, function(n) {
-                if(_.isEmpty(jsonData)) {
-                  if(_.isEmpty(n.Response.request)) {
-                    iscallback = true;
-                    callback(err,n);
-                    return 0;
-                  }
-                }
-                else {
-                  if(n.Response.request) {
-                    var obj = JSON.parse(_.unescape(n.Response.request));
-                    if (_.isEqual(obj, jsonData)) {
+                if (!iscallback) {
+                  if (_.isEmpty(jsonData)) {
+                    if (_.isEmpty(n.Response.request)) {
                       iscallback = true;
                       callback(err, n);
                       return 0;
+                    }
+                  } else {
+                    if (n.Response.request) {
+                      var obj = JSON.parse(_.unescape(n.Response.request));
+                      if (_.isEqual(obj, jsonData)) {
+                        iscallback = true;
+                        callback(err, n);
+                        return 0;
+                      }
                     }
                   }
                 }
