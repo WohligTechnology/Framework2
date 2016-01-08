@@ -1,36 +1,431 @@
-{ "_id" : { "$oid" : "56875334e00daa4deddf5b67" }, "Response" : { "response" : "{\n    \"value\":true\n}", "request" : "{\n    \"name\":\"Sohan\",\n    \"email\":\"sohan@wohlig.com\",\n    \"password\":\"Sohan123\"\n}" }, "name" : "Create User Case 1", "type" : "post", "url" : "user/create", "comment" : "This is perfect Case", "__v" : 0 }
-{ "_id" : { "$oid" : "56876d4ce00daa4deddf5b69" }, "Response" : { "response" : "{\n    \"value\":\"test2\"\n}", "request" : "{\n    \"name\":\"Jagruti\"\n}" }, "name" : "create user case 1", "type" : "post", "url" : "json/createUser", "comment" : "this is ideal case", "__v" : 0 }
-{ "_id" : { "$oid" : "56876dc4e00daa4deddf5b6a" }, "Response" : { "response" : "{\n    \"value\":\"false\"\n}", "request" : "{\n}" }, "name" : "create user Error", "type" : "post", "url" : "json/createUser", "comment" : "for error", "__v" : 0 }
-{ "_id" : { "$oid" : "568a0af0eea180360a91084c" }, "Response" : { "response" : "{\n    \"value\":\"true\"\n}", "request" : "{\n    \"name\":\"Jagruti\",\n    \"email\":\"jagruti@wohlig.com\",\n    \"password\":\"jagruti123\"\n}" }, "name" : "create User case 1", "type" : "post", "url" : "user/create", "comment" : "Perfect insertion case", "__v" : 0 }
-{ "_id" : { "$oid" : "568a0ba3eea180360a91084d" }, "Response" : { "response" : "{\n    \"value\":false,\n    \"error\":\"User already Created\"\n}", "request" : "{\n    \"name\":\"Chintan\",\n    \"email\":\"chintan@wohlig.com\",\n    \"password\":\"chintan\"\n}" }, "name" : "create User case 2", "type" : "post", "url" : "user/create", "__v" : 0 }
-{ "_id" : { "$oid" : "568a0c7ceea180360a91084f" }, "Response" : { "response" : "", "request" : "" }, "name" : "chinatn2", "type" : "post", "url" : "ddd/dddd", "__v" : 0 }
-{ "_id" : { "$oid" : "568cb02e30da9499a69a0b29" }, "Response" : { "response" : "[\n    {\n    \"id\":1,\n    \"src\":\"slide1.jpg\",\n    \"heading\":\"CUSTOMIZED BATS\",\n    \"subheading\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\"\n    },\n    {\n    \"id\":2,\n    \"src\":\"slide2.jpg\",\n    \"heading\":\"customized bags\",\n    \"subheading\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\"\n    }\n]", "request" : "" }, "name" : "getSlide", "type" : "post", "url" : "json/getSlide", "__v" : 0, "comment" : " images and data should be as itis in the ui" }
-{ "_id" : { "$oid" : "568cb65d30da9499a69a0b2a" }, "Response" : { "response" : "[\n    {\n    \"id\":1,\n    \"name\":\"Bats\",\n    \"order\":0\n},\n    {\n    \"id\":2,\n    \"name\":\"Balls\",\n\"order\":1\n    },\n    {\n    \"id\":3,\n    \"name\":\"Gloves\",\n    \"order\":2\n},\n    {\n    \"id\":4,\n    \"name\":\"Pads\",\n    \"order\":3\n    \n},\n    {\n    \"id\":5,\n    \"name\":\"Apparels\",\n    \"order\":4\n},\n    {\n    \"id\":6,\n    \"name\":\"Kit Bags\",\n    \"order\":5\n}\n]", "request" : "" }, "name" : "getCategory", "type" : "post", "url" : "json/getCategory", "__v" : 0 }
-{ "_id" : { "$oid" : "568cb98030da9499a69a0b2d" }, "Response" : { "response" : "{\r\n    \"product\": {\r\n        \"id\": 1,\r\n        \"name\": \"PLAYING T-SHIRTS\",\r\n        \"price\": 900,\r\n        \"description\": \"The Custom Cricket company cricket shirt is made from wicking fabric that lifts moisture from your body. Tested and built to perform in warm and cold climate conditions. It features the Custom Cricket company on the right chest and at the centre back of the tees.\",\r\n        \"details\": \"The Custom Cricket company cricket shirt is made from wicking fabric that lifts moisture from your body. Tested and built to perform in warm and cold climate conditions. It features the Custom Cricket company on the right chest and at the centre back of the tees.\",\r\n        \"delivery\": \"<ol type='1'><li> Delivery within 4 weeks depending on your exact delivery location. On placing your order, you will receive an email containing a summary of the order and also a more accurate delivery date. Sometimes, delivery may take longer due to- bad weather, flight delays, political disruptions or other unforeseen circumstances.* (Link to terms & conditions)</li><li> All our indicated prices do not include VAT. Promotional sporting goods shipped from India are VAT free.</li><li>We are a registered Import/ Export proprietorship with its head office in Mumbai, India.</li></ol>\",\r\n        \"care\": \"Wash when dirty, not too hot, not too cold\",\r\n        \"color\": 1,\r\n        \"colorname\": \"red\",\r\n        \"size\": 2,\r\n        \"sizename\": \"xl\",\r\n        \"firstsaleprice\": 800,\r\n        \"quantity\":0\r\n    },\r\n    \"productimages\": [{\r\n        \"id\": 1,\r\n        \"image\": \"img/detail/d1.jpg\"\r\n }, {\r\n        \"id\": 2,\r\n        \"image\": \"img/detail/d2.jpg\"\r\n }],\r\n    \"color\": [{\r\n        \"id\": 1,\r\n        \"name\": \"red\"\r\n }, {\r\n        \"id\": 3,\r\n        \"name\": \"green\"\r\n }],\r\n    \"size\": [{\r\n        \"id\": 1,\r\n        \"name\": \"xl\"\r\n }, {\r\n        \"id\": 2,\r\n        \"name\": \"xxl\"\r\n }]\r\n}\r\n", "request" : "" }, "name" : "getProductDetail", "type" : "get", "url" : "json/getProductDetail?id=1", "__v" : 0 }
-{ "_id" : { "$oid" : "568cbcd5b46e1216021a2124" }, "Response" : { "response" : "[\n    {\n    \"id\":1,\n    \"name\":\"PLAYING T-SHIRTS\",\n    \"image1\":\"apparels/playingtshirt.png\",\n    \"image2\":\"\",\n    \"type\":1,\n    \"order\":1,\n    \"status\":2\n},{\n    \"id\":2,\n    \"name\":\"SWEATSHIRTS\",\n    \"image1\":\"\",\n    \"image2\":\"apparels/sweatshirt.png\",\n    \"type\":2,\n    \"order\":2,\n    \"status\":2\n},{\n    \"id\":3,\n    \"name\":\"TRAINING SHORTS\",\n    \"image1\":\"\",\n    \"image2\":\"apparels/trainingshorts.png\",\n    \"type\":2,\n    \"order\":3,\n    \"status\":2\n},{\n    \"id\":4,\n    \"name\":\"TRACKSUIT TROUSER\",\n    \"image1\":\"\",\n    \"image2\":\"apparels/tracksuit.png\",\n    \"type\":2,\n    \"order\":4,\n    \"status\":2\n},{\n    \"id\":5,\n    \"name\":\"POLOS\",\n    \"image1\":\"\",\n    \"image2\":\"apparels/polos.png\",\n    \"type\":2,\n    \"order\":5,\n    \"status\":2\n},{\n    \"id\":6,\n    \"name\":\"TRACKSUIT TOP\",\n    \"image1\":\"apparels/tracksuit-top.png\",\n    \"image2\":\"\",\n    \"type\":1,\n    \"order\":6,\n    \"status\":2\n}\n]", "request" : "" }, "name" : "getSubCategory", "url" : "json/getSubCategory?name=Bats", "type" : "post", "comment" : "Ideal case. When the category exists. Image field is the image to be put in background for each category. see page /categories", "__v" : 0 }
-{ "_id" : { "$oid" : "568cc2f2b46e1216021a2125" }, "Response" : { "response" : "[{\n    \"id\":1,\n    \"name\":\"Sweatshirt 1\",\n    \"image\":\"sweatshirts/sweatshirt1.png\",\n    \"quantity\":50\n},{\n    \"id\":2,\n    \"name\":\"Sweatshirt 2\",\n    \"image\":\"sweatshirts/sweatshirt2.png\",\n    \"quantity\":50\n},{\n    \"id\":3,\n    \"name\":\"Sweatshirt 3\",\n    \"image\":\"sweatshirts/sweatshirt3.png\",\n    \"quantity\":1\n},{\n    \"id\":4,\n    \"name\":\"Sweatshirt 4\",\n    \"image\":\"sweatshirts/sweatshirt4.png\",\n    \"quantity\":0\n}]", "request" : "" }, "name" : "getProductBySubCategory", "type" : "get", "url" : "json/getProductBySubCategory?name=SWEATSHIRTS", "__v" : 0, "comment" : "The Product page only has name and product image and nothing else. Hence only these details" }
-{ "_id" : { "$oid" : "568cc65db46e1216021a212a" }, "Response" : { "response" : "{\n    \"value\":false,\n    \"comment\":\"already in cart\"\n}", "request" : "{\n    \"product\":1,\n    \"quantity\":2,\n    \"json\":\"{product:1,quantity:2}\"\n}" }, "name" : "addToCart (already in cart)", "type" : "post", "url" : "json/addToCart", "comment" : "add to cart case 1", "__v" : 0 }
-{ "_id" : { "$oid" : "568cc72db46e1216021a212b" }, "Response" : { "response" : "{\n    \"value\":true\n}", "request" : "{\n    \"product\":1,\n    \"quantity\":2,\n    \"json\":\"{product:1,quantity:2}\"\n}" }, "name" : "addToCart(added to cart)", "type" : "post", "url" : "json/addToCart", "comment" : "addto cart case 2", "__v" : 0 }
-{ "_id" : { "$oid" : "568cc7d8b46e1216021a212c" }, "Response" : { "response" : "{\n    \"value\":false,\n    \"comment\":\"quantity not available\"\n}", "request" : "{\n    \"product\":1,\n    \"quantity\":2,\n    \"json\":\"{product:1,quantity:2}\"\n}" }, "name" : "addToCart(quantity not available)", "type" : "post", "url" : "addToCart", "comment" : "addtocart case 3", "__v" : 0 }
-{ "_id" : { "$oid" : "568cc8cdb46e1216021a212d" }, "Response" : { "response" : "5", "request" : "" }, "name" : "getWishlistCount", "type" : "post", "url" : "getWishlistCount", "comment" : "if no wishlist then return 0", "__v" : 0 }
-{ "_id" : { "$oid" : "568ccb53b46e1216021a212e" }, "Response" : { "response" : "{\n    \"value\":true\n}", "request" : "{\n    \"email\":\"wohlig@wohlig.com\",\n    \"password\":\"chintan123!@#\"\n}" }, "name" : "login success", "type" : "post", "url" : "login", "__v" : 0 }
-{ "_id" : { "$oid" : "568ccbdcb46e1216021a212f" }, "Response" : { "response" : "{\n    \"value\":false,\n    \"comment\":\"email or password in invalid\"\n}", "request" : "{\n    \"email\":\"chintan@wohlig.com\",\n    \"password\":\"chirag123\"\n}" }, "name" : "login invalid data", "url" : "login", "type" : "post", "comment" : "", "__v" : 0 }
-{ "_id" : { "$oid" : "568cce80b46e1216021a2131" }, "Response" : { "response" : "{\n \"quantity\":2,\n \"amount\":345\n}", "request" : "" }, "name" : "getCartCount(if in cart)", "type" : "post", "url" : "getCartCount", "__v" : 0 }
-{ "_id" : { "$oid" : "568ccea9b46e1216021a2132" }, "Response" : { "response" : "{\n    \"value\":false\n}", "request" : "" }, "name" : "getCartCount(not in cart)", "type" : "post", "url" : "getCartCount", "__v" : 0 }
-{ "_id" : { "$oid" : "568ccecdb46e1216021a2133" }, "Response" : { "response" : "{\r\n    \"id\": \"7\",\r\n    \"name\": null,\r\n    \"email\": \"rohanwohlig@gmail.com\",\r\n    \"accesslevel\": null,\r\n    \"timestamp\": \"2016-01-07 16:02:30\",\r\n    \"status\": null,\r\n    \"image\": null,\r\n    \"username\": \"\",\r\n    \"socialid\": \"\",\r\n    \"logintype\": \"\",\r\n    \"json\": \"\",\r\n    \"firstname\": \"Rohan\",\r\n    \"lastname\": \"Gada\",\r\n    \"phone\": \"\",\r\n    \"billingaddress\": \"\",\r\n    \"billingcity\": \"\",\r\n    \"billingstate\": \"\",\r\n    \"billingcountry\": \"\",\r\n    \"billingcontact\": \"\",\r\n    \"billingpincode\": \"\",\r\n    \"shippingaddress\": \"\",\r\n    \"shippingcity\": \"\",\r\n    \"shippingcountry\": \"\",\r\n    \"shippingstate\": \"\",\r\n    \"shippingpincode\": \"\",\r\n    \"shippingname\": \"\",\r\n    \"shippingcontact\": \"\",\r\n    \"currency\": \"\",\r\n    \"credit\": \"\",\r\n    \"companyname\": \"\",\r\n    \"registrationno\": \"\",\r\n    \"vatnumber\": \"\",\r\n    \"country\": \"\",\r\n    \"fax\": \"\",\r\n    \"gender\": \"0\",\r\n    \"facebook\": \"\",\r\n    \"google\": \"\",\r\n    \"twitter\": \"\",\r\n    \"street\": \"\",\r\n    \"address\": \"\",\r\n    \"pincode\": \"\",\r\n    \"state\": \"\",\r\n    \"dob\": \"0000-00-00\",\r\n    \"city\": \"\"\r\n}", "request" : "{\n    \"firstname\":\"Rohan\",\n    \"lastname\":\"Gada\",\n    \"email\":\"rohanwohlig@gmail.com\",\n    \"password\":\"rohan123!@#\"\n}" }, "name" : "signup success", "url" : "signup", "type" : "post", "__v" : 0 }
-{ "_id" : { "$oid" : "568ccf38b46e1216021a2134" }, "Response" : { "response" : "{\n    \"value\":false,\n    \"comment\":\"Email already exists.\"\n}", "request" : "{\n    \"firstname\":\"Rohan\",\n    \"lastname\":\"Gada\",\n    \"email\":\"rohanwohlig@gmail.com\",\n    \"password\":\"rohan123!@#\"\n}" }, "name" : "signup invalid data", "url" : "signup", "type" : "post", "__v" : 0 }
-{ "_id" : { "$oid" : "568ce065c6b563fe0784abde" }, "Response" : { "response" : "{\n    \"value\":true\n}", "request" : "{\n    \"user\":1,\n    \"password\":\"wohlig123!@#\",\n    \"newpassword\":\"chintan123@#\"\n}" }, "name" : "changePassword success", "type" : "post", "url" : "changePassword", "__v" : 0 }
-{ "_id" : { "$oid" : "568ce0eac6b563fe0784abdf" }, "Response" : { "response" : "{\n \"value\":false,\n \"comment\":\"Password incorrect\"\n}", "request" : "{\n    \"user\":1,\n    \"password\":\"woh123!@#\",\n    \"newpassword\":\"chintan123!@#\"\n}" }, "name" : "changePassword invalid data", "type" : "post", "url" : "changePassword", "__v" : 0 }
-{ "_id" : { "$oid" : "568ce3b68b602dee08c19a5e" }, "Response" : { "response" : "[{\n    \"id\":3,\n    \"transactionid\":\"sdf698767sdf\",\n    \"date\":\"5.9.15\",\n    \"amount\":1234,\n    \"status\":\"DISPATCHED\"\n},{\n    \"id\":4,\n    \"transactionid\":\"sdf698767sdf\",\n    \"date\":\"5.9.15\",\n    \"amount\":1234,\n    \"status\":\"DISPATCHED\"\n}]", "request" : "" }, "name" : "getOrders", "type" : "get", "url" : "json/getOrders", "__v" : 0 }
-{ "_id" : { "$oid" : "568ce3e736c70cfb08ed6ae3" }, "Response" : { "response" : "{\n    \"value\":false\n}", "request" : "" }, "name" : "getOrders(no orders)", "type" : "post", "url" : "getOrders", "__v" : 0 }
-{ "_id" : { "$oid" : "568cf0e33443d154095a0dfc" }, "Response" : { "response" : "{\n    \"value\":true\n}", "request" : "{\n    \"cart\":1\n}" }, "name" : "removeFromCart", "url" : "removeFromCart", "type" : "post", "__v" : 0 }
-{ "_id" : { "$oid" : "568cf4513443d154095a0dfd" }, "Response" : { "response" : "5", "request" : "" }, "name" : "placeOrder", "type" : "post", "url" : "placeOrder", "__v" : 0 }
-{ "_id" : { "$oid" : "568cf9d93443d154095a0dfe" }, "Response" : { "response" : "", "request" : "" }, "name" : "demo", "url" : "deno", "__v" : 0 }
-{ "_id" : { "$oid" : "568cfc263443d154095a0e00" }, "Response" : { "response" : "", "request" : "" }, "name" : "tutor", "type" : "delete", "url" : "turoe", "__v" : 0 }
-{ "_id" : { "$oid" : "568d5e3c9bb3bbbf0cb733af" }, "Response" : { "response" : "{\n    \"value\":\"android\"\n}", "request" : "" }, "name" : "create user case 2", "type" : "post", "url" : "json/createUser", "comment" : "this is ideal case", "__v" : 0 }
-{ "_id" : { "$oid" : "568d71768ceb34dd0f2f7ec0" }, "name" : "tutor2", "Response" : { "response" : "", "request" : "" }, "url" : "tutor2", "__v" : 0 }
-{ "_id" : { "$oid" : "568e1db0f20c191e02291485" }, "name" : "getTestimonial", "Response" : { "response" : "[{\r\n                \"image\": \"img/manan.png\",\r\n                \"name\": \"manan vora\",\r\n                \"location\":\"Mumbai,Maharashtra\",\r\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\"\r\n      },\r\n            {\r\n                \"image\": \"img/manan.png\",\r\n                \"name\": \"Viraj\",\r\n                \"location\":\"Mumbai,Maharashtra\",\r\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\"\r\n}]", "request" : "" }, "url" : "json/getTestimonial", "type" : "get", "__v" : 0 }
-{ "_id" : { "$oid" : "568e3f21f20c191e02291486" }, "Response" : { "response" : "[]", "request" : "" }, "name" : "getProductBySubCategory(empty array)", "type" : "get", "url" : "json/getProductBySubCategory?name=POLOS", "__v" : 0, "comment" : "if there is no product" }
-{ "_id" : { "$oid" : "568e62840d2ea7200a7bf341" }, "name" : "getWishlist", "Response" : { "response" : "[{\n    \"id\":1,\n    \"image\":\"\",\n    \"name\":\"SPACE PRINT SLIM FIT T-SHIRT\",\n    \"colour\":\"White\",\n    \"size\":\"M\",\n    \"quantity\":2,\n    \"subtotal\":700\n},{\n    \"id\":2,\n    \"image\":\"\",\n    \"name\":\"SPACE PRINT SLIM FIT T-SHIRT\",\n    \"colour\":\"White\",\n    \"size\":\"M\",\n    \"quantity\":2,\n    \"subtotal\":700\n}]", "request" : "" }, "url" : "json/getWishlist", "type" : "get", "__v" : 0 }
-{ "_id" : { "$oid" : "568e62840d2ea7200a7bf342" }, "name" : "getWishlist", "Response" : { "response" : "[{\n    \"id\":1,\n    \"image\":\"\",\n    \"name\":\"SPACE PRINT SLIM FIT T-SHIRT\",\n    \"colour\":\"White\",\n    \"size\":\"M\",\n    \"quantity\":2,\n    \"subtotal\":700\n},{\n    \"id\":2,\n    \"image\":\"\",\n    \"name\":\"SPACE PRINT SLIM FIT T-SHIRT\",\n    \"colour\":\"White\",\n    \"size\":\"M\",\n    \"quantity\":2,\n    \"subtotal\":700\n}]", "request" : "" }, "url" : "json/getWishlist", "type" : "get", "__v" : 0 }
-{ "_id" : { "$oid" : "568f507f16ceaa8a02d02a68" }, "Response" : { "response" : "{\n    \"value\":false\n}", "request" : "{\n    \"billingcity\": \"Ahmedabad\",\n    \"billingcountry\": \"IND\",\n    \"billingline1\": \"demo\",\n    \"billingline2\": \"emo\",\n    \"billingline3\": \"demo\",\n    \"billingpincode\": \"380009\",\n    \"billingstate\": \"Gujarat\",\n    \"cart\":[{\n        \"id\": \"11\",\n        \"image\": \"Switcheasy_Numbers_Apple_iphone_6S_Frost_White_1.jpeg\",\n        \"maxQuantity\": \"1\",\n        \"name\": \"1\",\n        \"options\":{\n            \"productquantity\": \"1\",\n        \"realname\": \"Switcheasy Numbers Back Case For Apple iphone 6S - Frost White\"\n        },\n        \"price\": \"1200\",\n        \"qty\": \"1\",\n        \"rowid\": \"3b9e09b0353c5564832354a629ece37c\",\n        \"subtotal\": 1200\n        }],\n    \"email\": \"wohlig@wohlig.com\",\n    \"firstname\": \"Parin\",\n    \"id\": \"2\",\n    \"lastname\": \"Visariya\",\n    \"phone\": \"9898987898\",\n    \"user\": 0\n}" }, "name" : "placeOrder(case 2 error )", "type" : "post", "url" : "placeOrder", "__v" : 0, "comment" : "Any Error " }
+{ 
+    "_id" : ObjectId("568cb98030da9499a69a0b2d"), 
+    "Response" : {
+        "response" : "{\r\n    \"product\": {\r\n        \"id\": 2,\r\n        \"name\": \"PLAYING T-SHIRTS\",\r\n        \"price\": 900,\r\n        \"description\": \"The Custom Cricket company cricket shirt is made from wicking fabric that lifts moisture from your body. Tested and built to perform in warm and cold climate conditions. It features the Custom Cricket company on the right chest and at the centre back of the tees.\",\r\n        \"details\": \"The Custom Cricket company cricket shirt is made from wicking fabric that lifts moisture from your body. Tested and built to perform in warm and cold climate conditions. It features the Custom Cricket company on the right chest and at the centre back of the tees.\",\r\n        \"delivery\": \"<ol type='1'><li> Delivery within 4 weeks depending on your exact delivery location. On placing your order, you will receive an email containing a summary of the order and also a more accurate delivery date. Sometimes, delivery may take longer due to- bad weather, flight delays, political disruptions or other unforeseen circumstances.* (Link to terms & conditions)</li><li> All our indicated prices do not include VAT. Promotional sporting goods shipped from India are VAT free.</li><li>We are a registered Import/ Export proprietorship with its head office in Mumbai, India.</li></ol>\",\r\n        \"care\": \"Wash when dirty, not too hot, not too cold\",\r\n        \"color\": 1,\r\n        \"colorname\": \"red\",\r\n        \"size\": 2,\r\n        \"sizename\": \"xl\",\r\n        \"firstsaleprice\": 800,\r\n        \"quantity\":1\r\n    },\r\n    \"productimages\": [{\r\n        \"id\": 1,\r\n        \"image\": \"img/detail/d1.jpg\"\r\n }, {\r\n        \"id\": 2,\r\n        \"image\": \"img/detail/d2.jpg\"\r\n }],\r\n    \"color\": [{\r\n        \"id\": 1,\r\n        \"name\": \"red\"\r\n }, {\r\n        \"id\": 3,\r\n        \"name\": \"green\"\r\n }],\r\n    \"size\": [{\r\n        \"id\": 1,\r\n        \"name\": \"xl\"\r\n }, {\r\n        \"id\": 2,\r\n        \"name\": \"xxl\"\r\n }]\r\n}\r\n", 
+        "request" : ""
+    }, 
+    "name" : "getProductDetail(check cart)", 
+    "type" : "get", 
+    "url" : "json/getProductDetail?id=2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cc2f2b46e1216021a2125"), 
+    "Response" : {
+        "response" : "[{\n    \"id\":1,\n    \"name\":\"Sweatshirt 1\",\n    \"image\":\"sweatshirts/sweatshirt1.png\",\n    \"quantity\":50\n},{\n    \"id\":2,\n    \"name\":\"Sweatshirt 2\",\n    \"image\":\"sweatshirts/sweatshirt2.png\",\n    \"quantity\":50\n},{\n    \"id\":3,\n    \"name\":\"Sweatshirt 3\",\n    \"image\":\"sweatshirts/sweatshirt3.png\",\n    \"quantity\":1\n},{\n    \"id\":4,\n    \"name\":\"Sweatshirt 4\",\n    \"image\":\"sweatshirts/sweatshirt4.png\",\n    \"quantity\":0\n}]", 
+        "request" : ""
+    }, 
+    "name" : "getProductBySubCategory", 
+    "type" : "get", 
+    "url" : "json/getProductBySubCategory?name=SWEATSHIRTS", 
+    "__v" : NumberInt(0), 
+    "comment" : "The Product page only has name and product image and nothing else. Hence only these details"
+}
+{ 
+    "_id" : ObjectId("568ce0eac6b563fe0784abdf"), 
+    "Response" : {
+        "response" : "{\n \"value\":false,\n \"comment\":\"Password incorrect\"\n}", 
+        "request" : "{\n    \"user\":1,\n    \"password\":\"woh123!@#\",\n    \"newpassword\":\"chintan123!@#\"\n}"
+    }, 
+    "name" : "changePassword invalid data", 
+    "type" : "post", 
+    "url" : "changePassword", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ce3b68b602dee08c19a5e"), 
+    "Response" : {
+        "response" : "[{\n    \"id\":3,\n    \"transactionid\":\"sdf698767sdf\",\n    \"date\":\"5.9.15\",\n    \"amount\":1234,\n    \"status\":\"DISPATCHED\"\n},{\n    \"id\":4,\n    \"transactionid\":\"sdf698767sdf\",\n    \"date\":\"5.9.15\",\n    \"amount\":1234,\n    \"status\":\"DISPATCHED\"\n}]", 
+        "request" : ""
+    }, 
+    "name" : "getOrders", 
+    "type" : "get", 
+    "url" : "json/getOrders", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cfc263443d154095a0e00"), 
+    "Response" : {
+        "response" : "", 
+        "request" : ""
+    }, 
+    "name" : "tutor", 
+    "type" : "delete", 
+    "url" : "turoe", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568d5e3c9bb3bbbf0cb733af"), 
+    "Response" : {
+        "response" : "{\n    \"value\":\"android\"\n}", 
+        "request" : ""
+    }, 
+    "name" : "create user case 2", 
+    "type" : "post", 
+    "url" : "json/createUser", 
+    "comment" : "this is ideal case", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568e3f21f20c191e02291486"), 
+    "Response" : {
+        "response" : "[]", 
+        "request" : ""
+    }, 
+    "name" : "getProductBySubCategory(empty array)", 
+    "type" : "get", 
+    "url" : "json/getProductBySubCategory?name=POLOS", 
+    "__v" : NumberInt(0), 
+    "comment" : "if there is no product"
+}
+{ 
+    "_id" : ObjectId("568e62840d2ea7200a7bf341"), 
+    "name" : "getWishlist", 
+    "Response" : {
+        "response" : "[{\n    \"id\":1,\n    \"image\":\"\",\n    \"name\":\"SPACE PRINT SLIM FIT T-SHIRT\",\n    \"colour\":\"White\",\n    \"size\":\"M\",\n    \"quantity\":2,\n    \"subtotal\":700\n},{\n    \"id\":2,\n    \"image\":\"\",\n    \"name\":\"SPACE PRINT SLIM FIT T-SHIRT\",\n    \"colour\":\"White\",\n    \"size\":\"M\",\n    \"quantity\":2,\n    \"subtotal\":700\n}]", 
+        "request" : ""
+    }, 
+    "url" : "json/getWishlist", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568e62840d2ea7200a7bf342"), 
+    "name" : "getWishlist", 
+    "Response" : {
+        "response" : "[{\n    \"id\":1,\n    \"image\":\"\",\n    \"name\":\"SPACE PRINT SLIM FIT T-SHIRT\",\n    \"colour\":\"White\",\n    \"size\":\"M\",\n    \"quantity\":2,\n    \"subtotal\":700\n},{\n    \"id\":2,\n    \"image\":\"\",\n    \"name\":\"SPACE PRINT SLIM FIT T-SHIRT\",\n    \"colour\":\"White\",\n    \"size\":\"M\",\n    \"quantity\":2,\n    \"subtotal\":700\n}]", 
+        "request" : ""
+    }, 
+    "url" : "json/getWishlist", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56875334e00daa4deddf5b67"), 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"name\":\"Sohan\",\n    \"email\":\"sohan@wohlig.com\",\n    \"password\":\"Sohan123\"\n}"
+    }, 
+    "name" : "Create User Case 1", 
+    "type" : "post", 
+    "url" : "user/create", 
+    "comment" : "This is perfect Case", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56876d4ce00daa4deddf5b69"), 
+    "Response" : {
+        "response" : "{\n    \"value\":\"test2\"\n}", 
+        "request" : "{\n    \"name\":\"Jagruti\"\n}"
+    }, 
+    "name" : "create user case 1", 
+    "type" : "post", 
+    "url" : "json/createUser", 
+    "comment" : "this is ideal case", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56876dc4e00daa4deddf5b6a"), 
+    "Response" : {
+        "response" : "{\n    \"value\":\"false\"\n}", 
+        "request" : "{\n}"
+    }, 
+    "name" : "create user Error", 
+    "type" : "post", 
+    "url" : "json/createUser", 
+    "comment" : "for error", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568a0af0eea180360a91084c"), 
+    "Response" : {
+        "response" : "{\n    \"value\":\"true\"\n}", 
+        "request" : "{\n    \"name\":\"Jagruti\",\n    \"email\":\"jagruti@wohlig.com\",\n    \"password\":\"jagruti123\"\n}"
+    }, 
+    "name" : "create User case 1", 
+    "type" : "post", 
+    "url" : "user/create", 
+    "comment" : "Perfect insertion case", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568a0ba3eea180360a91084d"), 
+    "Response" : {
+        "response" : "{\n    \"value\":false,\n    \"error\":\"User already Created\"\n}", 
+        "request" : "{\n    \"name\":\"Chintan\",\n    \"email\":\"chintan@wohlig.com\",\n    \"password\":\"chintan\"\n}"
+    }, 
+    "name" : "create User case 2", 
+    "type" : "post", 
+    "url" : "user/create", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568a0c7ceea180360a91084f"), 
+    "Response" : {
+        "response" : "", 
+        "request" : ""
+    }, 
+    "name" : "chinatn2", 
+    "type" : "post", 
+    "url" : "ddd/dddd", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cb02e30da9499a69a0b29"), 
+    "Response" : {
+        "response" : "[\n    {\n    \"id\":1,\n    \"src\":\"slide1.jpg\",\n    \"heading\":\"CUSTOMIZED BATS\",\n    \"subheading\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\"\n    },\n    {\n    \"id\":2,\n    \"src\":\"slide2.jpg\",\n    \"heading\":\"customized bags\",\n    \"subheading\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\"\n    }\n]", 
+        "request" : ""
+    }, 
+    "name" : "getSlide", 
+    "type" : "post", 
+    "url" : "json/getSlide", 
+    "__v" : NumberInt(0), 
+    "comment" : " images and data should be as itis in the ui"
+}
+{ 
+    "_id" : ObjectId("568cb65d30da9499a69a0b2a"), 
+    "Response" : {
+        "response" : "[\n    {\n    \"id\":1,\n    \"name\":\"Bats\",\n    \"order\":0\n},\n    {\n    \"id\":2,\n    \"name\":\"Balls\",\n\"order\":1\n    },\n    {\n    \"id\":3,\n    \"name\":\"Gloves\",\n    \"order\":2\n},\n    {\n    \"id\":4,\n    \"name\":\"Pads\",\n    \"order\":3\n    \n},\n    {\n    \"id\":5,\n    \"name\":\"Apparels\",\n    \"order\":4\n},\n    {\n    \"id\":6,\n    \"name\":\"Kit Bags\",\n    \"order\":5\n}\n]", 
+        "request" : ""
+    }, 
+    "name" : "getCategory", 
+    "type" : "post", 
+    "url" : "json/getCategory", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cbcd5b46e1216021a2124"), 
+    "Response" : {
+        "response" : "[\n    {\n    \"id\":1,\n    \"name\":\"PLAYING T-SHIRTS\",\n    \"image1\":\"apparels/playingtshirt.png\",\n    \"image2\":\"\",\n    \"type\":1,\n    \"order\":1,\n    \"status\":2\n},{\n    \"id\":2,\n    \"name\":\"SWEATSHIRTS\",\n    \"image1\":\"\",\n    \"image2\":\"apparels/sweatshirt.png\",\n    \"type\":2,\n    \"order\":2,\n    \"status\":2\n},{\n    \"id\":3,\n    \"name\":\"TRAINING SHORTS\",\n    \"image1\":\"\",\n    \"image2\":\"apparels/trainingshorts.png\",\n    \"type\":2,\n    \"order\":3,\n    \"status\":2\n},{\n    \"id\":4,\n    \"name\":\"TRACKSUIT TROUSER\",\n    \"image1\":\"\",\n    \"image2\":\"apparels/tracksuit.png\",\n    \"type\":2,\n    \"order\":4,\n    \"status\":2\n},{\n    \"id\":5,\n    \"name\":\"POLOS\",\n    \"image1\":\"\",\n    \"image2\":\"apparels/polos.png\",\n    \"type\":2,\n    \"order\":5,\n    \"status\":2\n},{\n    \"id\":6,\n    \"name\":\"TRACKSUIT TOP\",\n    \"image1\":\"apparels/tracksuit-top.png\",\n    \"image2\":\"\",\n    \"type\":1,\n    \"order\":6,\n    \"status\":2\n}\n]", 
+        "request" : ""
+    }, 
+    "name" : "getSubCategory", 
+    "url" : "json/getSubCategory?name=Bats", 
+    "type" : "post", 
+    "comment" : "Ideal case. When the category exists. Image field is the image to be put in background for each category. see page /categories", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cc65db46e1216021a212a"), 
+    "Response" : {
+        "response" : "{\n    \"value\":false,\n    \"comment\":\"already in cart\"\n}", 
+        "request" : "{\n    \"product\":2,\n    \"quantity\":1,\n    \"json\":\"\"\n}"
+    }, 
+    "name" : "addToCart (already in cart)", 
+    "type" : "post", 
+    "url" : "json/addToCart", 
+    "comment" : "add to cart case 1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cc72db46e1216021a212b"), 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"json\":\"\",\n    \"product\":1,\n    \"quantity\":1\n}"
+    }, 
+    "name" : "addToCart(added to cart)", 
+    "type" : "post", 
+    "url" : "json/addToCart", 
+    "comment" : "addto cart case 2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cc7d8b46e1216021a212c"), 
+    "Response" : {
+        "response" : "{\n    \"value\":false,\n    \"comment\":\"quantity not available\"\n}", 
+        "request" : "{\n    \"json\":\"\",\n    \"product\":2,\n    \"quantity\":1\n}"
+    }, 
+    "name" : "addToCart(quantity not available)", 
+    "type" : "post", 
+    "url" : "addToCart", 
+    "comment" : "addtocart case 3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cc8cdb46e1216021a212d"), 
+    "Response" : {
+        "response" : "5", 
+        "request" : ""
+    }, 
+    "name" : "getWishlistCount", 
+    "type" : "post", 
+    "url" : "getWishlistCount", 
+    "comment" : "if no wishlist then return 0", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ccb53b46e1216021a212e"), 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"email\":\"wohlig@wohlig.com\",\n    \"password\":\"chintan123!@#\"\n}"
+    }, 
+    "name" : "login success", 
+    "type" : "post", 
+    "url" : "login", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ccbdcb46e1216021a212f"), 
+    "Response" : {
+        "response" : "{\n    \"value\":false,\n    \"comment\":\"email or password in invalid\"\n}", 
+        "request" : "{\n    \"email\":\"chintan@wohlig.com\",\n    \"password\":\"chirag123\"\n}"
+    }, 
+    "name" : "login invalid data", 
+    "url" : "login", 
+    "type" : "post", 
+    "comment" : "", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cce80b46e1216021a2131"), 
+    "Response" : {
+        "response" : "{\n \"quantity\":2,\n \"amount\":345\n}", 
+        "request" : ""
+    }, 
+    "name" : "getCartCount(if in cart)", 
+    "type" : "post", 
+    "url" : "json/getCartCount", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ccea9b46e1216021a2132"), 
+    "Response" : {
+        "response" : "{\n    \"value\":false\n}", 
+        "request" : ""
+    }, 
+    "name" : "getCartCount(not in cart)", 
+    "type" : "post", 
+    "url" : "json/getCartCount", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ccecdb46e1216021a2133"), 
+    "Response" : {
+        "response" : "{\r\n    \"id\": \"7\",\r\n    \"name\": null,\r\n    \"email\": \"rohanwohlig@gmail.com\",\r\n    \"accesslevel\": null,\r\n    \"timestamp\": \"2016-01-07 16:02:30\",\r\n    \"status\": null,\r\n    \"image\": null,\r\n    \"username\": \"\",\r\n    \"socialid\": \"\",\r\n    \"logintype\": \"\",\r\n    \"json\": \"\",\r\n    \"firstname\": \"Rohan\",\r\n    \"lastname\": \"Gada\",\r\n    \"phone\": \"\",\r\n    \"billingaddress\": \"\",\r\n    \"billingcity\": \"\",\r\n    \"billingstate\": \"\",\r\n    \"billingcountry\": \"\",\r\n    \"billingcontact\": \"\",\r\n    \"billingpincode\": \"\",\r\n    \"shippingaddress\": \"\",\r\n    \"shippingcity\": \"\",\r\n    \"shippingcountry\": \"\",\r\n    \"shippingstate\": \"\",\r\n    \"shippingpincode\": \"\",\r\n    \"shippingname\": \"\",\r\n    \"shippingcontact\": \"\",\r\n    \"currency\": \"\",\r\n    \"credit\": \"\",\r\n    \"companyname\": \"\",\r\n    \"registrationno\": \"\",\r\n    \"vatnumber\": \"\",\r\n    \"country\": \"\",\r\n    \"fax\": \"\",\r\n    \"gender\": \"0\",\r\n    \"facebook\": \"\",\r\n    \"google\": \"\",\r\n    \"twitter\": \"\",\r\n    \"street\": \"\",\r\n    \"address\": \"\",\r\n    \"pincode\": \"\",\r\n    \"state\": \"\",\r\n    \"dob\": \"0000-00-00\",\r\n    \"city\": \"\"\r\n}", 
+        "request" : "{\n    \"firstname\":\"Rohan\",\n    \"lastname\":\"Gada\",\n    \"email\":\"rohanwohlig@gmail.com\",\n    \"password\":\"rohan123!@#\"\n}"
+    }, 
+    "name" : "signup success", 
+    "url" : "signup", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ccf38b46e1216021a2134"), 
+    "Response" : {
+        "response" : "{\n    \"value\":false,\n    \"comment\":\"Email already exists.\"\n}", 
+        "request" : "{\n    \"firstname\":\"Rohan\",\n    \"lastname\":\"Gada\",\n    \"email\":\"rohanwohlig@gmail.com\",\n    \"password\":\"rohan123!@#\"\n}"
+    }, 
+    "name" : "signup invalid data", 
+    "url" : "signup", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ce065c6b563fe0784abde"), 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"user\":1,\n    \"password\":\"wohlig123!@#\",\n    \"newpassword\":\"chintan123@#\"\n}"
+    }, 
+    "name" : "changePassword success", 
+    "type" : "post", 
+    "url" : "changePassword", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ce3e736c70cfb08ed6ae3"), 
+    "Response" : {
+        "response" : "{\n    \"value\":false\n}", 
+        "request" : ""
+    }, 
+    "name" : "getOrders(no orders)", 
+    "type" : "post", 
+    "url" : "getOrders", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cf0e33443d154095a0dfc"), 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"cart\":1\n}"
+    }, 
+    "name" : "removeFromCart", 
+    "url" : "removeFromCart", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cf4513443d154095a0dfd"), 
+    "Response" : {
+        "response" : "5", 
+        "request" : ""
+    }, 
+    "name" : "placeOrder", 
+    "type" : "post", 
+    "url" : "placeOrder", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568cf9d93443d154095a0dfe"), 
+    "Response" : {
+        "response" : "", 
+        "request" : ""
+    }, 
+    "name" : "demo", 
+    "url" : "deno", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568d71768ceb34dd0f2f7ec0"), 
+    "name" : "tutor2", 
+    "Response" : {
+        "response" : "", 
+        "request" : ""
+    }, 
+    "url" : "tutor2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568e1db0f20c191e02291485"), 
+    "name" : "getTestimonial", 
+    "Response" : {
+        "response" : "[{\r\n                \"image\": \"img/manan.png\",\r\n                \"name\": \"manan vora\",\r\n                \"location\":\"Mumbai,Maharashtra\",\r\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\"\r\n      },\r\n            {\r\n                \"image\": \"img/manan.png\",\r\n                \"name\": \"Viraj\",\r\n                \"location\":\"Mumbai,Maharashtra\",\r\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\"\r\n}]", 
+        "request" : ""
+    }, 
+    "url" : "json/getTestimonial", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568f507f16ceaa8a02d02a68"), 
+    "Response" : {
+        "response" : "{\n    \"value\":false\n}", 
+        "request" : "{\n    \"billingcity\": \"Ahmedabad\",\n    \"billingcountry\": \"IND\",\n    \"billingline1\": \"demo\",\n    \"billingline2\": \"emo\",\n    \"billingline3\": \"demo\",\n    \"billingpincode\": \"380009\",\n    \"billingstate\": \"Gujarat\",\n    \"cart\":[{\n        \"id\": \"11\",\n        \"image\": \"Switcheasy_Numbers_Apple_iphone_6S_Frost_White_1.jpeg\",\n        \"maxQuantity\": \"1\",\n        \"name\": \"1\",\n        \"options\":{\n            \"productquantity\": \"1\",\n        \"realname\": \"Switcheasy Numbers Back Case For Apple iphone 6S - Frost White\"\n        },\n        \"price\": \"1200\",\n        \"qty\": \"1\",\n        \"rowid\": \"3b9e09b0353c5564832354a629ece37c\",\n        \"subtotal\": 1200\n        }],\n    \"email\": \"wohlig@wohlig.com\",\n    \"firstname\": \"Parin\",\n    \"id\": \"2\",\n    \"lastname\": \"Visariya\",\n    \"phone\": \"9898987898\",\n    \"user\": 0\n}"
+    }, 
+    "name" : "placeOrder(case 2 error )", 
+    "type" : "post", 
+    "url" : "placeOrder", 
+    "__v" : NumberInt(0), 
+    "comment" : "Any Error "
+}
+{ 
+    "_id" : ObjectId("568fa8618af9c187088266d2"), 
+    "name" : "showCart", 
+    "Response" : {
+        "response" : "[{\n    \"id\": \"433\",\n\"image\": \"Freego_F3_Black_1.jpeg\",\n\"maxQuantity\": \"1\",\n\"name\": \"1\",\n\"options\":{\n    \"realname\": \"Freego F3 Self-Balancing Scooter - Black\"\n    \n},\n\"price\": \"147000\",\n\"qty\": \"2\",\n\"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n\"subtotal\": 294000\n},{\n    \"id\": \"433\",\n\"image\": \"Freego_F3_Black_1.jpeg\",\n\"maxQuantity\": \"1\",\n\"name\": \"1\",\n\"options\":{\n    \"realname\": \"Freego F3 Self-Balancing Scooter - Black\"\n    \n},\n\"price\": \"147000\",\n\"qty\": \"2\",\n\"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n\"subtotal\": 294000\n}]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/showCart", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568fb7a38af9c187088266d4"), 
+    "name" : "showCart", 
+    "Response" : {
+        "response" : "[{\n    \"id\": \"433\",\n\"image\": \"\",\n\"maxQuantity\": \"1\",\n\"name\": \"1\",\n\"colour\": \"White\",\n\"size\": \"M\",\n\"options\":{\n    \"realname\": \"SPACE PRINT SLIM FIT T-SHIRT\"\n},\n\"price\": \"699\",\n\"qty\": \"1\",\n\"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n\"subtotal\": 294000\n},{\n    \"id\": \"430\",\n\"image\": \"\",\n\"maxQuantity\": \"1\",\n\"name\": \"1\",\n\"colour\": \"White\",\n\"size\": \"M\",\n\"options\":{\n    \"realname\": \"SPACE PRINT SLIM FIT T-SHIRT\"\n},\n\"price\": \"699\",\n\"qty\": \"1\",\n\"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n\"subtotal\": 294000\n}]", 
+        "request" : ""
+    }, 
+    "type" : "post", 
+    "url" : "json/showCart", 
+    "__v" : NumberInt(0)
+}
