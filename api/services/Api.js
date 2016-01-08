@@ -35,7 +35,6 @@ var models = {
           if (err) {
             callback(err, false);
           } else {
-
             Project.findOne({
               _id: projectid
             }, function(err, data3) {
@@ -107,6 +106,7 @@ var models = {
                   if(_.isEmpty(n.Response.request)) {
                     iscallback = true;
                     callback(err,n);
+                    return 0;
                   }
                 }
                 else {
@@ -115,6 +115,7 @@ var models = {
                     if (_.isEqual(obj, jsonData)) {
                       iscallback = true;
                       callback(err, n);
+                      return 0;
                     }
                   }
                 }
