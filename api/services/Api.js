@@ -62,26 +62,38 @@ var models = {
     }
   },
   deleteData: function(data, callback) {
-    Project.findOneAndUpdate({
-      "Api": data._id
-    }, {
-      $pull: {
-        Api: data._id
+
+
+    Api.findOneAndRemove({
+      _id: data._id
+    }, function(err, data2) {
+
+      if (err) {
+        callback(err, false);
+      } else {
+
+        Project.findOneAndUpdate({
+          "Api": data._id
+        }, {
+          $pull: {
+            Api: data._id
+          }
+        }, function(err, data3) {
+          if (err) {
+            callback(err, false);
+          }
+          else {
+            callback(null, data2);
+          }
+
+
+        });
+
+
       }
-    }, function(err, data) {
-
-      Api.findOneAndRemove({
-        _id: data._id
-      }, function(err, data) {
-
-        if (err) {
-          callback(err, false);
-        } else {
-          callback(null, data);
-        }
-      });
-
     });
+
+
 
   },
   callApi: function(project, url, jsonData, callback) {
