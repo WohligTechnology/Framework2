@@ -11,7 +11,7 @@ var schema = new Schema({
     ref: 'Api',
     index: true
   }]
-}); 
+});
 
 module.exports = mongoose.model('Project', schema);
 var models = {

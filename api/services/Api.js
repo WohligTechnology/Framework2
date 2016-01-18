@@ -81,8 +81,7 @@ var models = {
         }, function(err, data3) {
           if (err) {
             callback(err, false);
-          }
-          else {
+          } else {
             callback(null, data2);
           }
 
@@ -99,50 +98,44 @@ var models = {
   callApi: function(project, url, jsonData, callback) {
     Project.findOne({
       alias: project,
-    }, function(err, data) {
+    }).populate("Api").exec(function(err, data) {
       if (err) {
         callback("ERR", data);
       } else {
         if (_.isEmpty(data)) {
           callback("ERR", data);
         } else {
-          Api.find({
-            url: url,
-          }, function(err, data) {
-            if (_.isEmpty(data)) {
-              callback("ERROR", data);
-            } else {
-              var iscallback = false;
-              _.each(data, function(n) {
-                if (!iscallback) {
-                  if (_.isEmpty(jsonData)) {
-                    if (_.isEmpty(n.Response.request)) {
-                      iscallback = true;
-                      callback(err, n);
-                      return 0;
-                    }
-                  } else {
-                    if (n.Response.request) {
-                      var obj = JSON.parse(_.unescape(n.Response.request));
-                      if (_.isEqual(obj, jsonData)) {
-                        iscallback = true;
-                        callback(err, n);
-                        return 0;
-                      }
-                    }
+
+          var data2 = _.filter(data.Api,function(n) {
+            return (n.url == url);
+          });
+          var iscallback = false;
+          _.each(data2, function(n) {
+
+            if (!iscallback) {
+              if (_.isEmpty(jsonData)) {
+                if (_.isEmpty(n.Response.request)) {
+                  iscallback = true;
+                  callback(err, n);
+                  return 0;
+                }
+              } else {
+                if (n.Response.request) {
+                  var obj = JSON.parse(_.unescape(n.Response.request));
+                  if (_.isEqual(obj, jsonData)) {
+                    iscallback = true;
+                    callback(err, n);
+                    return 0;
                   }
                 }
-
-
-              });
-              if (!iscallback) {
-                callback("ERR", null);
               }
-
             }
 
 
           });
+          if (!iscallback) {
+            callback("ERR", null);
+          }
         }
 
       }

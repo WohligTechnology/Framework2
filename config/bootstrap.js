@@ -28,12 +28,11 @@ module.exports.bootstrap = function(cb) {
     sails.json2xls = require('json2xls'),
     sails.lwip = require('lwip'),
     sails.myurl = "http://wohlig.io/",
-    // Connection URL
     sails.url = 'mongodb://localhost:27017/framework2';
 
   sails.query = function(myfunc) {
       sails.MongoClient.connect(sails.url, myfunc);
-    }
+    };
     // It's very important to trigger this callback method when you are finished
     // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   cb();
