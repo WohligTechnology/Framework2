@@ -26,6 +26,7 @@ var schema = new Schema({
   }
 });
 
+
 module.exports = mongoose.model('User', schema);
 var models = {
   register: function(data, callback) {

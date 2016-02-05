@@ -14,6 +14,7 @@ var schema = new Schema({
 });
 
 module.exports = mongoose.model('Project', schema);
+
 var models = {
   saveData: function(data, callback) {
     var project = this(data);
@@ -35,7 +36,6 @@ var models = {
     this.findOneAndRemove({
       _id: data._id
     }, function(err, data) {
-
       if (err) {
         callback(err, false);
       } else {

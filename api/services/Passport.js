@@ -93,7 +93,7 @@ module.exports.use(new TwitterStrategy({
             "status": 1
           };
 
-          if (data.length != 0) {
+          if (data.length !== 0) {
             done(err, data);
           } else {
             var user = User(usertemp);
@@ -134,7 +134,7 @@ module.exports.use(new GoogleStrategy({
             "status": 1
           };
 
-          if (data.length != 0) {
+          if (data.length !== 0) {
             done(err, data);
           } else {
             var user = User(usertemp);
