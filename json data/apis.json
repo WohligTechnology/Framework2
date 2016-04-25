@@ -1,7 +1,7 @@
 { 
     "_id" : ObjectId("568cb98030da9499a69a0b2d"), 
     "Response" : {
-        "response" : "{\r\n    \"product\": {\r\n        \"id\": 2,\r\n        \"name\": \"PLAYING T-SHIRTS\",\r\n        \"price\": 900,\r\n        \"description\": \"The Custom Cricket company cricket shirt is made from wicking fabric that lifts moisture from your body. Tested and built to perform in warm and cold climate conditions. It features the Custom Cricket company on the right chest and at the centre back of the tees.\",\r\n        \"details\": \"The Custom Cricket company cricket shirt is made from wicking fabric that lifts moisture from your body. Tested and built to perform in warm and cold climate conditions. It features the Custom Cricket company on the right chest and at the centre back of the tees.\",\r\n        \"delivery\": \"<ol type='1'><li> Delivery within 4 weeks depending on your exact delivery location. On placing your order, you will receive an email containing a summary of the order and also a more accurate delivery date. Sometimes, delivery may take longer due to- bad weather, flight delays, political disruptions or other unforeseen circumstances.* (Link to terms & conditions)</li><li> All our indicated prices do not include VAT. Promotional sporting goods shipped from India are VAT free.</li><li>We are a registered Import/ Export proprietorship with its head office in Mumbai, India.</li></ol>\",\r\n        \"care\": \"Wash when dirty, not too hot, not too cold\",\r\n        \"color\": 1,\r\n        \"colorname\": \"red\",\r\n        \"size\": 2,\r\n        \"sizename\": \"xl\",\r\n        \"firstsaleprice\": 800,\r\n        \"quantity\":1\r\n    },\r\n    \"productimages\": [{\r\n        \"id\": 1,\r\n        \"image\": \"img/detail/d1.jpg\"\r\n }, {\r\n        \"id\": 2,\r\n        \"image\": \"img/detail/d2.jpg\"\r\n }],\r\n    \"color\": [{\r\n        \"id\": 1,\r\n        \"name\": \"red\"\r\n }, {\r\n        \"id\": 3,\r\n        \"name\": \"green\"\r\n }],\r\n    \"size\": [{\r\n        \"id\": 1,\r\n        \"name\": \"xl\"\r\n }, {\r\n        \"id\": 2,\r\n        \"name\": \"xxl\"\r\n }]\r\n}\r\n", 
+        "response" : "{\n    \"product\": {\n        \"id\": 2,\n        \"name\": \"PLAYING T-SHIRTS\",\n        \"price\": 900,\n        \"description\": \"The Custom Cricket company cricket shirt is made from wicking fabric that lifts moisture from your body. Tested and built to perform in warm and cold climate conditions. It features the Custom Cricket company on the right chest and at the centre back of the tees.\",\n        \"details\": \"The Custom Cricket company cricket shirt is made from wicking fabric that lifts moisture from your body. Tested and built to perform in warm and cold climate conditions. It features the Custom Cricket company on the right chest and at the centre back of the tees.\",\n        \"delivery\": \"<ol type='1'><li> Delivery within 4 weeks depending on your exact delivery location. On placing your order, you will receive an email containing a summary of the order and also a more accurate delivery date. Sometimes, delivery may take longer due to- bad weather, flight delays, political disruptions or other unforeseen circumstances.* (Link to terms & conditions)</li><li> All our indicated prices do not include VAT. Promotional sporting goods shipped from India are VAT free.</li><li>We are a registered Import/ Export proprietorship with its head office in Mumbai, India.</li></ol>\",\n        \"care\": \"Wash when dirty, not too hot, not too cold\",\n        \"color\": 1,\n        \"colorname\": \"red\",\n        \"size\": 2,\n        \"sizename\": \"xl\",\n        \"firstsaleprice\": 800,\n        \"quantity\": 1\n    },\n    \"productimages\": [{\n        \"id\": 1,\n        \"image\": \"img/detail/d1.jpg\"\n    }, {\n        \"id\": 2,\n        \"image\": \"img/detail/d2.jpg\"\n    }],\n    \"color\": [{\n        \"id\": 1,\n        \"name\": \"red\"\n    }, {\n        \"id\": 3,\n        \"name\": \"green\"\n    }],\n    \"size\": [{\n        \"id\": 1,\n        \"name\": \"xl\"\n    }, {\n        \"id\": 2,\n        \"name\": \"xxl\"\n    }]\n}", 
         "request" : ""
     }, 
     "name" : "getProductDetail(check cart)", 
@@ -20,17 +20,6 @@
     "url" : "json/getProductBySubCategory?name=SWEATSHIRTS", 
     "__v" : NumberInt(0), 
     "comment" : "The Product page only has name and product image and nothing else. Hence only these details"
-}
-{ 
-    "_id" : ObjectId("568ce0eac6b563fe0784abdf"), 
-    "Response" : {
-        "response" : "{\n \"value\":false,\n \"comment\":\"Password incorrect\"\n}", 
-        "request" : "{\n    \"user\":1,\n    \"password\":\"woh123!@#\",\n    \"newpassword\":\"chintan123!@#\"\n}"
-    }, 
-    "name" : "changePassword invalid data", 
-    "type" : "post", 
-    "url" : "changePassword", 
-    "__v" : NumberInt(0)
 }
 { 
     "_id" : ObjectId("568ce3b68b602dee08c19a5e"), 
@@ -101,6 +90,28 @@
     "__v" : NumberInt(0)
 }
 { 
+    "_id" : ObjectId("56a5b50378af853f055b2c85"), 
+    "name" : "addToCart(added to cart)", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"json\":\"\",\n    \"product\":1,\n    \"quantity\":1\n}"
+    }, 
+    "url" : "json/addToCart", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a5b59478af853f055b2c87"), 
+    "name" : "removeFromCart", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"cart\":1\n}"
+    }, 
+    "url" : "json/removeFromCart", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
     "_id" : ObjectId("56875334e00daa4deddf5b67"), 
     "Response" : {
         "response" : "{\n    \"value\":true\n}", 
@@ -149,17 +160,6 @@
     "__v" : NumberInt(0)
 }
 { 
-    "_id" : ObjectId("568a0ba3eea180360a91084d"), 
-    "Response" : {
-        "response" : "{\n    \"value\":false,\n    \"error\":\"User already Created\"\n}", 
-        "request" : "{\n    \"name\":\"Chintan\",\n    \"email\":\"chintan@wohlig.com\",\n    \"password\":\"chintan\"\n}"
-    }, 
-    "name" : "create User case 2", 
-    "type" : "post", 
-    "url" : "user/create", 
-    "__v" : NumberInt(0)
-}
-{ 
     "_id" : ObjectId("568a0c7ceea180360a91084f"), 
     "Response" : {
         "response" : "", 
@@ -173,7 +173,7 @@
 { 
     "_id" : ObjectId("568cb02e30da9499a69a0b29"), 
     "Response" : {
-        "response" : "[\n    {\n    \"id\":1,\n    \"src\":\"slide1.jpg\",\n    \"heading\":\"CUSTOMIZED BATS\",\n    \"subheading\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\"\n    },\n    {\n    \"id\":2,\n    \"src\":\"slide2.jpg\",\n    \"heading\":\"customized bags\",\n    \"subheading\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\"\n    }\n]", 
+        "response" : "[{\n    \"id\": 1,\n    \"src\": \"slide1.jpg\",\n    \"heading\": \"CUSTOMIZED BATS\",\n    \"subheading\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\"\n}, {\n    \"id\": 2,\n    \"src\": \"slide2.jpg\",\n    \"heading\": \"customized bags\",\n    \"subheading\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\"\n}]", 
         "request" : ""
     }, 
     "name" : "getSlide", 
@@ -185,7 +185,7 @@
 { 
     "_id" : ObjectId("568cb65d30da9499a69a0b2a"), 
     "Response" : {
-        "response" : "[\n    {\n    \"id\":1,\n    \"name\":\"Bats\",\n    \"order\":0\n},\n    {\n    \"id\":2,\n    \"name\":\"Balls\",\n\"order\":1\n    },\n    {\n    \"id\":3,\n    \"name\":\"Gloves\",\n    \"order\":2\n},\n    {\n    \"id\":4,\n    \"name\":\"Pads\",\n    \"order\":3\n    \n},\n    {\n    \"id\":5,\n    \"name\":\"Apparels\",\n    \"order\":4\n},\n    {\n    \"id\":6,\n    \"name\":\"Kit Bags\",\n    \"order\":5\n}\n]", 
+        "response" : "[{\n    \"id\": 1,\n    \"name\": \"Bats\",\n    \"order\": 0\n}, {\n    \"id\": 2,\n    \"name\": \"Balls\",\n    \"order\": 1\n}, {\n    \"id\": 3,\n    \"name\": \"Gloves\",\n    \"order\": 2\n}, {\n    \"id\": 4,\n    \"name\": \"Pads\",\n    \"order\": 3\n\n}, {\n    \"id\": 5,\n    \"name\": \"Apparels\",\n    \"order\": 4\n}, {\n    \"id\": 6,\n    \"name\": \"Kit Bags\",\n    \"order\": 5\n}]", 
         "request" : ""
     }, 
     "name" : "getCategory", 
@@ -254,17 +254,6 @@
     "__v" : NumberInt(0)
 }
 { 
-    "_id" : ObjectId("568ccb53b46e1216021a212e"), 
-    "Response" : {
-        "response" : "{\n    \"value\":true\n}", 
-        "request" : "{\n    \"email\":\"wohlig@wohlig.com\",\n    \"password\":\"chintan123!@#\"\n}"
-    }, 
-    "name" : "login success", 
-    "type" : "post", 
-    "url" : "login", 
-    "__v" : NumberInt(0)
-}
-{ 
     "_id" : ObjectId("568ccbdcb46e1216021a212f"), 
     "Response" : {
         "response" : "{\n    \"value\":false,\n    \"comment\":\"email or password in invalid\"\n}", 
@@ -301,11 +290,11 @@
 { 
     "_id" : ObjectId("568ccecdb46e1216021a2133"), 
     "Response" : {
-        "response" : "{\r\n    \"id\": \"7\",\r\n    \"name\": null,\r\n    \"email\": \"rohanwohlig@gmail.com\",\r\n    \"accesslevel\": null,\r\n    \"timestamp\": \"2016-01-07 16:02:30\",\r\n    \"status\": null,\r\n    \"image\": null,\r\n    \"username\": \"\",\r\n    \"socialid\": \"\",\r\n    \"logintype\": \"\",\r\n    \"json\": \"\",\r\n    \"firstname\": \"Rohan\",\r\n    \"lastname\": \"Gada\",\r\n    \"phone\": \"\",\r\n    \"billingaddress\": \"\",\r\n    \"billingcity\": \"\",\r\n    \"billingstate\": \"\",\r\n    \"billingcountry\": \"\",\r\n    \"billingcontact\": \"\",\r\n    \"billingpincode\": \"\",\r\n    \"shippingaddress\": \"\",\r\n    \"shippingcity\": \"\",\r\n    \"shippingcountry\": \"\",\r\n    \"shippingstate\": \"\",\r\n    \"shippingpincode\": \"\",\r\n    \"shippingname\": \"\",\r\n    \"shippingcontact\": \"\",\r\n    \"currency\": \"\",\r\n    \"credit\": \"\",\r\n    \"companyname\": \"\",\r\n    \"registrationno\": \"\",\r\n    \"vatnumber\": \"\",\r\n    \"country\": \"\",\r\n    \"fax\": \"\",\r\n    \"gender\": \"0\",\r\n    \"facebook\": \"\",\r\n    \"google\": \"\",\r\n    \"twitter\": \"\",\r\n    \"street\": \"\",\r\n    \"address\": \"\",\r\n    \"pincode\": \"\",\r\n    \"state\": \"\",\r\n    \"dob\": \"0000-00-00\",\r\n    \"city\": \"\"\r\n}", 
+        "response" : "{\n    \"email\": \"rohanwohlig@gmail.com\",\n\"firstname\": \"Rohan\",\n\"id\": 18,\n\"lastname\": \"Gada\",\n\"logged_in\": \"true\"\n}", 
         "request" : "{\n    \"firstname\":\"Rohan\",\n    \"lastname\":\"Gada\",\n    \"email\":\"rohanwohlig@gmail.com\",\n    \"password\":\"rohan123!@#\"\n}"
     }, 
     "name" : "signup success", 
-    "url" : "signup", 
+    "url" : "json/signup", 
     "type" : "post", 
     "__v" : NumberInt(0)
 }
@@ -318,17 +307,6 @@
     "name" : "signup invalid data", 
     "url" : "signup", 
     "type" : "post", 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("568ce065c6b563fe0784abde"), 
-    "Response" : {
-        "response" : "{\n    \"value\":true\n}", 
-        "request" : "{\n    \"user\":1,\n    \"password\":\"wohlig123!@#\",\n    \"newpassword\":\"chintan123@#\"\n}"
-    }, 
-    "name" : "changePassword success", 
-    "type" : "post", 
-    "url" : "changePassword", 
     "__v" : NumberInt(0)
 }
 { 
@@ -349,29 +327,8 @@
         "request" : "{\n    \"cart\":1\n}"
     }, 
     "name" : "removeFromCart", 
-    "url" : "removeFromCart", 
+    "url" : "json/removeFromCart", 
     "type" : "post", 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("568cf4513443d154095a0dfd"), 
-    "Response" : {
-        "response" : "5", 
-        "request" : ""
-    }, 
-    "name" : "placeOrder", 
-    "type" : "post", 
-    "url" : "placeOrder", 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("568cf9d93443d154095a0dfe"), 
-    "Response" : {
-        "response" : "", 
-        "request" : ""
-    }, 
-    "name" : "demo", 
-    "url" : "deno", 
     "__v" : NumberInt(0)
 }
 { 
@@ -388,7 +345,7 @@
     "_id" : ObjectId("568e1db0f20c191e02291485"), 
     "name" : "getTestimonial", 
     "Response" : {
-        "response" : "[{\r\n                \"image\": \"img/manan.png\",\r\n                \"name\": \"manan vora\",\r\n                \"location\":\"Mumbai,Maharashtra\",\r\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\"\r\n      },\r\n            {\r\n                \"image\": \"img/manan.png\",\r\n                \"name\": \"Viraj\",\r\n                \"location\":\"Mumbai,Maharashtra\",\r\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\"\r\n}]", 
+        "response" : "[{\n    \"image\": \"img/manan.png\",\n    \"name\": \"manan vora\",\n    \"location\": \"Mumbai,Maharashtra\",\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\"\n}, {\n    \"image\": \"img/manan.png\",\n    \"name\": \"Viraj\",\n    \"location\": \"Mumbai,Maharashtra\",\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\"\n}]", 
         "request" : ""
     }, 
     "url" : "json/getTestimonial", 
@@ -408,10 +365,399 @@
     "comment" : "Any Error "
 }
 { 
-    "_id" : ObjectId("568fa8618af9c187088266d2"), 
+    "_id" : ObjectId("568fb7a38af9c187088266d4"), 
     "name" : "showCart", 
     "Response" : {
-        "response" : "[{\n    \"id\": \"433\",\n\"image\": \"Freego_F3_Black_1.jpeg\",\n\"maxQuantity\": \"1\",\n\"name\": \"1\",\n\"options\":{\n    \"realname\": \"Freego F3 Self-Balancing Scooter - Black\"\n    \n},\n\"price\": \"147000\",\n\"qty\": \"2\",\n\"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n\"subtotal\": 294000\n},{\n    \"id\": \"433\",\n\"image\": \"Freego_F3_Black_1.jpeg\",\n\"maxQuantity\": \"1\",\n\"name\": \"1\",\n\"options\":{\n    \"realname\": \"Freego F3 Self-Balancing Scooter - Black\"\n    \n},\n\"price\": \"147000\",\n\"qty\": \"2\",\n\"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n\"subtotal\": 294000\n}]", 
+        "response" : "[{\n    \"id\": 1,\n    \"image\": \"\",\n    \"maxQuantity\": 1,\n    \"name\": \"1\",\n    \"colour\": \"White\",\n    \"size\": \"M\",\n    \"options\": {\n        \"realname\": \"SPACE PRINT SLIM FIT T-SHIRT\"\n    },\n    \"price\": 699,\n    \"qty\":1,\n    \"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n    \"subtotal\": 294000\n}, {\n    \"id\": 430,\n    \"image\": \"\",\n    \"maxQuantity\": 50,\n    \"name\": \"1\",\n    \"colour\": \"White\",\n    \"size\": \"M\",\n    \"options\": {\n        \"realname\": \"SPACE PRINT SLIM FIT T-SHIRT\"\n    },\n    \"price\": 699,\n    \"qty\": 3,\n    \"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n    \"subtotal\": 294000\n}]", 
+        "request" : ""
+    }, 
+    "type" : "post", 
+    "url" : "json/showCart", 
+    "__v" : NumberInt(0), 
+    "comment" : "quantity should be number"
+}
+{ 
+    "_id" : ObjectId("568cf4513443d154095a0dfd"), 
+    "Response" : {
+        "response" : "", 
+        "request" : "{\r\n \"accesslevel\": null,\r\n\"address\": \"\",\r\n\"billingaddress\": \"\",\r\n\"billingcity\": \"Mumbai\",\r\n\"billingcontact\": \"9768254461\",\r\n\"billingcountry\": \"IND\",\r\n\"billingline1\": \"Rohan\",\r\n\"billingline2\": \"Gada\",\r\n\"billingline3\": \"RohanGada\",\r\n\"billingpincode\": \"400062\",\r\n\"billingstate\": \"Maharashtra\",\r\n\"cart\": [{\r\n    \"id\": \"433\",\r\n    \"image\": \"\",\r\n    \"maxQuantity\": \"1\",\r\n    \"name\": \"1\",\r\n    \"colour\": \"White\",\r\n    \"size\": \"M\",\r\n    \"options\": {\r\n        \"realname\": \"SPACE PRINT SLIM FIT T-SHIRT\"\r\n    },\r\n    \"price\": \"699\",\r\n    \"qty\": \"1\",\r\n    \"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\r\n    \"subtotal\": 294000\r\n}, {\r\n    \"id\": \"430\",\r\n    \"image\": \"\",\r\n    \"maxQuantity\": \"1\",\r\n    \"name\": \"1\",\r\n    \"colour\": \"White\",\r\n    \"size\": \"M\",\r\n    \"options\": {\r\n        \"realname\": \"SPACE PRINT SLIM FIT T-SHIRT\"\r\n    },\r\n    \"price\": \"699\",\r\n    \"qty\": \"1\",\r\n    \"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\r\n    \"subtotal\": 294000\r\n}],\r\n\"city\": \"\",\r\n\"companyname\": \"\",\r\n\"country\": \"\",\r\n\"credit\": \"\",\r\n\"currency\": \"\",\r\n\"dob\": \"0000-00-00\",\r\n\"email\": \"gadarohan17@gmail.com\",\r\n\"facebook\": \"\",\r\n\"fax\": \"\",\r\n\"firstname\": \"Rohan\",\r\n\"gender\": \"0\",\r\n\"google\": \"\",\r\n\"id\": \"15\",\r\n\"image\": null,\r\n\"json\": \"\",\r\n\"lastname\": \"Gada\",\r\n\"logintype\": \"\",\r\n\"name\": null,\r\n\"password\": \"dc06698f0e2e75751545455899adccc3\",\r\n\"phone\": \"9768254461\",\r\n\"pincode\": \"\",\r\n\"registrationno\": \"\",\r\n\"shippingaddress\": \"\",\r\n\"shippingcity\": \"Mumbai\",\r\n\"shippingcontact\": \"\",\r\n\"shippingcountry\": \"IND\",\r\n\"shippingline1\": \"dfnmdshfoh\",\r\n\"shippingline2\": \"uhnydmhcoyh\",\r\n\"shippingline3\": \"ygmyugfsoyh\",\r\n\"shippingname\": \"\",\r\n\"shippingpincode\": \"400062\",\r\n\"shippingstate\": \"Maharashtra\",\r\n\"socialid\": \"\",\r\n\"state\": \"\",\r\n\"status\": null,\r\n\"street\": \"\",\r\n\"timestamp\": \"2016-01-11 05:56:01\",\r\n\"twitter\": \"\",\r\n\"username\": \"\",\r\n\"vatnumber\": \"\"\r\n}"
+    }, 
+    "name" : "placeOrder", 
+    "type" : "post", 
+    "url" : "json/placeOrder", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ccb53b46e1216021a212e"), 
+    "Response" : {
+        "response" : "{\n    \"email\": \"jagruti@wohlig.com\",\n\"firstname\": \"jagruti\",\n\"id\": 18,\n\"lastname\": \"patil\",\n\"logged_in\": \"true\"\n    \n}", 
+        "request" : "{\n    \"email\":\"wohlig@wohlig.com\",\n    \"password\":\"chintan123!@#\"\n}"
+    }, 
+    "name" : "login success", 
+    "type" : "post", 
+    "url" : "json/login", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5693566ac6a56fb00348031b"), 
+    "name" : "logout", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/logout", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("569357c8c6a56fb00348031c"), 
+    "name" : "getUser", 
+    "Response" : {
+        "response" : "{\r\n   \"id\": \"18\",\r\n   \"name\": \"wohlig\",\r\n   \"email\": \"wohlig@wohlig.com\",\r\n   \"accesslevel\": \"1\",\r\n   \"timestamp\": \"0000-00-00 00:00:00\",\r\n   \"status\": \"1\",\r\n   \"image\": \"images_(2)1.jpg\",\r\n   \"username\": \"\",\r\n   \"socialid\": \"\",\r\n   \"logintype\": \"Facebook\",\r\n   \"json\": \"0\",\r\n   \"firstname\": \"Rohan\",\r\n   \"lastname\": \"Gada\",\r\n   \"phone\": \"9768254461\",\r\n   \"billingaddress\": \"\",\r\n   \"billingcity\": \"Mumbai\",\r\n   \"billingstate\": \"\",\r\n   \"billingcountry\": \"\",\r\n   \"billingcontact\": \"\",\r\n   \"billingpincode\": \"\",\r\n   \"shippingaddress\": \"\",\r\n   \"shippingcity\": \"\",\r\n   \"shippingcountry\": \"\",\r\n   \"shippingstate\": \"\",\r\n   \"shippingpincode\": \"\",\r\n   \"shippingname\": \"\",\r\n   \"shippingcontact\": \"\",\r\n   \"currency\": \"\",\r\n   \"credit\": \"\",\r\n   \"companyname\": \"\",\r\n   \"registrationno\": \"\",\r\n   \"vatnumber\": \"\",\r\n   \"country\": \"\",\r\n   \"fax\": \"\",\r\n   \"gender\": \"0\",\r\n   \"facebook\": \"\",\r\n   \"google\": \"\",\r\n   \"twitter\": \"\",\r\n   \"street\": \"\",\r\n   \"address\": \"\",\r\n   \"pincode\": \"\",\r\n   \"state\": \"\",\r\n   \"dob\": \"0000-00-00\",\r\n   \"city\": \"\"\r\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getUser?id=18", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56938666c6a56fb00348031d"), 
+    "name" : "updateUser", 
+    "Response" : {
+        "response" : "{\n    \"billingaddress\": \"\",\n\"billingcity\": \"\",\n\"billingcontact\": \"\",\n\"billingcountry\": \"\",\n\"billingline1\": \"demooo\",\n\"billingline2\": \"eoj\",\n\"billingline3\": \"sdfa\",\n\"billingpincode\": \"\",\n\"billingstate\": \"\",\n\"email\": \"jagruti@wohlig.com\",\n\"id\": \"10\",\n\"name\": \"jagruti patil\",\n\"phone\": \"09898989890\",\n\"shippingaddress\": \"\",\n\"shippingcity\": \"\",\n\"shippingcontact\": \"\",\n\"shippingcountry\": \"\",\n\"shippingline1\": \"\",\n\"shippingline2\": \"\",\n\"shippingline3\": \"\",\n\"shippingname\": \"\",\n\"shippingpincode\": \"\",\n\"shippingstate\": \"\"\n}", 
+        "request" : "{\n    \"accesslevel\": null,\n\"address\": \"\",\n\"billingaddress\": \"\",\n\"billingcity\": \"\",\n\"billingcontact\": \"\",\n\"billingcountry\": \"\",\n\"billingline1\": \"demooo\",\n\"billingline2\": \"eoj\",\n\"billingline3\": \"sdfa\",\n\"billingpincode\": \"\",\n\"billingstate\": \"\",\n\"city\": \"\",\n\"companyname\": \"\",\n\"country\": \"\",\n\"credit\": \"\",\n\"currency\": \"\",\n\"dob\": \"0000-00-00\",\n\"email\": \"jagruti@wohlig.com\",\n\"facebook\": \"\",\n\"fax\": \"\",\n\"firstname\": \"jagruti\",\n\"gender\": \"0\",\n\"google\": \"\",\n\"id\": \"10\",\n\"image\": null,\n\"json\": \"\",\n\"lastname\": \"patil\",\n\"logintype\": \"\",\n\"name\": \"jagruti patil\",\n\"password\": \"3677b23baa08f74c28aba07f0cb6554e\",\n\"phone\": \"09898989890\",\n\"pincode\": \"\",\n\"registrationno\": \"\",\n\"shippingaddress\": \"\",\n\"shippingcity\": \"\",\n\"shippingcontact\": \"\",\n\"shippingcountry\": \"\",\n\"shippingline1\": \"\",\n\"shippingline2\": \"\",\n\"shippingline3\": \"\",\n\"shippingname\": \"\",\n\"shippingpincode\": \"\",\n\"shippingstate\": \"\",\n\"socialid\": \"\",\n\"state\": \"\",\n\"status\": null,\n\"street\": \"\",\n\"timestamp\": \"2015-12-18 05:07:59\",\n\"twitter\": \"\",\n\"username\": \"\",\n\"vatnumber\": \"\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "json/updateUser", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56938a33c6a56fb00348031e"), 
+    "name" : "changePassword(successful)", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"email\": \"jagruti@wohlig.com\",\n\"newpassword\": \"jagruti\",\n\"oldpassword\": \"jagrutipatil\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "json/changePassword", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56938acac6a56fb00348031f"), 
+    "name" : "changePassword(Wrong password)", 
+    "Response" : {
+        "response" : "{\n    \"value\":false,\n    \"comment\":\"Wrong password\"\n}", 
+        "request" : "{\n    \"email\": \"jagruti@wohlig.com\",\n\"newpassword\": \"jagruti\",\n\"oldpassword\": \"jagrutipa\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "json/changePassword", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56948bfe555b39fc028fb541"), 
+    "name" : "checkoutCheck(true)", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : ""
+    }, 
+    "url" : "json/checkoutCheck", 
+    "type" : "get", 
+    "comment" : "", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56948c27555b39fc028fb542"), 
+    "name" : "checkoutCheck(false)", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : ""
+    }, 
+    "url" : "json/checkoutCheck", 
+    "type" : "get", 
+    "comment" : "This case if any product quantity requested greater than available", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5695df669b7acdb102e9a5ab"), 
+    "name" : "addToWishlist(true)", 
+    "Response" : {
+        "response" : "{\n    \"value\":false\n}", 
+        "request" : "{\n    \"product\":2\n}"
+    }, 
+    "url" : "json/addToWishlist", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5695f7c79b7acdb102e9a5ac"), 
+    "name" : "forgotPassword success", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"email\":\"wohlig@wohlig.com\"\n}"
+    }, 
+    "url" : "json/forgotPassword", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5695f8f59b7acdb102e9a5ad"), 
+    "name" : "forgotPassword failure", 
+    "Response" : {
+        "response" : "{\n    \"value\":false\n}", 
+        "request" : "{\n    \"email\":\"rohanwohlig@gmail.com\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "json/forgotPassword", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("569611d69b7acdb102e9a5ae"), 
+    "name" : "resetPassword success", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"newpassword\": \"rohan\"\n}"
+    }, 
+    "url" : "json/resetPassword", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("569612199b7acdb102e9a5af"), 
+    "name" : "resetPassword failed", 
+    "Response" : {
+        "response" : "{\n    \"value\":false\n}", 
+        "request" : "{\n    \"newpassword\": \"wohlig\"\n}"
+    }, 
+    "url" : "json/resetPassword", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("569a09ba8cdb52782daa2a85"), 
+    "name" : "getSlide", 
+    "Response" : {
+        "response" : " [{\r\n        \"img\": \"img/home-slider/banner.jpg\",\r\n        \"title\": \"The calorie meter\",\r\n        \"description\": \"Count Your Calories with our index customised to Indian food\",\r\n        \"link\":\"abc.xyz\"\r\n      },\r\n      {\r\n        \"img\": \"img/home-slider/banner.jpg\",\r\n        \"title\": \"The calorie meter\",\r\n        \"description\": \"Count Your Calories with our index customised to Indian food\"\r\n      },\r\n      {\r\n        \"img\": \"img/home-slider/banner.jpg\",\r\n        \"title\": \"The calorie meter\",\r\n        \"description\": \"Count Your Calories with our index customised to Indian food\"\r\n      },\r\n\r\n      {\r\n        \"img\": \"img/home-slider/banner.jpg\",\r\n        \"title\": \"The calorie meter\",\r\n        \"description\": \"Count Your Calories with our index customised to Indian food\"\r\n      }\r\n    ]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getSlide", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("569a28508cdb52782daa2a86"), 
+    "name" : "getTestimonial", 
+    "Response" : {
+        "response" : "[{\n      \"name\": \"Rishabh Maniktala\",\n      \"location\": \"Mumbai, India\",\n      \"weight\": \"25\",\n      \"description\": \"There was so much to eat and there were so many options, that most of the time it was difficult to pick and choose what to eat\"\n    }, {\n      \"name\": \"Rishabh\",\n      \"location\": \"Mumbai, India\",\n      \"weight\": \"25\",\n      \"description\": \"There was so much to eat and there were so many options, that most of the time it was difficult to pick and choose what to eat\"\n    }]", 
+        "request" : ""
+    }, 
+    "url" : "json/getTestimonial", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("569a39978cdb52782daa2a87"), 
+    "name" : "showCart1", 
+    "Response" : {
+        "response" : "", 
+        "request" : ""
+    }, 
+    "url" : "json/showCart1", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("569dea83a43de2270d13a8e3"), 
+    "name" : "removeFromWishlist", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"product\":2\n}"
+    }, 
+    "url" : "json/removeFromWishlist", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a082d10589c95b091a5fee"), 
+    "name" : "getCategory", 
+    "Response" : {
+        "response" : "[{\n    \"id\": 1,\n    \"name\": \"Food Munchies & Beverages\",\n    \"categoryimg\":\"img/product_category/1.jpg\",\n    \"order\": 0\n}, {\n    \"id\": 4,\n    \"name\": \"Books & Gadgets\",\n    \"categoryimg\":\"img/product_category/4.jpg\",\n    \"order\": 3\n}, {\n    \"id\": 3,\n    \"name\": \"Protein Supplement\",\n    \"categoryimg\":\"img/product_category/3.jpg\",\n    \"order\": 2\n}, {\n    \"id\": 2,\n    \"name\": \"Vitamins & Minerals\",\n    \"categoryimg\":\"img/product_category/2.jpg\",\n    \"order\": 1\n}]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getCategory", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a09b1b0589c95b091a5fef"), 
+    "name" : "getCategoryById", 
+    "Response" : {
+        "response" : "{\n    \"id\":1,\n    \"name\":\"FOOD MUNCHIES & BEVERAGES\",\n    \"bannerimg\":\"img/apple.jpg\"\n}", 
+        "request" : ""
+    }, 
+    "url" : "json/getCategoryById?id=1", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a0bdc40589c95b091a5ff1"), 
+    "name" : "getSubCategory", 
+    "Response" : {
+        "response" : "[{\n    \"id\": 1,\n    \"name\": \"Protein Snacks\",\n    \"order\": 0\n},{\n    \"id\": 2,\n    \"name\": \"Cookies\",\n    \"order\": 2\n},{\n    \"id\": 3,\n    \"name\": \"Evening Snacks\",\n    \"order\": 1\n}, {\n    \"id\": 4,\n    \"name\": \"Nuts\",\n    \"order\": 3\n}, {\n    \"id\": 5,\n    \"name\": \"Fat Burner\",\n    \"order\": 6\n}, {\n    \"id\": 6,\n    \"name\": \"Flavoured Teas\",\n    \"order\": 5\n}, {\n    \"id\": 7,\n    \"name\": \"Chocolates\",\n    \"order\": 7\n}, {\n    \"id\": 8,\n    \"name\": \"Fiber Rich\",\n    \"order\": 4\n}]", 
+        "request" : ""
+    }, 
+    "url" : "json/getSubCategory?id=1", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a0ce310589c95b091a5ff2"), 
+    "name" : "askSumanSubmit", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"category\":\"Weight gain\",\n    \"name\":\"Chintan\",\n    \"email\":\"wohlig@wohlig.com\",\n    \"question\":\"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque numquam, magni sunt atque dicta, unde ab quo possimus deserunt molestiae perspiciatis qui id\"\n}"
+    }, 
+    "url" : "json/askSumanSubmit", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a0d3b00589c95b091a5ff3"), 
+    "name" : "subscribe failure", 
+    "Response" : {
+        "response" : "{\n    \"value\":false,\n    \"comment\":\"Already exists\"\n}", 
+        "request" : ""
+    }, 
+    "url" : "json/subscribe?email=rohanwohlig@gmail.com", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a0d41f0589c95b091a5ff4"), 
+    "name" : "subscribe success", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/subscribe?email=rohangada@gmail.com", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5718aa5042391ed4029d5d28"), 
+    "name" : "newsletter/submit", 
+    "Response" : {
+        "response" : "{\n    \"data\":\"thank you for submitting\",\n    \"error\":\"\",\n    \"value\":true\n}", 
+        "request" : "{\n    \"email\":\"chitalee@wohlig.com\"\n}"
+    }, 
+    "url" : "newsletter/submit", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a0adb70589c95b091a5ff0"), 
+    "name" : "getProductsByCategory", 
+    "Response" : {
+        "response" : "[{\n    \"id\":1,\n    \"name\":\"Baked Potato Chips\",\n    \"image\":\"img/health-products/1.jpg\",\n    \"price\":225,\n    \"quantity\":10\n},{\n    \"id\":2,\n    \"name\":\"Chana Jor\",\n    \"image\":\"img/health-products/2.jpg\",\n    \"price\":125,\n    \"quantity\":10\n}]", 
+        "request" : ""
+    }, 
+    "url" : "json/getProductsByCategory?categoryid=1&subcategories=1,3", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a1c5c06f8b8de603e70dcd"), 
+    "name" : "getProductsByCategory", 
+    "Response" : {
+        "response" : "[{\n    \"id\":1,\n    \"name\":\"Baked Potato Chips\",\n    \"image\":\"img/health-products/1.jpg\",\n    \"price\":225,\n    \"quantity\":10\n},{\n    \"id\":2,\n    \"name\":\"Chana Jor\",\n    \"image\":\"img/health-products/2.jpg\",\n    \"price\":125,\n    \"quantity\":10\n},{\n    \"id\":3,\n    \"name\":\"Bajra Rings\",\n    \"image\":\"img/health-products/3.jpg\",\n    \"price\":225,\n    \"quantity\":1\n},{\n    \"id\":4,\n    \"name\":\"Baked Potato Chips\",\n    \"image\":\"img/health-products/1.jpg\",\n    \"price\":200,\n    \"quantity\":1\n},{\n    \"id\":5,\n    \"name\":\"Unavailable Chips\",\n    \"image\":\"img/health-products/1.jpg\",\n    \"price\":100,\n    \"quantity\":0\n},{\n    \"id\":6,\n    \"name\":\"Baked Potato Chips\",\n    \"image\":\"img/health-products/1.jpg\",\n    \"price\":150,\n    \"quantity\":10\n},{\n    \"id\":7,\n    \"name\":\"Chana Jor\",\n    \"image\":\"img/health-products/2.jpg\",\n    \"price\":100,\n    \"quantity\":1\n},{\n    \"id\":8,\n    \"name\":\"Bajra Rings\",\n    \"image\":\"img/health-products/3.jpg\",\n    \"price\":200,\n    \"quantity\":1\n}]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getProductsByCategory?categoryid=1&subcategories=", 
+    "comment" : "noSubCategory", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a1e7076f8b8de603e70dce"), 
+    "name" : "getProductsByCategory 2", 
+    "Response" : {
+        "response" : "[{\n    \"id\":2,\n    \"name\":\"Chana Jor\",\n    \"image\":\"img/health-products/2.jpg\",\n    \"price\":125,\n    \"quantity\":10\n}]", 
+        "request" : ""
+    }, 
+    "url" : "json/getProductsByCategory?categoryid=1&subcategories=2", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a1f9166f8b8de603e70dcf"), 
+    "name" : "getProductDetail", 
+    "Response" : {
+        "response" : "{\n    \"id\":1,\n    \"name\":\"BAKED POTATO CHIPS\",\n    \"price\":225,\n    \"netweight\":100,\n    \"maxQuantity\":20,\n    \"status\":1,\n    \"image\":\"img/cookies.jpg\",\n    \"about\" : \"qwertyu\",\n    \"nutritional\":\"Love eating potato chips and don’t know how to deal with the craving? The world may say a resounding no to potato chips, but there is no need to be in denial. Here are baked potato-crisps that allow you to savor your favorite comfort food and do it without guilt.\"\n}", 
+        "request" : ""
+    }, 
+    "url" : "json/getProductDetail?id=1", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a32d8b19afbfa80451db7b"), 
+    "name" : "signup success", 
+    "Response" : {
+        "response" : "{\n    \"email\": \"rohanwohlig@gmail.com\",\n\"firstname\": \"Rohan\",\n\"id\": 18,\n\"lastname\": \"Gada\",\n\"logged_in\": \"true\"\n}", 
+        "request" : "{\n    \"firstname\":\"Rohan\",\n    \"lastname\":\"Gada\",\n    \"email\":\"rohanwohlig@gmail.com\",\n    \"password\":\"rohan123!@#\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "json/signup", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a32de519afbfa80451db7c"), 
+    "name" : "signup failure", 
+    "Response" : {
+        "response" : "{\n    \"value\":false,\n    \"comment\":\"Email already exists.\"\n}", 
+        "request" : "{\n    \"firstname\":\"Rohan\",\n    \"lastname\":\"Gada\",\n    \"email\":\"rohanwohlig@gmail.com\",\n    \"password\":\"rohan123!@#\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "json/signup", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a32f5b19afbfa80451db7d"), 
+    "name" : "login success", 
+    "Response" : {
+        "response" : "{\n    \"email\": \"jagruti@wohlig.com\",\n\"firstname\": \"jagruti\",\n\"id\": 18,\n\"lastname\": \"patil\",\n\"logged_in\": \"true\"\n    \n}", 
+        "request" : "{\n    \"email\":\"wohlig@wohlig.com\",\n    \"password\":\"chintan123!@#\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "json/login", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a352fa19afbfa80451db7e"), 
+    "name" : "contactSubmit", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : "{\n    \"firstname\":\"Rohan\",\n    \"lastname\":\"Gada\",\n    \"mobile\":97654310,\n    \"email\":\"gadarohan17@gmail.com\",\n    \"message\":\"qwertyuiosdfghjk\"\n}"
+    }, 
+    "url" : "json/contactSubmit", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a5b54778af853f055b2c86"), 
+    "name" : "addToCart (already in cart)", 
+    "Response" : {
+        "response" : "{\n    \"value\":false,\n    \"comment\":\"already in cart\"\n}", 
+        "request" : "{\n    \"product\":2,\n    \"quantity\":1,\n    \"json\":\"\"\n}"
+    }, 
+    "url" : "json/addToCart", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a5cd9d78af853f055b2c88"), 
+    "name" : "showCart", 
+    "Response" : {
+        "response" : "[{\n            \"user\": \"15\",\n            \"qty\": \"3\",\n            \"id\": \"7\",\n            \"price\": \"800\",\n            \"image\": \"_MG_47321.png\",\n            \"options\": {\n                \"realname\": \"Sweatshirt 2\",\n                \"json\": \"\"\n            },\n            \"subtotal\": \"800\",\n            \"maxQuantity\": \"20\"\n        },{\n            \"user\": \"15\",\n            \"qty\": \"1\",\n            \"id\": \"7\",\n            \"price\": \"800\",\n            \"image\": \"_MG_47321.png\",\n            \"options\": {\n                \"realname\": \"Sweatshirt 2\",\n                \"json\": \"\"\n            },\n            \"subtotal\": \"800\",\n            \"maxQuantity\": \"20\"\n        }\n        ]", 
         "request" : ""
     }, 
     "type" : "get", 
@@ -419,13 +765,1185 @@
     "__v" : NumberInt(0)
 }
 { 
-    "_id" : ObjectId("568fb7a38af9c187088266d4"), 
-    "name" : "showCart", 
+    "_id" : ObjectId("56a5da1578af853f055b2c89"), 
+    "name" : "logout", 
     "Response" : {
-        "response" : "[{\n    \"id\": \"433\",\n\"image\": \"\",\n\"maxQuantity\": \"1\",\n\"name\": \"1\",\n\"colour\": \"White\",\n\"size\": \"M\",\n\"options\":{\n    \"realname\": \"SPACE PRINT SLIM FIT T-SHIRT\"\n},\n\"price\": \"699\",\n\"qty\": \"1\",\n\"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n\"subtotal\": 294000\n},{\n    \"id\": \"430\",\n\"image\": \"\",\n\"maxQuantity\": \"1\",\n\"name\": \"1\",\n\"colour\": \"White\",\n\"size\": \"M\",\n\"options\":{\n    \"realname\": \"SPACE PRINT SLIM FIT T-SHIRT\"\n},\n\"price\": \"699\",\n\"qty\": \"1\",\n\"rowid\": \"c620bdfebb7d6ecafb2da3c287bed1c7\",\n\"subtotal\": 294000\n}]", 
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : ""
+    }, 
+    "url" : "json/logout", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a85cd1dc9773490521c001"), 
+    "name" : "checkoutCheck(true)", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : ""
+    }, 
+    "url" : "json/checkoutCheck", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56a85d21dc9773490521c002"), 
+    "name" : "checkoutCheck(false)", 
+    "Response" : {
+        "response" : "{\n    \"value\":false\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/checkoutCheck", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56aef441149aa3720a78e37f"), 
+    "name" : "getAllBlog", 
+    "Response" : {
+        "response" : "[{\n    \"id\":1,\n    \"title\":\"Your Questions, Answered\",\n    \"coverimage\":\"img123.jpg\",\n    \"content\":\"Q1. How much does the CoolSculpting procedure cost? Ans. The price for CoolSculpting procedures varies depending on your areas of concern, the number of sessions needed, and your ultimate goals - See more at: http://localhost/takecare/#/blog\"\n},{\n    \"id\":2,\n    \"title\":\"Sparkle This Season\",\n    \"coverimage\":\"img123.jpg\",\n    \"content\":\"Q1. How much does the CoolSculpting procedure cost? Ans. The price for CoolSculpting procedures varies depending on your areas of concern, the number of sessions needed, and your ultimate goals... - See more at: http://localhost/takecare/#/blog\"\n}]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getAllBlog?tag=food", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56aef6df149aa3720a78e380"), 
+    "name" : "getAllTags", 
+    "Response" : {
+        "response" : "[{\n    \"tag\":\"Acidity\",\n    \"id\":1\n},{\n    \"tag\":\"Benefits\",\n    \"id\":2\n}]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getAllTags", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56aef7f0149aa3720a78e381"), 
+    "name" : "searchBlog", 
+    "Response" : {
+        "response" : "[{\n    \"id\":1,\n    \"title\":\"Your Questions, Answered\",\n    \"coverimage\":\"img123.jpg\",\n    \"content\":\"Q1. How much does the CoolSculpting procedure cost? Ans. The price for CoolSculpting procedures varies depending on your areas of concern, the number of sessions needed, and your ultimate goals - See more at: http://localhost/takecare/#/blog\"\n},{\n    \"id\":2,\n    \"title\":\"Sparkle This Season\",\n    \"coverimage\":\"img123.jpg\",\n    \"content\":\"Q1. How much does the CoolSculpting procedure cost? Ans. The price for CoolSculpting procedures varies depending on your areas of concern, the number of sessions needed, and your ultimate goals... - See more at: http://localhost/takecare/#/blog\"\n}]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/searchBlog?title=Aci", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56aef95b149aa3720a78e382"), 
+    "name" : "popularPost", 
+    "Response" : {
+        "response" : "[{\n    \"id\":1,\n    \"coverimage\":\"img123.jpg\",\n    \"title\":\"Dhruv Kaji\",\n    \"order\":0\n},{\n    \"id\":2,\n    \"coverimage\":\"img123.jpg\",\n    \"title\":\"Dhruv Kaji\",\n    \"order\":1\n},{\n    \"id\":3,\n    \"coverimage\":\"img123.jpg\",\n    \"title\":\"Dhruv Kaji\",\n    \"order\":2\n},{\n    \"id\":4,\n    \"coverimage\":\"img123.jpg\",\n    \"title\":\"Dhruv Kaji\",\n    \"order\":3\n}]", 
+        "request" : ""
+    }, 
+    "url" : "json/popularPost", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b08a86c9af581404ffcbd8"), 
+    "name" : "getAllMobiles", 
+    "Response" : {
+        "response" : "[\n    {\n        \"id\":1,\n        \"name\":\"iPhone 5s\",\n        \"company\":\"Apple\",\n        \"img\":\"http://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/IPhone_5s.png/320px-IPhone_5s.png\"\n    },\n    {\n        \"id\":2,\n        \"name\":\"iPhone 6\",\n        \"company\":\"Apple\",\n        \"img\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/IPhone6_silver_frontface.png/320px-IPhone6_silver_frontface.png\"\n    },\n    {\n        \"id\":3,\n        \"name\":\"iPhone 6 Plus\",\n        \"company\":\"Apple\",\n        \"img\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/IPhone_6S_Rose_Gold.png/105px-IPhone_6S_Rose_Gold.png\"\n    },\n    {\n        \"id\":4,\n        \"name\":\"iPhone 6s\",\n        \"company\":\"Apple\",\n        \"img\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/IPhone_6S_Rose_Gold.png/320px-IPhone_6S_Rose_Gold.png\"\n    },{\n        \"id\":5,\n        \"name\":\"iPhone 6s Plus\",\n        \"company\":\"Apple\",\n        \"img\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/IPhone_6S_Rose_Gold.png/320px-IPhone_6S_Rose_Gold.png\"\n    }\n    \n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "mobile/getAll", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b09994c9af581404ffcbd9"), 
+    "name" : "getAllCountries", 
+    "Response" : {
+        "response" : "[\n    {\n        \"id\": 1,\n        \"name\": \"India\",\n        \"capital\": \"New Delhi\",\n        \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1350px-Flag_of_India.svg.png\"\n        \n    },\n    {\n        \"id\": 2,\n        \"name\": \"Kuwait\",\n        \"capital\": \"Kuwait City\",\n        \"flag\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAPFBMVEXOESYAej3///8AAADMABAAdjWlpaWiDR7SEScAfT4ANBoAgEBaCBHXEigAXzAAeT1fCBLJABsAORyrqKoA41xeAAACW0lEQVR4nO3XCW7CQBAF0SHOSsh+/7sGBGKLsWemWqCo653ALn215fK9eFmoVxmG99dbP8T/tc43LD8cYKdNPgfYbZtvWHoBu+zyOcA++3xewB6HfA6ww3E+L2Czk3wOsNVZPi9gm/N8DrDJ33xewAYj+RxgvdF8DrDWeD4HWOlSPj/BVS7mc4A1JvJ5AedN5XOAs6bzeQFnzORzgNNm83kBp8znc4ATavI5wIuq8jnASyrzOcBxtfkc4Kj6fA5wREM+B/hXUz5/Qs615XOAZ1rzeQFPNOdzgMc68nkBD3ryOcC9vnwOcKcznwPc6s7nJ3ijP58DXLB8XkCWzwHCfNkvIM2XfIA8X+oLGJAv8wBD8uW9gDH50g4wKl/SCxiWL+cAA/NlHGBkvoQDjM23HuBDKsH5hp+7VKLzPd76ha7LfIj5EPMh5kPMh5gPMR9iPsR8iPkQ8yHmQ8yHmA8xH2I+xHyI+RDzIeZDzIeYDzEfYj7EfIj5EPMh5kPMh5gPMR9iPsR8iPkQ8yHmQ8yHmA8xH2I+xHyI+RDzIeZDzIeYDzEfYj7EfIj5EPMhwflWX/epxOZ7eivJBMZbledbv83VxdXLN70Sly/j9EpYvpTTK0H5kk6vxOTLOr0SkS/v9EpAvsTTKzhf6ukVmi/39ArLl316BeVLP70C8jm9DaeHOD3E6SFOD3F6iNNDnB7i9BCnhzg9xOkhTg9xeojTQ5we4vQQp4c4PcTpIU4PcXqI00OcHuL0EKeHOD3E6SFOD3F6iNNDnB7i9BCnhzg9xOkhTg9xesin0wN+AcXjD+bYTVnTAAAAAElFTkSuQmCC\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Singapore\",\n        \"capital\": \"Singapore\",\n        \"flag\": \"data:image/png;base64,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\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Hong Kong\",\n        \"capital\": \"Victoria\",\n        \"flag\": \"data:image/png;base64,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\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Malaysia\",\n        \"capital\": \"Kuala Lumpur\",\n        \"flag\": \"data:image/png;base64,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\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Thailand\",\n        \"capital\": \"Bangkok\",\n        \"flag\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAElBMVEX////tHCQkHU/sAA32pacAAEI0+EZXAAABE0lEQVR4nO3cuQ3DABADwdPj/ltWfgvHUjBTAbEFcA62eXvAB2lSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmNRfb3GwDAAAAAAAAAPDPj21ONk1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT8ldQb19IAAAAAAAAAAAfdrPNxTYHmyalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmtQDn33W2V1v1XcAAAAASUVORK5CYII=\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Mauritius\",\n        \"capital\": \"Port Louis\",\n        \"flag\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAJ1BMVEXqKDkApVEaIG3/1QDtKDjIJkYAIG8AD3Cki0T/2gD/2ABcsEUApFIGNuB9AAABE0lEQVR4nO3QSQHCABAAseUsLfjXy3/HQiIhMwAAAAAAAAAAAAAAQDzZ5sU2b7a5szkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSknNQfbfNjmZJsHm5NyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSc7HNl21+bHNjc1JOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSf0Br4BjoeTFGNsAAAAASUVORK5CYII=\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Turkey\",\n        \"capital\": \"Istanbul\",\n        \"flag\": \"data:image/png;base64,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\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Egypt\",\n        \"capital\": \"Cairo\",\n        \"flag\": \"data:image/png;base64,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\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Kingdom of Saudi Arabia\",\n        \"capital\": \"Riyadh\",\n        \"flag\": \"data:image/png;base64,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\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Qatar\",\n        \"capital\": \"Doha\",\n        \"flag\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWYAAACNCAMAAACzDCDRAAAAeFBMVEWNGz3///+MFzuHAC6IADCGACuEACWEACOJADKFACehUmaLETjSsrngyc+DACCGACy3gI3Hn6imXW+WM07x5unEmaP69vetbX317vCTKkisaXm5hZGeSV/n1trcwsiPIEHs3+KaQFjTtbyBABnjz9PBk56zeod/ABLkBKwLAAADJElEQVR4nO2c25LaMBBEcYIxBgzZLLdkYcNeSP7/D6NBeXBVnrunyt3nDzjlGiSVdGYNi/3mtF7M1zNNaJqD29P3Rb/8kv2bE6BqDj7vb9vdWk01XXPh/P5bbX5kaA7K/OhanfmRpTkY7s/dTuOjztTcxPw4zfv59D/qZM3BfvM2ec/ZjmPpcZm85WTNsZBulwLjOU/xUWlZl+S4bFI6pU1KguIyKXqJSTGCrLhMiln3VUtxwHSseZzxgOZ4uPz5EPyM/0HT3ByHl+etqmie5qDsrde9yiJuDFdzcHtabYXO5ip8zUGZH2W9IaQ6R3PhvDntepnVc5rm4HpYiZztp2ouHF9ffrTTF52tOfj0eTOa4+u3X/6asVwPl27n2Yxkv/nZeqUBJf73tM7p+I7LpPAuEEuZFEudSTGCp1hvUoygWR5WHz5vphBTWWP99h9MzU3djXSCB85kzYHWirmSoDnQ2f9VkjQ3dX741hGFMj96ifmRqzm4HlbTHx7Zkgs3329Gc96cWoUnbJmOB53dd5ZisdsaGYrP76el2N0juuPhrniTjqq4TIqF0KQYQVPsAoE1w6FpDhx6oKH5MoKuuXHogYhDDzQcemDh0AMNhx4YOPQAx6EHOA494HHoAY5DD3AcesCjeZzxgObYoQcODj3QcOiBhtjVgQpfc+DQAwuHHmg49MDCoQcaDj3AcegBj85DnzTFWs/WUhTrPd/mO3boAY5DD3D0JsUImmWHHlg49MDCoQcaWivmSoLmQGf/V0nS3Dj0QMShBxoOPXBw6AGOQw94HHqAI3ZbI0OxQw94HHqA49ADHBcIrBkOTXPg0AMNzZcRdM2NQw9EHHqg4dADC4ceaDj0wMChBzgOPcBx6AGPQw9wHHqA49ADHs3jjAc0xw49cHDogYZDDzTErg5U+JoDhx5YOPRAw6EHFg490HDoAY5DD3h0HvqkKdZ6tpaiWO/5Nt+xQw9wHHqAozcpRtAsO/TAwqEHFg490NBaMVcSNAc6+79KkubGoQciDj3QcOiBg0MPcBx6wOPQAxyx2xoZih16wOPQAxyHHuBIFwj+AtPoeXV7b5vaAAAAAElFTkSuQmCC\"\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Oman\",\n        \"capital\": \"Muscat\",\n        \"flag\": \"data:image/png;base64,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\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Germany\",\n        \"capital\": \"Berlin\",\n        \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1280px-Flag_of_Germany.svg.png\"\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Syria\",\n        \"capital\": \"Damascus\",\n        \"flag\": \"data:image/png;base64,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\"\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Hungary\",\n        \"capital\": \"Budapest\",\n        \"flag\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAD1BMVEX////NKj5Db03LFzE3aEPEnHcLAAABBElEQVR4nO3QSQ2AAADEwOXwrxkRfQDJjIKmOwj2dsC/2ZfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl9iX2JfYl+wiGAAAAAAAAAAAAAAAAAAAAACfcRPsJLAvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL7EvsS+xL3kAmYrKe5pXC3kAAAAASUVORK5CYII=\"\n    }\n    ]", 
         "request" : ""
     }, 
     "type" : "post", 
-    "url" : "json/showCart", 
+    "url" : "countries", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b0aed4c9af581404ffcbda"), 
+    "name" : "getMobile", 
+    "Response" : {
+        "response" : "{\n        \"id\":1,\n        \"name\":\"iPhone 5s\",\n        \"desc\":\"Touch ID,Three-axis gyro,Accelerometer,Proximity sensor,Ambient light sensor\",\n        \"img\":\"http://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/IPhone_5s.png/320px-IPhone_5s.png\"\n    }", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "mobile/getMobile?id=1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b0af8bc9af581404ffcbdb"), 
+    "name" : "Country1", 
+    "Response" : {
+        "response" : "{\n    \"id\": 1,\n    \"name\": \"India\",\n    \"capital\": \"New Delhi\",\n    \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1350px-Flag_of_India.svg.png\",\n    \"description\": \"India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country by area, the second-most populous country with over 1.2 billion people, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the south-west, and the Bay of Bengal on the south-east, it shares land borders with Pakistan to the west; China, Nepal, and Bhutan to the north-east; and Myanmar (Burma) and Bangladesh to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; in addition, India's Andaman and Nicobar Islands share a maritime border with Thailand and Indonesia.\"\n        \n    }", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "eachCountry/1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b18c9f5474b33c02f26b3e"), 
+    "name" : "errPg", 
+    "Response" : {
+        "response" : "{\n    \"id\":2,\n    \"name\":\"iPhone 6\",\n    \"desc\":\"1/3 sensor size, 1.5 µm pixel size, touch focus, geo-tagging, face/smile detection, HDR (photo/panorama),Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot\",\n     \"img\":\"\"\n    \n}", 
+        "request" : ""
+    }, 
+    "url" : "mobile/getMobile?id=2", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1952f5474b33c02f26b3f"), 
+    "name" : "Country2", 
+    "Response" : {
+        "response" : "{\n        \"id\": 2,\n        \"name\": \"Kuwait\",\n        \"capital\": \"Kuwait City\",\n        \"flag\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAPFBMVEXOESYAej3///8AAADMABAAdjWlpaWiDR7SEScAfT4ANBoAgEBaCBHXEigAXzAAeT1fCBLJABsAORyrqKoA41xeAAACW0lEQVR4nO3XCW7CQBAF0SHOSsh+/7sGBGKLsWemWqCo653ALn215fK9eFmoVxmG99dbP8T/tc43LD8cYKdNPgfYbZtvWHoBu+zyOcA++3xewB6HfA6ww3E+L2Czk3wOsNVZPi9gm/N8DrDJ33xewAYj+RxgvdF8DrDWeD4HWOlSPj/BVS7mc4A1JvJ5AedN5XOAs6bzeQFnzORzgNNm83kBp8znc4ATavI5wIuq8jnASyrzOcBxtfkc4Kj6fA5wREM+B/hXUz5/Qs615XOAZ1rzeQFPNOdzgMc68nkBD3ryOcC9vnwOcKcznwPc6s7nJ3ijP58DXLB8XkCWzwHCfNkvIM2XfIA8X+oLGJAv8wBD8uW9gDH50g4wKl/SCxiWL+cAA/NlHGBkvoQDjM23HuBDKsH5hp+7VKLzPd76ha7LfIj5EPMh5kPMh5gPMR9iPsR8iPkQ8yHmQ8yHmA8xH2I+xHyI+RDzIeZDzIeYDzEfYj7EfIj5EPMh5kPMh5gPMR9iPsR8iPkQ8yHmQ8yHmA8xH2I+xHyI+RDzIeZDzIeYDzEfYj7EfIj5EPMhwflWX/epxOZ7eivJBMZbledbv83VxdXLN70Sly/j9EpYvpTTK0H5kk6vxOTLOr0SkS/v9EpAvsTTKzhf6ukVmi/39ArLl316BeVLP70C8jm9DaeHOD3E6SFOD3F6iNNDnB7i9BCnhzg9xOkhTg9xeojTQ5we4vQQp4c4PcTpIU4PcXqI00OcHuL0EKeHOD3E6SFOD3F6iNNDnB7i9BCnhzg9xOkhTg9xesin0wN+AcXjD+bYTVnTAAAAAElFTkSuQmCC\",\n        \"description\": \"Kuwait, officially the State of Kuwait, is a country in Western Asia. Situated in the northern edge of Eastern Arabia at the tip of the Persian Gulf, it shares borders with Iraq and Saudi Arabia. As of 2014, Kuwait has a population of 4.2 million people; 1.3 million are Kuwaitis and 2.9 million are expatriates.\"\n    }", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "eachCountry/2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b197535474b33c02f26b40"), 
+    "name" : "Country3", 
+    "Response" : {
+        "response" : "{\n        \"id\": 3,\n        \"name\": \"Singapore\",\n        \"capital\": \"Singapore\",\n        \"flag\":\"\",\n        \"description\": \"Singapore officially the Republic of Singapore, and often referred to as the Lion City, the Garden City, and the Red Dot, is a global city in Southeast Asia and the world's only island city-state. It lies one degree (137 km) north of the equator, at the southernmost tip of continental Asia and peninsular Malaysia, with Indonesia's Riau Islands to the south. Singapore's territory consists of the diamond-shaped main island and 62 islets. Since independence, extensive land reclamation has increased its total size by 23% (130 km2), and its greening policy has covered the densely populated island with tropical flora, parks and gardens.\"\n    }", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "eachCountry/3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1a5b15474b33c02f26b41"), 
+    "name" : "Country4", 
+    "Response" : {
+        "response" : "{\n    \"value\":false\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "eachCountry/4", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1ac4b5474b33c02f26b42"), 
+    "name" : "falsevalue", 
+    "Response" : {
+        "response" : "{\n    \"value\":\"false\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "mobile/getMobile?id=3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1ac615474b33c02f26b43"), 
+    "name" : "Country5", 
+    "Response" : {
+        "response" : "{\n        \"id\": 5,\n        \"name\": \"Malaysia\",\n        \"capital\": \"Kuala Lumpur\",\n        \"flag\": \"data:image/png;base64,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\",\n        \n        \"description\": \"Malaysia is a federal constitutional monarchy located in Southeast Asia. It consists of thirteen states and three federal territories and has a total landmass of 329,847 square kilometres (127,350 sq mi) separated by the South China Sea into two similarly sized regions, Peninsular Malaysia and East Malaysia (Malaysian Borneo). Peninsular Malaysia shares a land and maritime border with Thailand and maritime borders with Singapore, Vietnam, and Indonesia. East Malaysia shares land and maritime borders with Brunei and Indonesia and a maritime border with the Philippines and Vietnam. The capital city is Kuala Lumpur, while Putrajaya is the seat of the federal government. By 2016, with a population of over 30 million, Malaysia became the 44nd most populous country in the world. The southernmost point of continental Eurasia, Tanjung Piai, is in Malaysia, located in the tropics. It is one of 17 megadiverse countries on earth, with large numbers of endemic species.\"\n    }", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "eachCountry/5", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1b6075474b33c02f26b45"), 
+    "name" : "falseid", 
+    "Response" : {
+        "response" : "{\n    \"value\":\"false\"\n}", 
+        "request" : ""
+    }, 
+    "url" : "mobile/getMobile?id=6", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1acb65474b33c02f26b44"), 
+    "name" : "Country6", 
+    "Response" : {
+        "response" : "{\n        \"id\": 6,\n        \"name\": \"Thailand\",\n        \"capital\": \"Bangkok\",\n        \"flag\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAElBMVEX////tHCQkHU/sAA32pacAAEI0+EZXAAABE0lEQVR4nO3cuQ3DABADwdPj/ltWfgvHUjBTAbEFcA62eXvAB2lSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmNRfb3GwDAAAAAAAAAPDPj21ONk1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT8ldQb19IAAAAAAAAAAAfdrPNxTYHmyalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmtQDn33W2V1v1XcAAAAASUVORK5CYII=\",\n        \"description\": \"Thailand, officially the Kingdom of Thailand, formerly known as Siam, is a country at the centre of the Indochinese peninsula in Mainland Southeast Asia. It is bordered to the north by Myanmar and Laos, to the east by Laos and Cambodia, to the south by the Gulf of Thailand and Malaysia, and to the west by the Andaman Sea and the southern extremity of Myanmar. Its maritime boundaries include Vietnam in the Gulf of Thailand to the southeast, and Indonesia and India on the Andaman Sea to the southwest.\"\n    }", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "eachCountry/6", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1b8c85474b33c02f26b46"), 
+    "name" : "idblank", 
+    "Response" : {
+        "response" : "{\n    \"id\": false\n}", 
+        "request" : ""
+    }, 
+    "url" : "mobile/getMobile?id=4", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1da495474b33c02f26b48"), 
+    "name" : "getAllProjects", 
+    "Response" : {
+        "response" : "[{\n    \"id\":1,\n    \"name\":\"SelCare\"\n        \n    },\n    {\n        \n    \"id\":2,\n    \"name\":\"TagBoss\"\n    },\n    {\n        \n    \"id\":3,\n    \"name\":\"Countries\"\n    },\n    {\n        \n    \"id\":4,\n    \"name\":\"Mobile\"\n    }]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "Project/getAll", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1f1206c07aa245719bd5b"), 
+    "name" : "deleteProject", 
+    "Response" : {
+        "response" : "{\n    \"value\":true\n}", 
+        "request" : ""
+    }, 
+    "type" : "post", 
+    "url" : "Project/deleteProj", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b4435ec45d4e040940eb24"), 
+    "name" : "projectDetail2", 
+    "Response" : {
+        "response" : "{\n    \"id\":2,\n    \"name\":\"TagBoss\",\n    \"url\":\"\",\n    \"gitname\":\"\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "Project/getProjectDet?id=2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b443a3c45d4e040940eb25"), 
+    "name" : "projectDetail3", 
+    "Response" : {
+        "response" : "{\n    \"id\":3,\n    \"name\":\"Countries\",\n    \"url\":\"\",\n    \"gitname\":\"\"\n}", 
+        "request" : ""
+    }, 
+    "url" : "Project/getProjectDet?id=3", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b443efc45d4e040940eb26"), 
+    "name" : "projectDetail4", 
+    "Response" : {
+        "response" : "{\n    \"id\":4,\n    \"name\":\"Mobile\",\n    \"url\":\"\",\n    \"gitname\":\"\"\n}", 
+        "request" : ""
+    }, 
+    "url" : "Project/getProjectDet?id=4", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b2e55956b3bc0f021f4990"), 
+    "name" : "projectDetail1", 
+    "Response" : {
+        "response" : "{\n    \"id\":1,\n    \"name\":\"Selfcare\",\n    \"url\":\"\",\n    \"gitname\":\"\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "Project/getProjectDet?id=1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b1e8b66c07aa245719bd5a"), 
+    "name" : "createForm", 
+    "Response" : {
+        "response" : "[\n    {\n        \"id\": 1,\n        \"label\":\"name\",\n        \"type\":\"text\",\n        \"options\":[]\n    },\n    {\n        \"id\": 2,\n        \"label\": \"email\",\n        \"type\": \"email\",\n        \"options\":[]\n    },\n    {\n        \"id\": 3,\n        \"label\": \"gender\",\n        \"type\": \"radio\",\n        \"options\":[\"male\", \"female\"]\n    },\n    {\n        \"id\": 4,\n        \"label\": \"education\",\n        \"type\": \"checkbox\",\n        \"options\":[\"ssc\", \"hsc\", \"bsc\"]\n    },\n    {\n        \"id\": 5,\n        \"label\": \"submit\",\n        \"type\": \"button\",\n        \"options\":[]\n    }\n]", 
+        "request" : ""
+    }, 
+    "type" : "post", 
+    "url" : "createForm", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b3496156b3bc0f021f4991"), 
+    "name" : "newForm", 
+    "Response" : {
+        "response" : "[\n    {\n        \"id\":1,\n        \"label\":\"name\",\n        \"type\":\"text\",\n        \"options\":[],\n        \"value\":\"midhet\"\n    },\n    \n    {\n        \"id\":2,\n        \"label\":\"email\",\n        \"type\":\"email\",\n        \"options\":[],\n        \"value\":\"midhetfatema94@gmail.com\"\n    },\n    \n    {\n        \"id\":3,\n        \"label\":\"gender\",\n        \"type\":\"radio\",\n        \"options\":[\"male\",\"female\"],\n        \"value\": \"female\"\n    },\n    \n    {\n        \"id\":4,\n        \"label\":\"education\",\n        \"type\":\"checkbox\",\n        \"options\":[\"ssc\",\"hsc\",\"bsc\"],\n        \"value\":[\"ssc\",\"hsc\",\"ssc\"]\n    },\n    \n    {\n        \"id\":5,\n        \"label\":\"submit\",\n        \"type\":\"button\",\n        \"options\":[]\n    }\n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "submitForm", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b98c73361e0c880296120b"), 
+    "name" : "homeslider", 
+    "Response" : {
+        "response" : "[\n    {\n        \"id\":1,\n        \"order\":1,\n        \"status\":true,\n        \"image\":\"img/home-slide/slider1.jpg\"\n    },\n    \n    {\n        \"id\":2,\n        \"order\":2,\n        \"status\":true,\n        \"image\":\"img/home-slide/slider2.jpg\"\n    },\n    \n    {\n        \"id\":3,\n        \"order\":3,\n        \"status\":true,\n        \"image\":\"img/home-slide/slider3.jpg\"\n    },\n    \n    {\n        \"id\":4,\n        \"order\":4,\n        \"status\":true,\n        \"image\":\"img/home-slide/slider4.jpg\"\n    }\n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getSlider", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b99086361e0c880296120e"), 
+    "name" : "getCategoryById", 
+    "Response" : {
+        "response" : "{\n    \"id\":2,\n    \"productName\":\"Acrylyte\",\n    \"bannerImage\":\"img/banners/acrylyte.png\",\n    \"featureImage\":\"img/features/acrylyte.jpg\",\n    \"status\":1,\n    \"series\":[8800, 8900, 9000]\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getCategoryById?id=2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b990a8361e0c880296120f"), 
+    "name" : "homepageimage", 
+    "Response" : {
+        "response" : "{\n    \"id\":1,\n    \"image1\":\"img/Adhesive-banner.jpg\",\n    \"image2\":\"img/vereno-banner.jpg\",\n    \"image3\":\"img/lucento-banner.jpg\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getHomePageImage", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b994c5361e0c8802961211"), 
+    "name" : "homepageimage", 
+    "Response" : {
+        "response" : "{\n    \"id\":1,\n    \"image1\":\"img/adhesive-banner.jpg\",\n    \"image2\":\"img/1.jpg\",\n    \"image3\":\"img/2.jpg\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getHomePageImage", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b996d2361e0c8802961212"), 
+    "name" : "popularproduct", 
+    "Response" : {
+        "response" : "[\n   {\n        \"id\":1,\n        \"order\":1,\n        \"frontImage\":\"img/brandlist/acrylam.png\",\n        \"backImage\":\"img/brandlist/acrylamhov.png\",\n        \"status\":true,\n        \"series\":[]\n   },\n   \n   {\n        \"id\":2,\n        \"order\":2,\n        \"frontImage\":\"img/brandlist/acrylyte.png\",\n        \"backImage\":\"img/brandlist/acrylytehov.png\",\n        \"status\":true,\n        \"series\":[8800, 8900, 9000]\n   },\n   \n   {\n        \"id\":3,\n        \"order\":3,\n        \"frontImage\":\"img/brandlist/corriano.png\",\n        \"backImage\":\"img/brandlist/corrianohov.png\",\n        \"status\":true,\n        \"series\":[]\n   }\n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getPopularProduct", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b99b22361e0c8802961213"), 
+    "name" : "gallery", 
+    "Response" : {
+        "response" : "[\n    {\n    \"id\":1,\n    \"categoryName\":\"decolite\",\n    \"categoryImg\":\"img/gallery/decolite.png\",\n    \"pdf\":\"img/pdf/decolite.pdf\",\n    \"order\":1,\n    \"status\":true\n    },\n    {\n    \"id\":2,\n    \"categoryName\":\"lucento\",\n    \"categoryImg\":\"img/gallery/lucento.png\",\n    \"pdf\":\"img/pdf/lucento.pdf\",\n    \"order\":2,\n    \"status\":true\n    },\n    \n    {\n    \"id\":3,\n    \"categoryName\":\"mikano\",\n    \"categoryImg\":\"img/gallery/mikano.png\",\n    \"pdf\":\"img/pdf/mikano.pdf\",\n    \"order\":3,\n    \"status\":true\n    },\n    {\n    \"id\":4,\n    \"categoryName\":\"vereno\",\n    \"categoryImg\":\"img/gallery/vereno.png\",\n    \"pdf\":\"img/pdf/vereno.pdf\",\n    \"order\":4,\n    \"status\":true\n    },\n    {\n    \"id\":5,\n    \"categoryName\":\"acrylam\",\n    \"categorpdfyImg\":\"img/gallery/acrylam.png\",\n    \"pdf\":\"img/pdf/acrylam.pdf\",\n    \"order\":5,\n    \"status\":true\n    },\n    {\n    \"id\":6,\n    \"categoryName\":\"egger\",\n    \"categoryImg\":\"img/gallery/egger.png\",\n    \"pdf\":[],\n    \"order\":6,\n    \"status\":true\n    },\n    {\n    \"id\":7,\n    \"categoryName\":\"flos\",\n    \"categoryImg\":\"img/gallery/flos.png\",\n    \"pdf\":[],\n    \"order\":7,\n    \"status\":true\n    }\n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getGalleryImages", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b98eee361e0c880296120d"), 
+    "name" : "getExclusivePdt", 
+    "Response" : {
+        "response" : "\n    {\n        \"id\":1,\n        \"image1\":\"img/mikano-banner.jpg\",\n        \"image2\":\"img/decoart-banner.jpg\"\n    }\n", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getExclusivePdt", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b98da2361e0c880296120c"), 
+    "name" : "getSubscribers", 
+    "Response" : {
+        "response" : "{\n    \"email\":\"midhetfatema94@gmail.com\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getSubscribers?email=midhetfatema94@gmail.com", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56bb0801da40ad4702f4dec5"), 
+    "name" : "getSlide", 
+    "Response" : {
+        "response" : "[\n {\"image\":\"img/main_bg.jpg\"},\n {\"image\":\"img/main_bg2.jpg\"},\n {\"image\":\"img/main_bg3.jpg\"}\n ]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getSlide", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56b992e8361e0c8802961210"), 
+    "name" : "getProducts", 
+    "Response" : {
+        "response" : "[\n    {\n        \"id\":1,\n        \"name\":\"decolite\",\n        \"series\":[],\n        \"image\":\"img/gallery/decolite.png\"\n    },\n    {\n        \"id\":2,\n        \"name\":\"acrylite\",\n        \"series\":[8800, 8900, 9000],\n        \"image\":\"img/gallery/acrylyte.png\"\n    },\n    {\n        \"id\":3,\n        \"name\":\"lucento\",\n        \"series\":[],\n        \"image\":\"img/gallery/lucento.png\"\n    },\n    {\n        \"id\":4,\n        \"name\":\"mikano\",\n        \"series\":[],\n        \"image\":\"img/gallery/mikano.png\"\n    },\n    {\n        \"id\":5,\n        \"name\":\"vereno\",\n        \"series\":[],\n        \"image\":\"img/gallery/vereno.png\"\n    }\n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getAllProducts", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56bc2cb384fb3a9b0b13bc90"), 
+    "name" : "each series", 
+    "Response" : {
+        "response" : "[{\n    \"name\":\"Acrylyte\",\n    \"code\":\"8801\",\n    \"size\":\"1220 x 2440mm x 3mm (T)\",\n    \"image\":\"img/acrylyte/sample/8801.jpg\"\n},\n{\n    \"name\":\"Acrylyte\",\n    \"code\":\"8802\",\n    \"size\":\"1220 x 2440mm x 3mm (T)\",\n    \"image\":\"img/acrylyte/sample/8802.jpg\"\n}]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "category?id=2/series?code=8800", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56bc2e2484fb3a9b0b13bc91"), 
+    "name" : "contactUs", 
+    "Response" : {
+        "response" : "{\n    \"name\":\"abc\",\n    \"email\":\"chaitaleelp10@gmail.com\",\n    \"telephone\":\"\",\n    \"comment\":\"\"\n}", 
+        "request" : ""
+    }, 
+    "url" : "contactUs", 
+    "type" : "post", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56bb0e34da40ad4702f4dec6"), 
+    "name" : "getEachPopularProduct", 
+    "Response" : {
+        "response" : "[\n    {\n        \"image\":\"img/acrylyte/sample/8801.jpg\",\n         \"name\":\"Acrylyte\",\n         \"code\":8801, \n         \"size\":\"1220 x 2440mm x 3mm (T)\"\n    }, \n    {\n        \"image\":\"img/acrylyte/sample/8802.jpg\",\n        \"name\":\"Acrylyte\",\n        \"code\":8802,\n        \"size\":\"1220 x 2440mm x 3mm (T)\"\n        \n    }, \n    {\n        \"image\":\"img/acrylyte/sample/8803.jpg\",\n        \"name\":\"Acrylyte\",\n        \"code\":8803,\n        \"size\":\"1220 x 2440mm x 3mm (T)\"\n    }, \n    {\n        \"image\":\"img/acrylyte/sample/8804.jpg\",\n        \"name\":\"Acrylyte\",\n        \"code\":8804,\n        \"size\":\"1220 x 2440mm x 3mm (T)\"\n    }\n]", 
+        "request" : ""
+    }, 
+    "url" : "getEachPopularProduct?id=2", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56bc209b84fb3a9b0b13bc8f"), 
+    "name" : "getEachProductGallery/1", 
+    "Response" : {
+        "response" : "{\n    \"id\":1,\n    \"img\":[\"img/mikano/1.jpg\",\"img/mikano/2.jpg\",\"img/mikano/3.jpg\",\"img/mikano/4.jpg\"]\n}", 
+        "request" : ""
+    }, 
+    "url" : "getEachProductGallery?id=1", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56bc7b1c84fb3a9b0b13bc99"), 
+    "name" : "getEachProductGallery/2", 
+    "Response" : {
+        "response" : "{\n    \"id\":2,\n    \"img\":[\"img/mikano/3.jpg\",\"img/mikano/4.jpg\"]\n}", 
+        "request" : ""
+    }, 
+    "url" : "getEachProductGallery?id=2", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c3183e67ee0cff09ae5e82"), 
+    "name" : "each series 2", 
+    "Response" : {
+        "response" : "[\n    {\n        \"name\":\"Acrylyte\",\n        \"code\":\"8803\",\n        \"size\":\"1220 x 2440mm x 3mm (T)\",\n        \"image\":\"img/acrylyte/sample/8803.jpg\"\n    },\n    {\n        \"name\":\"Acrylyte\",\n        \"code\":\"8804\",\n        \"size\":\"1220 x 2440mm x 3mm (T)\",\n        \"image\":\"img/acrylyte/sample/8804.jpg\"\n    }\n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "category?id=2/series?code=8900", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c40668ff484f0804200714"), 
+    "name" : "each series 3", 
+    "Response" : {
+        "response" : "[{\n    \"name\":\"Acrylyte\",\n    \"code\":\"8805\",\n    \"size\":\"1220 x 2440mm x 3mm (T)\",\n    \"image\":\"img/acrylyte/sample/8805.jpg\"\n}]", 
+        "request" : ""
+    }, 
+    "url" : "category?id=2/series?code=9000", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6c6716114076804a01ebc"), 
+    "name" : "get city options", 
+    "Response" : {
+        "response" : "[\"mumbai\", \"delhi\", \"blahblah\"]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getcityoptions", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6e98e6114076804a01ebf"), 
+    "name" : "my profile page", 
+    "Response" : {
+        "response" : "{\n    \"personalDetails\": {\n        \"userId\": \"priyanka123\",\n        \"name\": \"Priyanka Kumbhar\",\n        \"email\": \"avicci@gmail.com\",\n        \"contactNo\": \"+918087120163\",\n        \"address\": \"Mayur Nagar, Aarey Colony, etc etc\"\n    },\n\n    \"education\": [{\n        \"examination\": \"hsc\",\n        \"percentage\": \"60%\",\n        \"institution\": \"Bkc college, mumbai\"\n    }, {\n        \"examination\": \"be\",\n        \"percentage\": \"60%\",\n        \"institution\": \"RCOE\"\n    }],\n\n    \"workExperience\": [{\n            \"company\": \"babycorn\",\n            \"duration\": \"6 years\",\n            \"responsibilities\": \"jrfkhekhfkerf,ejfefiuefh,oejfoejfoif\",\n            \"designation\": \"Developer\"\n        },\n\n        {\n            \"company\": \"capsicum\",\n            \"duration\": \"6 years\",\n            \"responsibilities\": \"jrfkhekhfkerf,ejfefiuefh,oejfoejfoif\",\n            \"designation\": \"Developer\"\n        }\n    ]\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/findoneprofile", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6e99b6114076804a01ec0"), 
+    "name" : "each job listing", 
+    "Response" : {
+        "response" : "{\n    \"company\": \"BobCorn\",\n    \"roleRequired\": \"Mobile App Developer\",\n    \"city\": \"Mumbai\",\n    \"jobPayment\": \"hourly\",\n    \"payment\": \"Rs. 1000-2000\",\n    \"timeCommitment\": \"40 hours weekly\",\n    \"postingDate\": \"Fri Feb 19 2016 13:43:11 GMT+0530 (IST)\",\n    \"expiryDate\": \"Fri Feb 26 2016 13:43:11 GMT+0530 (IST)\",\n    \"jobDescription\": \"This is an awesome job! you should try it!!\",\n    \"companyDescription\": \"This is an awesome company! you should try it!!\",\n    \"exposure\": \"WorldWideWeb\",\n    \"jobResponsibilities\": \"You are going to have alot of responsibilities!!\",\n    \"image\":\"img/joblist.jpg\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/findonejob", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6ebf36114076804a01ec3"), 
+    "name" : "category dropdown", 
+    "Response" : {
+        "response" : "[\"Design\", \"Websites IT Software\", \"Mobile\", \"Data Entry\", \"Product Sourcing\", \"Sales & Marketing\", \"Business Accounting & Legal\"]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/findallcategories", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6eefa6114076804a01ec5"), 
+    "name" : "searchresult", 
+    "Response" : {
+        "response" : "{\n    \"id\":1,\n    \"name\":\"Acrylyte\",\n    \"image1\":\"img/acrylyte/sample/8802.jpg\",\n    \"image2\":\"img/acrylyte/sample/8801.jpg\"\n    \n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "getsearchresult", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6f9d06114076804a01ec8"), 
+    "name" : "company profile", 
+    "Response" : {
+        "response" : "{\n    \"companyDetails\": {\n        \"email\": \"avicci@gmail.com\",\n        \"companyName\": \"AapCot\",\n        \"name\": \"Priyanka Kumbhar\",\n        \"contactNo\": \"8087120163\",\n        \"address\": \"Aarey Colony\",\n        \"experience\":\"As a UI Designer in wohlig technology. 4 year of exprience\"\n    },\n\n    \"description\": \"jowjewojoewjfowejfowejfifjowefowejfowejeeojoweijf\",\n\n    \"jobs\": [{\n            \"title\": \"program manager\",\n            \"description\": \"part time from office with skills in business, development, sales, training, education, sales, training, education, management, learning and development, 6-8 years of work experience for prepmyskills.com\"\n\n        },\n\n        {\n            \"title\": \"program manager\",\n            \"description\": \"part time from office with skills in business, development, sales, training, education, sales, training, education, management, learning and development, 6-8 years of work experience for prepmyskills.com\"\n\n        },\n\n        {\n            \"title\": \"program manager\",\n            \"description\": \"part time from office with skills in business, development, sales, training, education, sales, training, education, management, learning and development, 6-8 years of work experience for prepmyskills.com\"\n\n        },\n\n        {\n            \"title\": \"program manager\",\n            \"description\": \"part time from office with skills in business, development, sales, training, education, sales, training, education, management, learning and development, 6-8 years of work experience for prepmyskills.com\"\n\n        }\n    ]\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/findonecompanyprofile", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c700fe6114076804a01ecb"), 
+    "name" : "forum", 
+    "Response" : {
+        "response" : "[{\n    \"starter\": {\n        \"Id\": \"fwejffkjwenfkjnfkjen\",\n        \"name\": \"Seema Yadav\",\n        \"designation\": \"Sales Manager\",\n        \"company\": \"Aapcot\"\n    },\n\n    \"question\": {\n        \"id\": \"jekfkeff\",\n        \"description\": \"How to get a better interest rate?\",\n        \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\"\n    },\n\n    \"comments\": [{\n            \"id\": \"ejhjhwebfwbfjh\",\n            \"userId\": \"jedhfwehefiuehf\",\n            \"description\": \"ejoijefowejojfoiejo, iefiwefif\",\n            \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\",\n            \"comments\": [{\n                \"id\": \"ejhjhwebfwbfjh\",\n                \"userId\": \"jedhfwehefiuehf\",\n                \"description\": \"ejoijefowejojfoiejo, iefiwefif\",\n                \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\"\n            }]\n        },\n\n        {\n            \"id\": \"ejhjhwebfwbfjh\",\n            \"userId\": \"jedhfwehefiuehf\",\n            \"description\": \"ejoijefowejojfoiejo, iefiwefif\",\n            \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\"\n        },\n\n        {\n            \"id\": \"ejhjhwebfwbfjh\",\n            \"userId\": \"jedhfwehefiuehf\",\n            \"description\": \"ejoijefowejojfoiejo, iefiwefif\",\n            \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\"\n        }\n    ]\n}]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getalldiscussions", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6ed0a6114076804a01ec4"), 
+    "name" : "sign up client", 
+    "Response" : {
+        "response" : "{\n    \"status\": 200,\n    \"message\":\"success\"\n}", 
+        "request" : "{\n    \"accessLevel\": \"client\",\n    \"companyName\": \"midhet\",\n    \"name\": \"midhet\",\n    \"email\": \"midhetfatema94@gmail.com\",\n    \"contact\": \"9920605751\",\n    \"password\": \"midhet123\",\n    \"location\": \"mumbai\",\n    \"jobRole\": \"developer\",\n    \"image\":\"1.jpg\",\n    \"tc\":true\n}"
+    }, 
+    "type" : "get", 
+    "url" : "json/createclient", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6c5836114076804a01ebb"), 
+    "name" : "sign up freelancer", 
+    "Response" : {
+        "response" : "{\n    \"status\": 200,\n    \"message\":\"Success\"\n}", 
+        "request" : "{\n    \"accessLevel\": \"freelancer\",\n    \"name\": \"midhet\",\n    \"email\": \"midhetfatema94@gmail.com\",\n    \"contactNo\": \"9920605751\",\n    \"password\": \"midhet123\",\n    \"location\": \"mumbai\",\n    \"jobRole\": \"developer\",\n    \"tc\":true,\n    \"picture\":\"1.jpg\",\n    \"resume\":\"acrylam.pdf\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "json/createfreelancer", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6eb256114076804a01ec2"), 
+    "name" : "slider", 
+    "Response" : {
+        "response" : "[\"http://cdn2.hubspot.net/hubfs/53/Knowledge_Base_Images/Content/Landing_Page/Tracking_URL_Campaign_Select.png?t=1455847252190\", \"https://weeblr.com/media/com_wbdoc/display/products.sh404sef/4/images/going-further/sh404sef-going-further-set-canonical-sample.png\", \"https://www.google.co.in/imgres?imgurl=http://www.sustworks.com/pa_guide/genericDialURL_files/genericdialurl.jpg&imgrefurl=http://www.sustworks.com/pa_guide/genericDialURL.html&h=325&w=450&tbnid=ya34uMQF69wfzM:&docid=tv8jjKiJffBBCM&ei=fPvHVpuWFuTAmwXPi6WIAQ&tbm=isch&ved=0ahUKEwibxPnoz4XLAhVk4KYKHc9FCREQMwgeKAIwAg\", \"https://www.google.co.in/search?q=some+image+urls&espv=2&biw=1301&bih=659&source=lnms&tbm=isch&sa=X&ved=0ahUKEwirmKGhz4XLAhWCCY4KHYn2BMkQ_AUIBigB#imgrc=Qzvqgp_qEholSM%3A\"]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getsliderimages", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6fac86114076804a01ec9"), 
+    "name" : "testimonials", 
+    "Response" : {
+        "response" : "[{\n        \"name\": \"Seema Yadav\",\n        \"designation\": \"Sales Manager\",\n        \"company\": \"AapCot\",\n        \"comment\": \"wekjfenfknefknfkjwenf, iejfefwjefkjfkjwe, ijkdnkndkwndnekwenkjwenwe\",\n        \"image\": \"http://morefromyourblog.com/wp-content/uploads/2013/01/Adsense-block-feature.png\"\n    },\n\n    {\n        \"name\": \"Frida Kahlo\",\n        \"designation\": \"Sales Manager\",\n        \"company\": \"AapCot\",\n        \"comment\": \"wekjfenfknefknfkjwenf, iejfefwjefkjfkjwe, ijkdnkndkwndnekwenkjwenwe\",\n        \"image\": \"data:image/png;base64,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\"\n    },\n\n    {\n        \"name\": \"Madonna\",\n        \"designation\": \"Sales Manager\",\n        \"company\": \"AapCot\",\n        \"comment\": \"wekjfenfknefknfkjwenf, iejfefwjefkjfkjwe, ijkdnkndkwndnekwenkjwenwe\",\n        \"image\": \"data:image/png;base64,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\"\n    }\n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/findalltestimonials", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c7ff7c8352343802f6d491"), 
+    "name" : "get one discussion", 
+    "Response" : {
+        "response" : "{\n    \"starter\": {\n        \"Id\": \"fwejffkjwenfkjnfkjen\",\n        \"name\": \"Seema Yadav\",\n        \"designation\": \"Sales Manager\",\n        \"company\": \"Aapcot\"\n    },\n\n    \"question\": {\n        \"id\": \"jekfkeff\",\n        \"description\": \"How to get a better interest rate?\",\n        \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\"\n    },\n\n    \"comments\": [{\n            \"id\": \"ejhjhwebfwbfjh\",\n            \"userId\": \"jedhfwehefiuehf\",\n            \"description\": \"ejoijefowejojfoiejo, iefiwefif\",\n            \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\",\n            \"comments\": [{\n                \"id\": \"ejhjhwebfwbfjh\",\n                \"userId\": \"jedhfwehefiuehf\",\n                \"description\": \"ejoijefowejojfoiejo, iefiwefif\",\n                \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\"\n            }]\n        },\n\n        {\n            \"id\": \"ejhjhwebfwbfjh\",\n            \"userId\": \"jedhfwehefiuehf\",\n            \"description\": \"ejoijefowejojfoiejo, iefiwefif\",\n            \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\"\n        },\n\n        {\n            \"id\": \"ejhjhwebfwbfjh\",\n            \"userId\": \"jedhfwehefiuehf\",\n            \"description\": \"ejoijefowejojfoiejo, iefiwefif\",\n            \"timestamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\"\n        }\n    ]\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getonediscussion", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6fba46114076804a01eca"), 
+    "name" : "notification", 
+    "Response" : {
+        "response" : "[{\n        \"image\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAADp6enY2NhmZmarq6tZWVnPz8+zs7OwsLAoKCgkJCQ2NjYJCQn6+vrU1NTx8fGlpaVtbW2enp5ISEiYmJhzc3OQkJA3NzcUFBR6enpTU1PFxcXh4eFxcXEfHx+icMxgAAABqklEQVR4nO3d21LiQBCAYVREWAHDwRXZg+//lkKVd0t6SWCYRr7vBbr/SiaVuxkMWjU/767E+qW9IjKtvXgHD30Cf9feuottn8LH2lt3MVJ404W/hqktTy/s+SG+mNMLn8690pkpDChMQmFAYRIKAwqTUBhQmITCgMIkFAYUJqEwoDAJhQGFSSgMKExCYUBhEgoDCpNQGFCYhMKAwiQUBhQmoTCgMAmFAYVJKAwoTEJhQGESCgMKk1AYUJiEwoDCJBQGFCahMKAwCYUBhUkoDChMQmFAYRIKAwqTUBhQmITCgMIkFAYUJqEwoDAJhQGFSSgMKExCYUBhEgoDN1M4eUjtz+mF10HhjRZOam/dxbBP4X3trbt47FM4GNde+3h///e0FqOP539NP2ovfqzZ5scBz6NFc3XPqrPxPvCp+JjZanLY66z47P0lMsviUxat52NRfPZycInLx1athavis6e7KeviU2av48Mu8Jaud4VvxafU9LYrnG9qb1HQZr4/DM32vfYihbxv518Hvrn/npqj/t0AAAAAAAAAAAAAAAAAAAAAAAAAAIAWn4lMKXNb8NOOAAAAAElFTkSuQmCC\",\n        \"description\": \"A Client has viewed your profile\",\n        \"skills\":[\"HTML\", \"PHP\", \"JavaScript\"],\n        \"budget\":\"$750\",\n        \"timeStamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\",\n        \"status\": \"unread\"\n    },\n\n    {\n        \"image\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAADp6enY2NhmZmarq6tZWVnPz8+zs7OwsLAoKCgkJCQ2NjYJCQn6+vrU1NTx8fGlpaVtbW2enp5ISEiYmJhzc3OQkJA3NzcUFBR6enpTU1PFxcXh4eFxcXEfHx+icMxgAAABqklEQVR4nO3d21LiQBCAYVREWAHDwRXZg+//lkKVd0t6SWCYRr7vBbr/SiaVuxkMWjU/767E+qW9IjKtvXgHD30Cf9feuottn8LH2lt3MVJ404W/hqktTy/s+SG+mNMLn8690pkpDChMQmFAYRIKAwqTUBhQmITCgMIkFAYUJqEwoDAJhQGFSSgMKExCYUBhEgoDCpNQGFCYhMKAwiQUBhQmoTCgMAmFAYVJKAwoTEJhQGESCgMKk1AYUJiEwoDCJBQGFCahMKAwCYUBhUkoDChMQmFAYRIKAwqTUBhQmITCgMIkFAYUJqEwoDAJhQGFSSgMKExCYUBhEgoDN1M4eUjtz+mF10HhjRZOam/dxbBP4X3trbt47FM4GNde+3h///e0FqOP539NP2ovfqzZ5scBz6NFc3XPqrPxPvCp+JjZanLY66z47P0lMsviUxat52NRfPZycInLx1athavis6e7KeviU2av48Mu8Jaud4VvxafU9LYrnG9qb1HQZr4/DM32vfYihbxv518Hvrn/npqj/t0AAAAAAAAAAAAAAAAAAAAAAAAAAIAWn4lMKXNb8NOOAAAAAElFTkSuQmCC\",\n        \"skills\":[\"HTML\", \"PHP\", \"JavaScript\"],\n        \"budget\":\"$750\",\n        \"description\": \"A Client has shortlisted your profile\",\n        \"timeStamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\",\n        \"status\": \"read\"\n    },\n\n    {\n        \"image\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAADp6enY2NhmZmarq6tZWVnPz8+zs7OwsLAoKCgkJCQ2NjYJCQn6+vrU1NTx8fGlpaVtbW2enp5ISEiYmJhzc3OQkJA3NzcUFBR6enpTU1PFxcXh4eFxcXEfHx+icMxgAAABqklEQVR4nO3d21LiQBCAYVREWAHDwRXZg+//lkKVd0t6SWCYRr7vBbr/SiaVuxkMWjU/767E+qW9IjKtvXgHD30Cf9feuottn8LH2lt3MVJ404W/hqktTy/s+SG+mNMLn8690pkpDChMQmFAYRIKAwqTUBhQmITCgMIkFAYUJqEwoDAJhQGFSSgMKExCYUBhEgoDCpNQGFCYhMKAwiQUBhQmoTCgMAmFAYVJKAwoTEJhQGESCgMKk1AYUJiEwoDCJBQGFCahMKAwCYUBhUkoDChMQmFAYRIKAwqTUBhQmITCgMIkFAYUJqEwoDAJhQGFSSgMKExCYUBhEgoDN1M4eUjtz+mF10HhjRZOam/dxbBP4X3trbt47FM4GNde+3h///e0FqOP539NP2ovfqzZ5scBz6NFc3XPqrPxPvCp+JjZanLY66z47P0lMsviUxat52NRfPZycInLx1athavis6e7KeviU2av48Mu8Jaud4VvxafU9LYrnG9qb1HQZr4/DM32vfYihbxv518Hvrn/npqj/t0AAAAAAAAAAAAAAAAAAAAAAAAAAIAWn4lMKXNb8NOOAAAAAElFTkSuQmCC\",\n        \"skills\":[\"HTML\", \"PHP\", \"JavaScript\"],\n        \"budget\":\"$750\",\n        \"description\": \"A Client has requested an interview with you\",\n        \"timeStamp\": \"Fri Feb 19 2016 13:44:26 GMT+0530 (IST)\",\n        \"status\": \"read\"\n    }\n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getallnotifications", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6f2fc6114076804a01ec6"), 
+    "name" : "free lancer listing", 
+    "Response" : {
+        "response" : "{\n    \"count\": 30,\n    \"lastPage\": 3,\n    \"data\": [{\n            \"image\": \"img/search.png\",\n            \"name\": \"Sonia Nehwal\",\n            \"role\": \"Graphic Designer\",\n            \"experience\": 2,\n            \"city\": \"Mumbai\"\n        },\n\n        {\n            \"image\": \"img/search.png\",\n            \"name\": \"Rital Naik\",\n            \"role\": \"Design Student\",\n            \"experience\": 1,\n            \"city\": \"Bangalore\"\n        }, \n        \n        {\n            \"image\": \"img/search.png\",\n            \"name\": \"Pranit Sahu\",\n            \"role\": \"Design Intern\",\n            \"experience\": 3,\n            \"city\": \"Mangalore\"\n        }, \n        \n        {\n            \"image\": \"img/search.png\",\n            \"name\": \"Deepak Shah\",\n            \"role\": \"Senior Graphic Designer\",\n            \"experience\": 5,\n            \"city\": \"Mysore\"\n        },\n\n        {\n            \"image\": \"img/search.png\",\n            \"name\": \"Rahul Kane\",\n            \"role\": \"UI/UX designer\",\n            \"experience\": 4,\n            \"city\": \"Delhi\"\n        }\n    ]\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/findallfreelancers", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56c6c8d66114076804a01ebd"), 
+    "name" : "search search jobs", 
+    "Response" : {
+        "response" : "{\n    \"count\": 1500,\n    \"data\": \n    [{\n            \"id\":1,\n            \"title\":\"efjowefjoiwefj\",\n            \"image\":\"img/resgration.png\",\n            \"company\": \"BobCorn\",\n            \"jobPayment\": \"Hourly\",\n            \"payment\": \"Rs. 1000-2000\",\n            \"timeCommitment\": \"40 hours weekly\",\n            \"postingDate\": \"Fri Feb 19 2016 13:43:11 GMT+0530 (IST)\",\n            \"expiryDate\": \"Fri Feb 26 2016 13:43:11 GMT+0530 (IST)\",\n            \"description\": \"This is an awesome job! you should try it!!\",\n            \"city\":\"Mumbai\",\n            \"jobRole\":\"developer\"\n        },\n\n        {\n            \"id\":2,\n            \"title\":\"efjowefjoiwefj\",\n            \"image\":\"img/resgration.png\",\n            \"company\": \"AapCot\",\n            \"jobPayment\": \"Hourly\",\n            \"payment\": \"Rs. 1000-2000\",\n            \"timeCommitment\": \"40 hours weekly\",\n            \"postingDate\": \"Fri Feb 19 2016 13:43:11 GMT+0530 (IST)\",\n            \"expiryDate\": \"Fri Feb 26 2016 13:43:11 GMT+0530 (IST)\",\n            \"description\": \"This is an awesome job! you should try it!!\",\n            \"city\":\"Delhi\",\n            \"jobRole\":\"designer\"\n        },\n\n        {\n            \"id\":3,\n            \"title\":\"efjowefjoiwefj\",\n            \"image\":\"img/resgration.png\",\n            \"company\": \"BindCity\",\n            \"jobPayment\": \"Hourly\",\n            \"payment\": \"Rs. 1000-2000\",\n            \"timeCommitment\": \"40 hours weekly\",\n            \"postingDate\": \"Fri Feb 19 2016 13:43:11 GMT+0530 (IST)\",\n            \"expiryDate\": \"Fri Feb 26 2016 13:43:11 GMT+0530 (IST)\",\n            \"description\": \"This is an awesome job! you should try it!!\",\n            \"city\":\"Bangalore\",\n            \"jobRole\":\"developer\"\n        },\n\n        {\n            \"id\":4,\n            \"title\":\"efjowefjoiwefj\",\n            \"image\":\"img/resgration.png\",\n            \"company\": \"CapLoft\",\n            \"jobPayment\": \"Hourly\",\n            \"payment\": \"Rs. 1000-2000\",\n            \"timeCommitment\": \"40 hours weekly\",\n            \"postingDate\": \"Fri Feb 19 2016 13:43:11 GMT+0530 (IST)\",\n            \"expiryDate\": \"Fri Feb 26 2016 13:43:11 GMT+0530 (IST)\",\n            \"description\": \"This is an awesome job! you should try it!!\",\n            \"city\":\"Hyderabad\",\n            \"jobRole\":\"developer\"\n        },\n        {\n            \"id\":5,\n            \"title\":\"efjowefjoiwefj\",\n            \"image\":\"img/resgration.png\",\n            \"company\": \"CapLoft\",\n            \"jobPayment\": \"Hourly\",\n            \"payment\": \"Rs. 1000-2000\",\n            \"timeCommitment\": \"40 hours weekly\",\n            \"postingDate\": \"Fri Feb 19 2016 13:43:11 GMT+0530 (IST)\",\n            \"expiryDate\": \"Fri Feb 26 2016 13:43:11 GMT+0530 (IST)\",\n            \"description\": \"This is an awesome job! you should try it!!\",\n            \"city\":\"Mangalore\",\n            \"jobRole\":\"Architect\"\n        },\n        {\n            \"id\":6,\n            \"title\":\"efjowefjoiwefj\",\n            \"image\":\"img/resgration.png\",\n            \"company\": \"CapLoft\",\n            \"jobPayment\": \"Hourly\",\n            \"payment\": \"Rs. 1000-2000\",\n            \"timeCommitment\": \"40 hours weekly\",\n            \"postingDate\": \"Fri Feb 19 2016 13:43:11 GMT+0530 (IST)\",\n            \"expiryDate\": \"Fri Feb 26 2016 13:43:11 GMT+0530 (IST)\",\n            \"description\": \"This is an awesome job! you should try it!!\",\n            \"city\":\"Mysore\",\n            \"jobRole\":\"Architect\"\n        },\n        {\n            \"id\":7,\n            \"title\":\"efjowefjoiwefj\",\n            \"image\":\"img/resgration.png\",\n            \"company\": \"CapLoft\",\n            \"jobPayment\": \"Hourly\",\n            \"payment\": \"Rs. 1000-2000\",\n            \"timeCommitment\": \"40 hours weekly\",\n            \"postingDate\": \"Fri Feb 19 2016 13:43:11 GMT+0530 (IST)\",\n            \"expiryDate\": \"Fri Feb 26 2016 13:43:11 GMT+0530 (IST)\",\n            \"description\": \"This is an awesome job! you should try it!!\",\n            \"city\":\"Chennai\",\n            \"jobRole\":\"developer\"\n        },\n        {\n            \"id\":8,\n            \"title\":\"efjowefjoiwefj\",\n            \"image\":\"img/resgration.png\",\n            \"company\": \"CapLoft\",\n            \"jobPayment\": \"Hourly\",\n            \"payment\": \"Rs. 1000-2000\",\n            \"timeCommitment\": \"40 hours weekly\",\n            \"postingDate\": \"Fri Feb 19 2016 13:43:11 GMT+0530 (IST)\",\n            \"expiryDate\": \"Fri Feb 26 2016 13:43:11 GMT+0530 (IST)\",\n            \"description\": \"This is an awesome job! you should try it!!\",\n            \"city\":\"Latur\",\n            \"jobRole\":\"Businessman\"\n        }]\n}", 
+        "request" : "{\n    \"job\":\"designer\",\n    \"city\":\"mumbai\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "json/findalljobs", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56d14a7a3d8acdfd0214a8c2"), 
+    "name" : "no notifications", 
+    "Response" : {
+        "response" : "{\n    \"data\":\"No notifications to display!\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "json/getallnotifications/2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56d54b002a28964a03973d1f"), 
+    "name" : "EventsList", 
+    "Response" : {
+        "response" : "{\n    \"data\": [\n    {\n        \"id\":\"7\",\n        \"image\":\"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n        \"title\":\"Title 1\",\n        \"date\":\"11 Jan, 2015\",\n        \"time\":\"00:00 AM onwards\"\n    },\n    {\n        \"id\":\"2\",\n        \"image\":\"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n        \"title\":\"Title 2\",\n        \"date\":\"11 Jan, 2015\",\n        \"time\":\"00:00 AM onwards\"\n    },\n    {\n        \"id\":\"3\",\n        \"image\":\"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n        \"title\":\"Title 3\",\n        \"date\":\"11 Jan, 2015\",\n        \"time\":\"00:00 AM onwards\"\n    }\n    ],\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "url" : "event/getAll", 
+    "type" : "get", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will give the list of all the events."
+}
+{ 
+    "_id" : ObjectId("56d54c952a28964a03973d21"), 
+    "name" : "ContactFrom Success", 
+    "Response" : {
+        "response" : "{\n    \"value\":\"true\"\n}", 
+        "request" : "{\n    \"name\": \"Abc\",\n    \"email\": \"info@info.com\",\n    \"subject\": \"Subject\",\n    \"comments\": \"Comments\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "contact/contactForm", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will submit the Contact Form and Success message."
+}
+{ 
+    "_id" : ObjectId("56d54ca32a28964a03973d22"), 
+    "name" : "ContactFrom Failure", 
+    "Response" : {
+        "response" : "{\n    \"value\":\"false\"\n}", 
+        "request" : "{\n    \"name\": \"Xyz\",\n    \"email\": \"info@info.com\",\n    \"subject\": \"Subject\",\n    \"comments\": \"Comments\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "contact/contactForm", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will submit the Contact Form and failure message."
+}
+{ 
+    "_id" : ObjectId("56d575902a28964a03973d27"), 
+    "name" : "Edit Profile Success", 
+    "Response" : {
+        "response" : "{\n    \"value\" : \"true\"\n}", 
+        "request" : "{\n    \"id\" : \"abcd1234!@#$\",\n    \"email\" : \"email@email.com\",\n    \"name\" : \"Jay Visariya\",\n    \"number\" : \"+919773677677\",\n    \"location\" : \"India\",\n    \"dob\" : \"27/09/1993\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "profile/update", 
+    "__v" : NumberInt(0), 
+    "comment" : "Edit profile with the success message. "
+}
+{ 
+    "_id" : ObjectId("56d575a42a28964a03973d28"), 
+    "name" : "Edit Profile Failure", 
+    "Response" : {
+        "response" : "{\n    \"value\" : \"false\"\n}", 
+        "request" : "{\n    \"id\" : \"abcd1234\",\n    \"email\" : \"email@email.com\",\n    \"name\" : \"Name\",\n    \"number\" : \"1234567890\",\n    \"location\" : \"India\",\n    \"dob\" : \"27/09/1993\",\n    \"image\" : \"1.jpg\" \n}"
+    }, 
+    "type" : "post", 
+    "url" : "profile/update", 
+    "__v" : NumberInt(0), 
+    "comment" : "Edit profile with the failure message. "
+}
+{ 
+    "_id" : ObjectId("56d577f52a28964a03973d2a"), 
+    "name" : "Video List", 
+    "Response" : {
+        "response" : "{\n    \"data\":[\n    {\n        \"id\" : \"EQz-VaJN_6Q\",\n        \"title\" : \"GCM Integration\"\n    },\n    {\n        \"id\" : \"0idgOOQHxHg\",\n        \"title\" : \"Android Push Notifications\"\n    }\n    ],\n    \"value\": true\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "video/getAlbumVideos?id=7", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will list all the videos of a particular Video Gallery."
+}
+{ 
+    "_id" : ObjectId("56d56d4d2a28964a03973d23"), 
+    "name" : "Event", 
+    "Response" : {
+        "response" : "{\n    \"data\" : {\n            \"id\" : \"7\",\n            \"title\" : \"Title\",\n            \"banner\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"time\" : \"02 Oct, 2015\",\n            \"venue\" : \"NYC\",\n            \"content\" : \"Lorem Ipsum\",\n            \"videos\" : [\n                    {\n                        \"id\" : \"EQz-VaJN_6Q\"\n                    },\n                    {\n                        \"id\" : \"0idgOOQHxHg\"\n                    },\n                    {\n                        \"id\" : \"EQz-VaJN_6Q\"\n                    },\n                    {\n                        \"id\" : \"0idgOOQHxHg\"\n                    }\n                ],\n            \"images\" : [\n                    {\n                        \"text\" : \"This is Demo text.\",\n                        \"thumbnail\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\"\n                    },\n                    {\n                        \"text\" : \"http://www.abc.com\",\n                        \"thumbnail\" : \"http://searchengineland.com/figz/wp-content/seloads/2013/05/google-search-results-no-url-mobile.png\"\n                    },\n                    {\n                        \"text\" : \"This is Demo text.\",\n                        \"thumbnail\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\"\n                    },\n                    {\n                        \"text\" : \"http://www.abc.com\",\n                        \"thumbnail\" : \"http://searchengineland.com/figz/wp-content/seloads/2013/05/google-search-results-no-url-mobile.png\"\n                    }\n                ]    \n            },\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "url" : "event/get?id=7", 
+    "type" : "get", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will get all the details of a particular event by specifying the Id. It also has the list of videos and images of that particular event."
+}
+{ 
+    "_id" : ObjectId("56d54bce2a28964a03973d20"), 
+    "name" : "ContactInfo", 
+    "Response" : {
+        "response" : "{\n    \"data\" : [\n                {\n                    \"title\": \"Mumbai\",\n                    \"address\": \"Test Address\",\n                    \"telephone\": \"+919876543210\",\n                    \"mail\": \"info@info.com\",\n                    \"lat\": \"18.9750\",\n                    \"long\":\"72.8258\"\n                },\n                {   \n                    \"title\": \"Chennai\",\n                    \"address\": \"Test Address\",\n                    \"telephone\": \"+919876543210\",\n                    \"mail\": \"info@info.com\",\n                    \"lat\": \"\",\n                    \"long\":\"long\"\n                }\n            ],\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "contact/getAll", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will give the Contact Info of Multiple locations with Google Maps latitude and longitude."
+}
+{ 
+    "_id" : ObjectId("56d574b42a28964a03973d25"), 
+    "name" : "Change Password Success", 
+    "Response" : {
+        "response" : "{\n    \"data\" : \"Empty\",\n    \"value\" : \"true\"\n}", 
+        "request" : "{\n    \"oldPassword\" : \"old\",\n    \"newPassword\" : \"new\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "profile/changePassword", 
+    "__v" : NumberInt(0), 
+    "comment" : "Changes the password of a user with success. Not sending the User-Id or Email because we will be getting it from the sessions stored on the server."
+}
+{ 
+    "_id" : ObjectId("56d574f42a28964a03973d26"), 
+    "name" : "Change Password Failure", 
+    "Response" : {
+        "response" : "{\n    \"data\" : \"Empty\",\n    \"value\" : \"false\"\n}", 
+        "request" : "{\n    \"oldPassword\" : \"old\",\n    \"newPassword\" : \"newOld\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "profile/changePassword", 
+    "__v" : NumberInt(0), 
+    "comment" : "Changes the password of a user and failure. Not sending the User-Id or Email because we will be getting it from the sessions stored on the server."
+}
+{ 
+    "_id" : ObjectId("56d5821f2a28964a03973d2e"), 
+    "name" : "Change Password Failure - Old & New Same", 
+    "Response" : {
+        "response" : "{\n    \"data\" : \"Empty\",\n    \"value\" : \"false\"\n}", 
+        "request" : "{\n    \"oldPassword\" : \"old\",\n    \"newPassword\" : \"old\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "profile/changePassword", 
+    "__v" : NumberInt(0), 
+    "comment" : "Changes the password of a user and failure. Not sending the User-Id or Email because we will be getting it from the sessions stored on the server."
+}
+{ 
+    "_id" : ObjectId("56d585c22a28964a03973d2f"), 
+    "name" : "Audio All Gallery List", 
+    "Response" : {
+        "response" : "[\n    {\n        \"id\":\"1\",\n        \"image\":\"1.jpg\",\n        \"title\":\"Title 1\",\n        \"subtitle\":\"Subtitle 1\"\n    },\n    {\n        \"id\":\"2\",\n        \"image\":\"2.jpg\",\n        \"title\":\"Title 2\",\n        \"subtitle\":\"Subtitle 2\"\n    },\n    {\n        \"id\":\"3\",\n        \"image\":\"3.jpg\",\n        \"title\":\"Title 3\",\n        \"subtitle\":\"Subtitle 3\"\n    }\n]", 
+        "request" : ""
+    }, 
+    "url" : "audio/getAllAlbums", 
+    "type" : "get", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will get list of all the Audio Galleries."
+}
+{ 
+    "_id" : ObjectId("56d585e42a28964a03973d30"), 
+    "name" : "Audio List", 
+    "Response" : {
+        "response" : "[\n    {\n        \"thumbnail\" : \"thumb1.jpg\",\n        \"link\" : \"http://youtube.com\",\n        \"title\" : \"Audio title\"\n    },\n    {   \n        \"thumbnail\" : \"thumb2.jpg\",\n        \"link\" : \"http://youtube.com\",\n        \"title\" : \"Audio titte\"\n    }\n]", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "audio/getAblumAudios?id=7", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will list all the videos of a particular Audio Gallery."
+}
+{ 
+    "_id" : ObjectId("56d53f4b2a28964a03973d1b"), 
+    "name" : "Home", 
+    "Response" : {
+        "response" : "{\n    \"data\":{\n        \"slider\": [\n                \"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n                \"http://images.boomsbeat.com/data/images/full/19640/game-of-thrones-season-4-jpg.jpg\"\n            ],\n        \"content\": \"<html><h2>Home</h2>This is demo text which supports all <b>html</b> tag.</html>\"\n    },\n    \"value\": true\n}", 
+        "request" : ""
+    }, 
+    "url" : "home/get", 
+    "type" : "get", 
+    "__v" : NumberInt(0), 
+    "comment" : "Home Page content with Image slider and WYSIWYG Html content"
+}
+{ 
+    "_id" : ObjectId("56c6f54e6114076804a01ec7"), 
+    "name" : "resume", 
+    "Response" : {
+        "response" : "{\n    \"personalDetails\": {\n        \"name\":\"Prachi Shah\",\n        \"role\":\"Graphic Designer\"\n    },\n    \n    \"contactDetails\": {\n        \"contactNumber\": \"9892323461\",\n        \"email\": \"avicci@gmail.com\"\n    },\n\n    \"keySkills\": [\"Adobe PS\", \"Adobe Illustrator\", \"Adobe Indesign\", \"Adobe Flash\"],\n\n    \"education\": [\"Bachelor's Degree in Designing\", \"University of Jawaharlal Nehru design and art college\"],\n\n    \"experience\":\"Five year of Experience in Wohlig Technology\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "post", 
+    "url" : "json/viewresume", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56d548102a28964a03973d1d"), 
+    "name" : "Image All Gallery List", 
+    "Response" : {
+        "response" : "{\n    \"data\": [\n        {   \"id\":\"7\",\n            \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n            \"title\":\"Title 1\"\n        },\n        {\n            \"id\":\"2\",\n            \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n            \"title\":\"Title 2\"\n        },\n        {\n            \"id\":\"3\",\n            \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n            \"title\":\"Title 3\"\n        },\n        {\n            \"id\":\"1\",\n            \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n            \"title\":\"Title 1\"\n        },\n        {\n            \"id\":\"2\",\n            \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n            \"title\":\"Title 2\"\n        },\n        {\n            \"id\":\"3\",\n            \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n            \"title\":\"Title 3\"\n        },\n        {\n            \"id\":\"1\",\n            \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n            \"title\":\"Title 1\"\n        },\n        {\n            \"id\":\"2\",\n            \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n            \"title\":\"Title 2\"\n        },\n        {\n            \"id\":\"3\",\n            \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n            \"title\":\"Title 3\"\n        }\n    ],\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "url" : "image/getAllAlbums", 
+    "type" : "get", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will get list of all the Image Galleries."
+}
+{ 
+    "_id" : ObjectId("56d548962a28964a03973d1e"), 
+    "name" : "Video All Gallery List", 
+    "Response" : {
+        "response" : "{\n    \"data\":[\n    {\n        \"id\":\"7\",\n        \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n        \"title\":\"Title 1\",\n        \"subtitle\":\"Subtitle 1\"\n    },\n    {\n        \"id\":\"2\",\n        \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n        \"title\":\"Title 2\",\n        \"subtitle\":\"Subtitle 2\"\n    },\n    {\n        \"id\":\"3\",\n        \"image\":\"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n        \"title\":\"Title 3\",\n        \"subtitle\":\"Subtitle 3\"\n    }\n    ],\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "url" : "video/getAllAlbums", 
+    "type" : "get", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will get list of all the Video Galleries."
+}
+{ 
+    "_id" : ObjectId("56d576df2a28964a03973d29"), 
+    "name" : "Image List", 
+    "Response" : {
+        "response" : "{\n    \"data\":[\n    {\n        \"image\" : \"http://searchengineland.com/figz/wp-content/seloads/2013/05/google-search-results-no-url-mobile.png\",\n        \"text\" : \"This is awesome demo text for the first image.\"\n    },\n    {\n        \"image\" : \"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n        \"text\" : \"This slider is working perfect.\"\n    },\n    {\n        \"image\" : \"http://searchengineland.com/figz/wp-content/seloads/2013/05/google-search-results-no-url-mobile.png\"\n    },\n    {   \n        \"image\" : \"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n        \"text\" : \"Go JPP Go!!!\"\n    }\n    ],\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "image/getAlbumImages?id=7", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will list all the images of a particular Image Gallery."
+}
+{ 
+    "_id" : ObjectId("56d57aeb2a28964a03973d2c"), 
+    "name" : "Blog List", 
+    "Response" : {
+        "response" : "{\n    \"data\": [\n    {\n        \"id\" : \"7\",\n        \"title\" : \"This is the title for this blog!\",\n        \"time\" : \"07 January, 2007\",\n        \"desc\" : \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\",\n        \"userIcon\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\"\n    },\n    {\n        \"id\" : \"1\",\n        \"title\" : \"This is the title for this blog!\",\n        \"time\" : \"07 January, 2007\",\n        \"desc\" : \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\",\n        \"userIcon\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\"\n    },\n    {\n        \"id\" : \"7\",\n        \"title\" : \"This is the title for this blog!\",\n        \"time\" : \"07 January, 2007\",\n        \"desc\" : \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\",\n        \"userIcon\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\"\n    },\n    {\n        \"id\" : \"7\",\n        \"title\" : \"This is the title for this blog!\",\n        \"time\" : \"07 January, 2007\",\n        \"desc\" : \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\",\n        \"userIcon\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\"\n    }\n    ],\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "url" : "blog/getAll", 
+    "type" : "get", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will list all the blogs"
+}
+{ 
+    "_id" : ObjectId("56d57a072a28964a03973d2b"), 
+    "name" : "Blog", 
+    "Response" : {
+        "response" : "{\n    \"data\" : {\n        \"title\" : \"Go JPP Go!!\",\n        \"time\" : \"07 January, 2007\",\n        \"content\" : \"Lorem <b>Ipsum</b> is simply dummy text of the printing and typesetting industry. <h3>Lorem Ipsum</h3> has been the industry's standard dummy text ever since the <u>1500s</u>, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\",\n        \"banner\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\"\n    },\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "url" : "blog/get?id=7", 
+    "type" : "get", 
+    "__v" : NumberInt(0), 
+    "comment" : "Get all the details of a particular blog by specifying the Id."
+}
+{ 
+    "_id" : ObjectId("56d5461c2a28964a03973d1c"), 
+    "name" : "Article", 
+    "Response" : {
+        "response" : "{\n    \"data\" :{\n        \"banner\": \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n        \"title\": \"About\",\n        \"content\": \"<html><p>Welcome to Blazen</p>We always have tried to do something different, so we didn't use <b>Lorem Ipsum</b> to give you a demo. :-P</html>\"\n    },\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "url" : "article/get?id=7", 
+    "type" : "get", 
+    "__v" : NumberInt(0), 
+    "comment" : "Article page - It has one Banner on top , title and WYSIWYG  Html content"
+}
+{ 
+    "_id" : ObjectId("56d572162a28964a03973d24"), 
+    "name" : "Profile", 
+    "Response" : {
+        "response" : "{\n   \"data\" : {\n    \"id\" : \"abcd1234!@#$\",\n    \"email\" : \"email@email.com\",\n    \"name\" : \"Jay Visariya\",\n    \"number\" : \"+919773677677\",\n    \"location\" : \"India\",\n    \"dob\" : \"27/09/1993\",\n    \"image\" : \"http://brian.hoover.net.au/blog/wp-content/uploads/2009/07/Blank-Facebook-Prifile-Picture1.JPG\" \n    },\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "type" : "post", 
+    "url" : "profile/get", 
+    "__v" : NumberInt(0), 
+    "comment" : "This will get the user profile details. Not sending the User-Id or Email because we will be getting it from the sessions stored on the server."
+}
+{ 
+    "_id" : ObjectId("56d581ce2a28964a03973d2d"), 
+    "name" : "Notification", 
+    "Response" : {
+        "response" : "{\n    \"data\" : [   \n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"Image Gallery\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"7\",\n            \"type\" : \"imageGallery\"\n        },\n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"Blog List\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"0\",\n            \"type\" : \"blog\"\n        },\n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"Single Event\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"7\",\n            \"type\" : \"singleEvent\"\n        },\n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"WebLink\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"http://www.facebook.com\",\n            \"type\" : \"external\"\n        }\n    ],\n    \"value\": true\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "notification/getAll", 
+    "comment" : "List of all the notifications.", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("56ebf5b12cc4129e02d7ff78"), 
+    "name" : "Navigation", 
+    "Response" : {
+        "response" : "{\n    \"data\": {\n        \"user\": {\n            \"id\" : \"abcd@1234\",\n            \"picture\" : \"http://brian.hoover.net.au/blog/wp-content/uploads/2009/07/Blank-Facebook-Prifile-Picture1.JPG\",\n            \"name\" : \"Sohan Honakeri\",\n            \"email\" : \"shn619@gmail.com\"\n        },\n        \"navigation\" : [\n            {\n                \"title\": \"Home\",\n                \"type\": \"home\",\n                \"link\": \"0\",\n                \"icon\": \"home\"\n            },\n            {\n                \"title\": \"Notification\",\n                \"type\": \"notification\",\n                \"link\": \"0\",\n                \"icon\": \"notifications\"\n            },\n            {\n                \"title\": \"Image Gallery\",\n                \"type\": \"imageGallery\",\n                \"link\": \"7\",\n                \"icon\": \"collections\"\n            },\n            {\n                \"title\": \"Facebook\",\n                \"type\": \"external\",\n                \"link\": \"http://www.facebook.com/wohlig\",\n                \"icon\": \"group\"\n            },\n            {\n                \"title\": \"Blog\",\n                \"type\": \"blog\",\n                \"link\": \"0\",\n                \"icon\": \"local post office\"\n            },\n            {\n                \"title\": \"Events\",\n                \"type\": \"event\",\n                \"link\": \"0\",\n                \"icon\": \"event\"\n            },\n            {\n                \"title\": \"Contact\",\n                \"type\": \"contact\",\n                \"link\": \"0\",\n                \"icon\": \"perm contact calendar\"\n            },\n            {\n                \"title\": \"About\",\n                \"type\": \"article\",\n                \"link\": \"7\",\n                \"icon\": \"info outline\"\n            },\n            {\n                \"title\": \"Profile\",\n                \"type\": \"profile\",\n                \"link\": \"0\",\n                \"icon\": \"account circle\"\n            },\n            {\n                \"title\": \"Video Inside\",\n                \"type\": \"videoGallery\",\n                \"link\": \"7\",\n                \"icon\": \"videocam\"\n            },\n            {\n                \"title\": \"ABC Event\",\n                \"type\": \"singleEvent\",\n                \"link\": \"7\",\n                \"icon\": \"event available\"\n            }\n        ]\n        \n    },\n    \"value\": true    \n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "navigation/get", 
+    "__v" : NumberInt(0), 
+    "comment" : ""
+}
+{ 
+    "_id" : ObjectId("57025d90b7158a91024fa87d"), 
+    "name" : "Search hi", 
+    "Response" : {
+        "response" : "{\n    \"data\" : [   \n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"Image Gallery\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"7\",\n            \"type\" : \"imageGallery\"\n        },\n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"Blog List\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"0\",\n            \"type\" : \"blog\"\n        },\n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"Single Event\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"7\",\n            \"type\" : \"singleEvent\"\n        },\n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"WebLink\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"http://www.facebook.com\",\n            \"type\" : \"external\"\n        }\n    ],\n    \"value\": true    \n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "search/getResults?text=hi", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("570f919da7f8094c0249dd14"), 
+    "name" : "Search hi", 
+    "Response" : {
+        "response" : "{\n    \"data\" : [   \n        {\n            \"id\" : \"kljglkdjfgljdflgj\",\n            \"title\" : \"Image Gallery\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"7\",\n            \"type\" : \"imageGallery\"\n        },\n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"Blog List\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"0\",\n            \"type\" : \"blog\"\n        },\n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"Single Event\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"7\",\n            \"type\" : \"singleEvent\"\n        },\n        {\n            \"id\" : \"ab12!@\",\n            \"title\" : \"WebLink\",\n            \"text\" : \"This is demo text for this particular notification.\",\n            \"image\" : \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n            \"link\" : \"http://www.facebook.com\",\n            \"type\" : \"external\"\n        }\n    ],\n    \"value\": true    \n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "search/getResults?id=7", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("570f973aa7f8094c0249dd15"), 
+    "name" : "Article", 
+    "Response" : {
+        "response" : "{\n    \"data\" :{\n        \"banner\": \"http://jaipurpinkpanthers.com/admin/uploads/736x327-14.jpg\",\n        \"title\": \"sjkdhfjkhfkjhdskfjhksdjhfksdhfjksdfh\",\n        \"content\": \"<html><p>Welcome to Blazen</p>We always have tried to do something different, so we didn't use <b>Lorem Ipsum</b> to give you a demo. :-P</html>\"\n    },\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "url" : "article/get?id=1", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("570f9809a7f8094c0249dd16"), 
+    "name" : "Image List", 
+    "Response" : {
+        "response" : "{\n    \"data\":[\n    {\n        \"image\" : \"http://searchengineland.com/figz/wp-content/seloads/2013/05/google-search-results-no-url-mobile.png\",\n        \"text\" : \"This is awesome demo text for the first image.\"\n    },\n    {\n        \"image\" : \"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n        \"text\" : \"This slider is working perfect.\"\n    },\n    {\n        \"image\" : \"http://searchengineland.com/figz/wp-content/seloads/2013/05/google-search-results-no-url-mobile.png\"\n    },\n    {   \n        \"image\" : \"http://admin.jaipurpinkpanthers.com/uploads/736x327-14.jpg\",\n        \"text\" : \"Go JPP Go!!!\"\n    }\n    ],\n    \"value\" : true\n}", 
+        "request" : ""
+    }, 
+    "url" : "image/getAlbumImages", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("570f98cda7f8094c0249dd17"), 
+    "name" : "video list", 
+    "Response" : {
+        "response" : "{\n    \"data\":[\n    {\n        \"id\" : \"EQz-VaJN_6Q\",\n        \"title\" : \"GCM Integration\"\n    },\n    {\n        \"id\" : \"0idgOOQHxHg\",\n        \"title\" : \"Android Push Notifications\"\n    }\n    ],\n    \"value\": true\n}", 
+        "request" : ""
+    }, 
+    "url" : "video/getAlbumVideos", 
+    "type" : "get", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571098ee63e5cb5c023f9870"), 
+    "name" : "search", 
+    "Response" : {
+        "response" : "{\n    \"data\": {\n        \"home\": [\n            {\n                \"_id\": \"56ebb3ff7c102d4821df773c\",\n                \"name\": \"holi festival\"\n            }\n        ],\n        \"notification\": [\n            {\n                \"_id\": \"56f4c6392864bdb432bb2fc7\",\n                \"content\": \"jafyeyf srjkte retseru feur\"\n            },\n            {\n                \"_id\": \"56f5148628dff7202896d4cf\",\n                \"content\": \"<p>on status</p>\"\n            },\n            {\n                \"_id\": \"56f51e2728dff7202896d4d5\",\n                \"content\": \"<p>disable</p>\"\n            },\n            {\n                \"_id\": \"56fa80a7431ba2d82a17f65d\",\n                \"content\": \"<p>eagger</p>\"\n            }\n        ],\n        \"event\": [\n            {\n                \"_id\": \"570f88e1a908f7083374a038\",\n                \"name\": \"lets try\",\n                \"content\": \"<p>phpmyadmin</p>\"\n            }\n        ],\n        \"blog\": [],\n        \"article\": [\n            {\n                \"_id\": \"570f7d1a3a4f03572c3a23ab\",\n                \"name\": \"about us\",\n                \"content\": \"<p>hello us</p>\"\n            }\n        ],\n        \"photo\": [],\n        \"video\": [\n            {\n                \"_id\": \"570df49be3ceaffe291df703\",\n                \"title\": \"Amazing Technologies\"\n            }\n        ],\n        \"contact\": [\n            {\n                \"_id\": \"56f0d14eafa1513c204d8da9\",\n                \"title\": \"hey hii\",\n                \"address\": \"<p>airoli navimumbai</p>\"\n            },\n            {\n                \"_id\": \"56f13064afa1513c204d8db3\",\n                \"title\": \"email test\",\n                \"email\": \"chalialeelp10@gmail.com\",\n                \"address\": \"<p>email test</p>\"\n            },\n            {\n                \"_id\": \"56f66bd228dff7202896d4da\",\n                \"title\": \"test\",\n                \"email\": \"abc@gh.jjg\",\n                \"address\": \"<p>test</p>\"\n            }\n        ],\n        \"audio\": [],\n        \"user\": [\n            {\n                \"_id\": \"570f367ae6859c550fbdf7b5\",\n                \"name\": \"jagruti\",\n                \"email\": \"jagruti@wohlig.com\",\n                \"dob\": \"2016-04-07T18:30:00.000Z\",\n                \"status\": 1,\n                \"__v\": 0,\n                \"location\": \"thakurli,dombivili\",\n                \"phone\": \"9899999999\",\n                \"config\": [],\n                \"oauthLogin\": [],\n                \"notification\": []\n            },\n            {\n                \"_id\": \"570f3695f2d2b1890f0cbd47\",\n                \"name\": \"jagruti\",\n                \"email\": \"chhaya@wohlig.com\",\n                \"dob\": \"2012-09-08T18:30:00.000Z\",\n                \"status\": 1,\n                \"__v\": 0,\n                \"config\": [],\n                \"oauthLogin\": [],\n                \"notification\": []\n            }\n        ]\n    },\n    \"value\": true\n}", 
+        "request" : "{\n    \"search\":\"a\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "config/searchData", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5718abfb42391ed4029d5d2a"), 
+    "name" : "newsletter/submit - error", 
+    "Response" : {
+        "response" : "{\n    \"error\":\"Sorry email id already present.\",\n    \"value\":false\n}", 
+        "request" : "{\n    \"email\":\"chintan@wohlig.com\"\n}"
+    }, 
+    "type" : "get", 
+    "url" : "newsletter/submit", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b19cccb004ba303756244"), 
+    "name" : "save user", 
+    "Response" : {
+        "response" : "", 
+        "request" : ""
+    }, 
+    "type" : "post", 
+    "url" : "user/save", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1a12cb004ba303756245"), 
+    "name" : "Login", 
+    "Response" : {
+        "response" : "{\n    \"data\": {\n        \"_id\":\"12345\",\n        \"name\":\"Chintan Shah\",\n        \"expiry\":\"2016-12-12\"\n    },\n    \"value\":true\n}", 
+        "request" : "{\n    \"contact\":\"9819222221\",\n    \"password\":\"chintan123\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "user/login", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1ab0cb004ba303756246"), 
+    "name" : "Login Error wrong password", 
+    "Response" : {
+        "response" : "{\n    \"data\": {\n        \n    },\n    \"value\":false,\n    \"error\":\"IncorrectCredentials\"\n}", 
+        "request" : "{\n    \"contact\":\"9819222221\",\n    \"password\":\"chintan\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "user/login", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1ad3cb004ba303756247"), 
+    "name" : "Login Error Expired", 
+    "Response" : {
+        "response" : "{\n    \"data\": {\n        \n    },\n    \"value\":false,\n    \"error\":\"DateExpired\"\n}", 
+        "request" : "{\n    \"contact\":\"9819222221\",\n    \"password\":\"chintan12345\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "user/login", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1b82cb004ba303756248"), 
+    "name" : "Become a Member", 
+    "Response" : {
+        "response" : "{\n    \"data\": {\n        \"message\":\"MemberCreated\"\n    },\n    \"value\":true\n}", 
+        "request" : "{\n    \"name\":\"Chintan Shah\",\n    \"contact\":\"9819222221\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "user/becomeMember", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1bb3cb004ba303756249"), 
+    "name" : "Become a Member Error", 
+    "Response" : {
+        "response" : "{\n    \"data\": {},\n    \"value\":false,\n    \"error\":\"UserAlreadyRegistered\"\n}", 
+        "request" : "{\n    \"name\":\"Chintan Shah\",\n    \"contact\":\"9819222222\"\n}"
+    }, 
+    "type" : "post", 
+    "url" : "user/becomeMember", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1cc3cb004ba30375624a"), 
+    "name" : "Notification", 
+    "Response" : {
+        "response" : "{\n    \"data\":[\n        {\n            \"title\":\"Title 1 \",\n            \"timestamp\":\"2016-11-01 20:22:20\"\n        },\n        {\n            \"title\":\"Title 2 \",\n            \"timestamp\":\"2016-11-01 20:21:20\"\n        }\n    ],\n    \"value\":true,\n    \"serverTime\":\"2016-11-01\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "notification/getAll?page=1", 
+    "comment" : "this will be standard pagination", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1d1bcb004ba30375624b"), 
+    "name" : "Notification page 2", 
+    "Response" : {
+        "response" : "{\n    \"data\":[\n        {\n            \"title\":\"Title 3 \",\n            \"timestamp\":\"2016-11-01 20:19:20\"\n        },\n        {\n            \"title\":\"Title 4 \",\n            \"timestamp\":\"2016-11-01 20:11:20\"\n        }\n    ],\n    \"value\":true,\n    \"serverTime\":\"2016-11-01\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "notification/getAll?page=2", 
+    "comment" : "this will be standard pagination", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1d46cb004ba30375624c"), 
+    "name" : "Notification Page 3 with expired server time", 
+    "Response" : {
+        "response" : "{\n    \"data\":[],\n    \"value\":true,\n    \"serverTime\":\"2017-11-01\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "notification/getAll?page=3", 
+    "comment" : "this will be standard pagination", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1dd2cb004ba30375624d"), 
+    "name" : "Change Password Success", 
+    "Response" : {
+        "response" : "{\n    \"data\":{\n        \"message\":\"PasswordChangedSuccessfully\"\n    },\n    \"value\":true,\n    \"serverTime\":\"2017-11-01\"\n}", 
+        "request" : "{\n    \"oldPassword\":\"chintan\",\n    \"newPassword\":\"chintan123\"\n}"
+    }, 
+    "type" : "get", 
+    "url" : "user/chagePassword", 
+    "comment" : "", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1de9cb004ba30375624e"), 
+    "name" : "Change Password Error", 
+    "Response" : {
+        "response" : "{\n    \"data\":{\n        \n    },\n    \"value\":false,\n    \"error\":\"IncorrectOldPAssword\",\n    \"serverTime\":\"2017-11-01\"\n}", 
+        "request" : "{\n    \"oldPassword\":\"chintan123\",\n    \"newPassword\":\"chintan\"\n}"
+    }, 
+    "type" : "get", 
+    "url" : "user/chagePassword", 
+    "comment" : "", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b213fcb004ba303756250"), 
+    "name" : "GetMatch", 
+    "Response" : {
+        "response" : "{\n    \"data\":{\n            \"cupName\":\"T20 World Cup 2016\",\n            \"status\":\"live\",\n            \"suspended\":false,\n            \"team1\":\"IND\",\n            \"team2\":\"ZIM\",\n            \"overs\":20,\n            \"newOvers\":20,\n            \"firstBat\":2,\n            \"bat\":1,\n            \"team1Runs\":10,\n            \"team1Wicket\":1,\n            \"team1Overs\":10.2,\n            \"team2Runs\":200,\n            \"team2Wicket\":3,\n            \"team2Overs\":5.2,\n            \"favorite\":2,\n            \"rate1\":0.49,\n            \"rate2\":0.50,\n            \"session1\":\n            [\n                {\n                    \"over\":5,\n                    \"run\":60\n                },\n                {\n                    \"over\":10,\n                    \"run\":120\n                },\n                {\n                    \"over\":20,\n                    \"run\":200\n                }\n            ],\n            \"session2\":\n            [\n                {\n                    \"over\":5,\n                    \"run\":60\n                },\n                {\n                    \"over\":10,\n                    \"run\":120\n                },\n                {\n                    \"over\":20,\n                    \"run\":200\n                }\n            ],\n            \"comment\":\"ABC\"\n    },\n    \"value\":true,\n    \"serverTime\":\"2016-11-01\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "match/get?id=123", 
+    "comment" : "", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("571b1eb4cb004ba30375624f"), 
+    "name" : "GetAllMatches", 
+    "Response" : {
+        "response" : "{\n    \"data\":[\n        {\n            \"_id\":\"123\",\n            \"cupName\":\"T20 World Cup 2016\",\n            \"status\":\"live\",\n            \"startTime\":\"2016-01-01 10:10:10\",\n            \"team1\":\"IND\",\n            \"team2\":\"ZIM\",\n            \"overs\":\"20\",\n            \"newOvers\":\"15\",\n            \"firstBat\":2,\n            \"bat\":2,\n            \"team1Runs\":\"0\",\n            \"team1Wicket\":\"0\",\n            \"team1Overs\":\"0\",\n            \"team2Runs\":\"20\",\n            \"team2Wicket\":3,\n            \"team2Overs\":\"5.2\",\n            \"comment\":\"ABC\"\n        },\n        {\n            \"_id\":\"124\",\n            \"cupName\":\"T20 World Cup 2016\",\n            \"status\":\"live\",\n            \"startTime\":\"2016-01-01 10:10:10\",\n            \"team1\":\"WI\",\n            \"team2\":\"AUS\",\n            \"overs\":\"20\",\n            \"newOvers\":\"15\",\n            \"firstBat\":2,\n            \"bat\":1,\n            \"team1Runs\":\"12\",\n            \"team1Wicket\":1,\n            \"team1Overs\":\"2\",\n            \"team2Runs\":\"120\",\n            \"team2Wicket\":3,\n            \"team2Overs\":\"15\",\n            \"comment\":\"ABC\"\n            \n        },\n        {\n            \"_id\":\"125\",\n            \"cupName\":\"T20 World Cup 2016\",\n            \"status\":\"pre\",\n            \"startTime\":\"2016-01-01 10:10:10\",\n            \"team1\":\"WI\",\n            \"team2\":\"AUS\",\n            \"overs\":\"20\",\n            \"newOvers\":\"15\",\n            \"firstBat\":0,\n            \"bat\":0,\n            \"team1Runs\":\"0\",\n            \"team1Wicket\":0,\n            \"team1Overs\":\"0\",\n            \"team2Runs\":\"0\",\n            \"team2Wicket\":0,\n            \"team2Overs\":\"0\",\n            \"comment\":\"ABC\"\n        },\n        {\n            \"_id\":\"127\",\n            \"cupName\":\"T20 World Cup 2016\",\n            \"status\":\"complete\",\n            \"team1\":\"SA\",\n            \"team2\":\"PAK\",\n            \"overs\":\"20\",\n            \"newOvers\":\"20\",\n            \"firstBat\":2,\n            \"bat\":1,\n            \"team1Runs\":\"120\",\n            \"team1Wicket\":5,\n            \"team1Overs\":\"20\",\n            \"team2Runs\":\"150\",\n            \"team2Wicket\":2,\n            \"team2Overs\":\"20\",\n            \"comment\":\"ABC\"\n            \n        }\n    ],\n    \"value\":true,\n    \"serverTime\":\"2016-11-01\"\n}", 
+        "request" : ""
+    }, 
+    "type" : "get", 
+    "url" : "match/getAll?page=1", 
+    "comment" : "this will be standard pagination", 
     "__v" : NumberInt(0)
 }
